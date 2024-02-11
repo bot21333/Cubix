@@ -153,14 +153,6 @@ ButtonExit.BorderColor3 = Color3.fromRGB(0, 0, 0)
 ButtonExit.BorderSizePixel = 0
 ButtonExit.Position = UDim2.new(0.926829278, 0, 0.0422077924, 0)
 ButtonExit.Size = UDim2.new(0, 29, 0, 26)
-ButtonExit.MouseButton1Down:connect(function()
-    Cubix_Main.Visible = false
-    Hide_2.Visible = true
-end)
-Hide_2.MouseButton1Down:connect(function()
-    Cubix_Main.Visible = true
-    Hide_2.Visible = false
-end)
 
 UICorner_2.Parent = ButtonExit
 
@@ -172,7 +164,14 @@ ImageButton.BorderSizePixel = 0
 ImageButton.Position = UDim2.new(0.103448279, 0, 0.15384616, 0)
 ImageButton.Size = UDim2.new(0, 23, 0, 18)
 ImageButton.Image = "rbxassetid://10747384394"
-
+ImageButton.MouseButton1Down:connect(function()
+    Cubix_Main.Visible = false
+    Hide_2.Visible = true
+end)
+Hide_2.MouseButton1Down:connect(function()
+    Cubix_Main.Visible = true
+    Hide_2.Visible = false
+end)
 ImageLabel.Parent = Cubix_Main
 ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 ImageLabel.BackgroundTransparency = 1.000
