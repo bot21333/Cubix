@@ -826,9 +826,6 @@ DexExplorer.Position = UDim2.new(0.514218092, 0, 0.193484306, 0)
 DexExplorer.Size = UDim2.new(0, 185, 0, 76)
 DexExplorer.Image = "rbxassetid://16341179758"
 DexExplorer.ScaleType = Enum.ScaleType.Crop
-DexExplorer.MouseButton1Click:Connect(function()
-	loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/Dex%20Explorer.txt", true))()
-end)
 UICorner_26.Parent = DexExplorer
 
 ExecuteDexE.Name = "ExecuteDexE"
@@ -842,7 +839,9 @@ ExecuteDexE.Font = Enum.Font.GothamMedium
 ExecuteDexE.Text = "Execute"
 ExecuteDexE.TextColor3 = Color3.fromRGB(255, 255, 255)
 ExecuteDexE.TextSize = 14.000
-
+ExecuteDexE.MouseButton1Click:Connect(function()
+	loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/Dex%20Explorer.txt", true))()
+end)
 UICorner_27.Parent = ExecuteDexE
 
 SettingsDisplay.Name = "Settings-Display"
