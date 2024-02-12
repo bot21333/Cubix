@@ -953,13 +953,7 @@ task.spawn(C_31);
 local function C_35()
 local script = G2L["35"];
 	local txtbox = script.Parent.Parent.Parent.Display.ScrollingFrame.TextBox
-	
-	local executecode = executecode and clonefunction(executecode) or function(v)
-		task.spawn(loadstring(v));
-	end
-	
-	executecode(txtbox.Text)
-	
+	loadstring(txtbox.Text)
 	-- notification
 	
 	local Bindable = Instance.new("BindableFunction")
