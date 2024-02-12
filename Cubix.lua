@@ -1,5 +1,10 @@
 local CubixUI = {};
 
+spawn(function()
+	if setfpscap then
+		setfpscap(100)
+	end
+end)
 -- StarterGui.CubiX
 CubixUI["1"] = Instance.new("ScreenGui", game:GetService("CoreGui") or gethui());
 CubixUI["1"]["IgnoreGuiInset"] = true;
