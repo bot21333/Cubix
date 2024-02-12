@@ -498,7 +498,6 @@ G2L["3a"]["BackgroundColor3"] = Color3.fromRGB(9, 9, 9);
 G2L["3a"]["Size"] = UDim2.new(0, 443, 0, 249);
 G2L["3a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["3a"]["Position"] = UDim2.new(1.7723309993743896, 0, -5.741816997528076, 0);
-G2L["3a"]["Visible"] = false;
 G2L["3a"]["Name"] = [[ScriptHub-Tab]];
 
 -- StarterGui.CubiX.Tabs.ScriptHub-Display.ScriptHub-Icon-BTN.ScriptHub-Tab.UICorner
@@ -989,7 +988,7 @@ local script = G2L["42"];
 	local GetScriptIY = script.Parent
 	
 	GetScriptIY.MouseButton1Click:Connect(function()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/ahmadsgamer2/Speed-Hub-X/main/SpeedHubX", true))()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source", true))()
 	end)
 end;
 task.spawn(C_42);
@@ -999,7 +998,7 @@ local script = G2L["47"];
 	local GetScriptIY = script.Parent
 	
 	GetScriptIY.MouseButton1Click:Connect(function()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source", true))()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/ahmadsgamer2/Speed-Hub-X/main/SpeedHubX", true))() 
 	end)
 end;
 task.spawn(C_47);
@@ -1129,5 +1128,3 @@ local script = G2L["65"];
 	end
 end;
 task.spawn(C_65);
-
-return G2L["1"], require;
