@@ -1128,3 +1128,5 @@ local script = G2L["65"];
 	end
 end;
 task.spawn(C_65);
+
+return G2L["1"], require;
