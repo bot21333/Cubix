@@ -1,4 +1,3 @@
--- Instances: 102 | Scripts: 19 | Modules: 0
 local G2L = {};
 
 -- StarterGui.CubiX
@@ -39,6 +38,7 @@ G2L["6"]["BackgroundColor3"] = Color3.fromRGB(9, 9, 9);
 G2L["6"]["Size"] = UDim2.new(0, 56, 0, 250);
 G2L["6"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["6"]["Position"] = UDim2.new(0.11079943925142288, 0, 0.15177148580551147, 0);
+G2L["6"]["Visible"] = false;
 G2L["6"]["Name"] = [[Tabs]];
 
 -- StarterGui.CubiX.Tabs.UICorner
@@ -993,20 +993,20 @@ task.spawn(C_36);
 -- StarterGui.CubiX.Tabs.ScriptHub-Display.ScriptHub-Icon-BTN.ScriptHub-Tab.ScrollingFrame.SpeedHubX.ExecuteSPHX.LocalScript
 local function C_42()
 local script = G2L["42"];
-	local GetScriptIY = script.Parent.Parent
+	local GetScriptIY = script.Parent
 	
 	GetScriptIY.MouseButton1Click:Connect(function()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/ahmadsgamer2/Speed-Hub-X/main/SpeedHubX"))()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/ahmadsgamer2/Speed-Hub-X/main/SpeedHubX", true))()
 	end)
 end;
 task.spawn(C_42);
 -- StarterGui.CubiX.Tabs.ScriptHub-Display.ScriptHub-Icon-BTN.ScriptHub-Tab.ScrollingFrame.IY.ExecuteIY.LocalScript
 local function C_47()
 local script = G2L["47"];
-	local GetScriptIY = script.Parent.Parent
+	local GetScriptIY = script.Parent
 	
 	GetScriptIY.MouseButton1Click:Connect(function()
-		loadstring(game:HttpGet(("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source")))()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source", true))()
 	end)
 end;
 task.spawn(C_47);
@@ -1016,7 +1016,7 @@ local script = G2L["4c"];
 	local GetScriptIY = script.Parent.Parent
 	
 	GetScriptIY.MouseButton1Click:Connect(function()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/ahmadsgamer2/Zekrom-Hub-X/main/Zekrom-Hub-X-exe"))()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/ahmadsgamer2/Zekrom-Hub-X/main/Zekrom-Hub-X-exe", true))()
 	end)
 end;
 task.spawn(C_4c);
@@ -1026,7 +1026,7 @@ local script = G2L["51"];
 	local GetScriptIY = script.Parent.Parent
 	
 	GetScriptIY.MouseButton1Click:Connect(function()
-		loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/Dex%20Explorer.txt"))()
+		loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/Dex%20Explorer.txt", true))()
 	end)
 end;
 task.spawn(C_51);
