@@ -95,6 +95,47 @@ spawn(function()
     end
 end)
 
+local UserInputService = game:GetService("UserInputService")
+local TweenService = game:GetService("TweenService")
+
+local function MakeDraggable(topbarobject, object)
+ local Dragging = nil
+ local DragInput = nil
+ local DragStart = nil
+ local StartPosition = nil
+
+ local function Update(input)
+     local Delta = input.Position - DragStart
+     local pos = UDim2.new(StartPosition.X.Scale, StartPosition.X.Offset + Delta.X, StartPosition.Y.Scale, StartPosition.Y.Offset + Delta.Y)
+     local Tween = TweenService:Create(object, TweenInfo.new(0.15), {Position = pos})
+     Tween:Play()
+ end
+
+topbarobject.InputBegan:Connect(function(input)
+	if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+		Dragging = true
+		DragStart = input.Position
+		StartPosition = object.Position
+		input.Changed:Connect(function()
+			if input.UserInputState == Enum.UserInputState.End then
+				Dragging = false
+			end
+		end)
+	end
+end)
+topbarobject.InputChanged:Connect(function(input)
+	if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+		DragInput = input
+	end
+end)
+UserInputService.InputChanged:Connect(function(input)
+	if input == DragInput and Dragging then
+		Update(input)
+	    end
+    end)
+end
+
+
 CubiX.Name = "CubiX"
 CubiX.Parent = gethui()
 CubiX.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
@@ -121,7 +162,7 @@ Tabs.BorderSizePixel = 0
 Tabs.Position = UDim2.new(0.110799439, 0, 0.151771486, 0)
 Tabs.Size = UDim2.new(0, 56, 0, 250)
 Tabs.Visible = false
-
+MakeDraggable(CubiX, Tabs)
 UICorner_2.Parent = Tabs
 
 Avatar.Name = "Avatar"
@@ -167,6 +208,12 @@ HomeTab.BorderColor3 = Color3.fromRGB(0, 0, 0)
 HomeTab.BorderSizePixel = 0
 HomeTab.Position = UDim2.new(1.74074125, 0, -2.27999973, 0)
 HomeTab.Size = UDim2.new(0, 445, 0, 249)
+HomeIconBTN.MouseButton1Click:Connect(function()
+	HomeTab.Visible = true
+	CodeDisplay["Code-Icon-BTN"]["Code-Tab"].Visible = false
+	ScriptHubDisplay["ScriptHub-Icon-BTN"]["ScriptHub-Tab"].Visible = false
+	SettingsDisplay["Settings-Icon-BTN"]["Settings-Tab"].Visible = false
+end)
 
 UICorner_5.CornerRadius = UDim.new(0, 11)
 UICorner_5.Parent = HomeTab
@@ -180,7 +227,7 @@ TitleWelcome.BorderSizePixel = 0
 TitleWelcome.Position = UDim2.new(0.027777778, 0, 0.0519851372, 0)
 TitleWelcome.Size = UDim2.new(0, 200, 0, 32)
 TitleWelcome.Font = Enum.Font.GothamMedium
-TitleWelcome.Text = "Welcome, User!"
+TitleWelcome.Text = "Welcome, "..game.Players.LocalPlayer.Name
 TitleWelcome.TextColor3 = Color3.fromRGB(255, 255, 255)
 TitleWelcome.TextSize = 18.000
 TitleWelcome.TextXAlignment = Enum.TextXAlignment.Left
@@ -291,7 +338,7 @@ xx_4.BorderSizePixel = 0
 xx_4.Position = UDim2.new(0.0432099849, 0, 0.554744542, 0)
 xx_4.Size = UDim2.new(0, 148, 0, 36)
 xx_4.Font = Enum.Font.Gotham
-xx_4.Text = "- Updated to V1.2"
+xx_4.Text = "- Updated to V1.2.1"
 xx_4.TextColor3 = Color3.fromRGB(255, 255, 255)
 xx_4.TextSize = 14.000
 xx_4.TextWrapped = true
@@ -391,6 +438,12 @@ CodeTab.BorderSizePixel = 0
 CodeTab.Position = UDim2.new(1.74074078, 0, -3.99999976, 0)
 CodeTab.Size = UDim2.new(0, 444, 0, 249)
 CodeTab.Visible = false
+CodeIconBTN.MouseButton1Click:Connect(function()
+	CodeTab.Visible = true
+	HomeDisplay["Home-Icon-BTN"]["Home-Tab"].Visible = false
+	ScriptHubDisplay["ScriptHub-Icon-BTN"]["ScriptHub-Tab"].Visible = false
+	SettingsDisplay["Settings-Icon-BTN"]["Settings-Tab"].Visible = false
+end)
 
 UICorner_12.CornerRadius = UDim.new(0, 11)
 UICorner_12.Parent = CodeTab
@@ -454,7 +507,6 @@ ClearDisplay.BorderColor3 = Color3.fromRGB(0, 0, 0)
 ClearDisplay.BorderSizePixel = 0
 ClearDisplay.Position = UDim2.new(0.0270270277, 0, 0.779116333, 0)
 ClearDisplay.Size = UDim2.new(0, 104, 0, 44)
-
 UICorner_14.CornerRadius = UDim.new(0, 6)
 UICorner_14.Parent = ClearDisplay
 
@@ -469,6 +521,22 @@ ClearBTN.Font = Enum.Font.Gotham
 ClearBTN.Text = "Clear"
 ClearBTN.TextColor3 = Color3.fromRGB(255, 255, 255)
 ClearBTN.TextSize = 18.000
+ClearBTN.MouseButton1Click:Connect(function()
+	TextBox.Text = ""
+
+	local Bindable = Instance.new("BindableFunction")
+	Bindable.OnInvoke = Callback
+
+	game.StarterGui:SetCore("SendNotification", {
+		Title = "Cubix | Android";
+		Text = "Cleared the script.";
+		Duration = "5";
+		Button1 = "Close Notification";
+		Callback = Bindable
+	})
+	function Callback(answer)
+	end
+end)
 
 CopyDisplay.Name = "Copy-Display"
 CopyDisplay.Parent = CodeTab
@@ -493,6 +561,22 @@ CopyBTN.Font = Enum.Font.Gotham
 CopyBTN.Text = "Copy Text"
 CopyBTN.TextColor3 = Color3.fromRGB(255, 255, 255)
 CopyBTN.TextSize = 18.000
+CopyBTN.MouseButton1Click:Connect(function()
+	setclipboard(TextBox.Text)
+
+	local Bindable = Instance.new("BindableFunction")
+	Bindable.OnInvoke = Callback
+
+	game.StarterGui:SetCore("SendNotification", {
+		Title = "Cubix | Android";
+		Text = "Copied the script.";
+		Duration = "5";
+		Button1 = "Close Notification";
+		Callback = Bindable
+	})
+	function Callback(answer)
+	end
+end)
 
 PasteDisplay.Name = "Paste-Display"
 PasteDisplay.Parent = CodeTab
@@ -516,6 +600,22 @@ PasteBTN.Font = Enum.Font.Gotham
 PasteBTN.Text = "Paste Text"
 PasteBTN.TextColor3 = Color3.fromRGB(255, 255, 255)
 PasteBTN.TextSize = 18.000
+CopyBTN.MouseButton1Click:Connect(function()
+	TextBox.Text = getclipboard()
+
+	local Bindable = Instance.new("BindableFunction")
+	Bindable.OnInvoke = Callback
+
+	game.StarterGui:SetCore("SendNotification", {
+		Title = "Cubix | Android";
+		Text = "Pasted the script.";
+		Duration = "5";
+		Button1 = "Close Notification";
+		Callback = Bindable
+	})
+	function Callback(answer)
+	end
+end)
 
 ExecDisplay.Name = "Exec-Display"
 ExecDisplay.Parent = CodeTab
@@ -527,6 +627,9 @@ ExecDisplay.Size = UDim2.new(0, 92, 0, 44)
 
 UICorner_17.CornerRadius = UDim.new(0, 6)
 UICorner_17.Parent = ExecDisplay
+local executecode = executecode and clonefunction(executecode) or function(v)
+	task.spawn(loadstring(v));
+end
 
 ExecBTN.Name = "Exec-BTN"
 ExecBTN.Parent = ExecDisplay
@@ -539,6 +642,22 @@ ExecBTN.Font = Enum.Font.Gotham
 ExecBTN.Text = "Execute"
 ExecBTN.TextColor3 = Color3.fromRGB(255, 255, 255)
 ExecBTN.TextSize = 18.000
+ExecBTN.MouseButton1Click:Connect(function()
+	executecode(TextBox.Text)
+
+	local Bindable = Instance.new("BindableFunction")
+	Bindable.OnInvoke = Callback
+
+	game.StarterGui:SetCore("SendNotification", {
+		Title = "Cubix | Android";
+		Text = "Executed the script.";
+		Duration = "5";
+		Button1 = "Close Notification";
+		Callback = Bindable
+	})
+	function Callback(answer)
+	end
+end)
 
 ScriptHubDisplay.Name = "ScriptHub-Display"
 ScriptHubDisplay.Parent = Tabs
@@ -561,6 +680,18 @@ ScriptHubIconBTN.Position = UDim2.new(0.0882352963, 0, 0.121212125, 0)
 ScriptHubIconBTN.Size = UDim2.new(0, 27, 0, 25)
 ScriptHubIconBTN.Image = "rbxassetid://7733779730"
 ScriptHubIconBTN.ScaleType = Enum.ScaleType.Fit
+ScriptHubIconBTN.MouseButton1Click:Connect(function()
+	HomeDisplay["Home-Icon-BTN"]["Home-Tab"].Visible = false
+	CodeDisplay["Code-Icon-BTN"]["Code-Tab"].Visible = false
+	ScriptHubIconBTN["ScriptHub-Tab"].Visible = true
+	SettingsDisplay["Settings-Icon-BTN"]["Settings-Tab"].Visible = false
+end)
+ScriptHubIconBTN.MouseButton1Click:Connect(function()
+	HomeDisplay["Home-Icon-BTN"]["Home-Tab"].Visible = false
+	CodeDisplay["Code-Icon-BTN"]["Code-Tab"].Visible = false
+	ScriptHubIconBTN["ScriptHub-Icon-BTN"]["ScriptHub-Tab"].Visible = false
+	SettingsTab.Visible = true
+end)
 
 ScriptHubTab.Name = "ScriptHub-Tab"
 ScriptHubTab.Parent = ScriptHubIconBTN
@@ -622,7 +753,9 @@ ExecuteSPHX.Font = Enum.Font.GothamMedium
 ExecuteSPHX.Text = "Execute"
 ExecuteSPHX.TextColor3 = Color3.fromRGB(255, 255, 255)
 ExecuteSPHX.TextSize = 14.000
-
+ExecuteSPHX.MouseButton1Click:Connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/ahmadsgamer2/Speed-Hub-X/main/SpeedHubX"))()
+end)
 UICorner_21.Parent = ExecuteSPHX
 
 IY.Name = "IY"
@@ -635,7 +768,6 @@ IY.Position = UDim2.new(0.514218092, 0, 0.0118914768, 0)
 IY.Size = UDim2.new(0, 185, 0, 76)
 IY.Image = "http://www.roblox.com/asset/?id=15914349618"
 IY.ScaleType = Enum.ScaleType.Crop
-
 UICorner_22.Parent = IY
 
 ExecuteIY.Name = "ExecuteIY"
@@ -649,7 +781,9 @@ ExecuteIY.Font = Enum.Font.GothamMedium
 ExecuteIY.Text = "Execute"
 ExecuteIY.TextColor3 = Color3.fromRGB(255, 255, 255)
 ExecuteIY.TextSize = 14.000
-
+ExecuteIY.MouseButton1Click:Connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source", true))()
+end)
 UICorner_23.Parent = ExecuteIY
 
 ZekromHubX.Name = "ZekromHubX"
@@ -676,7 +810,9 @@ ExecuteZekroV2.Font = Enum.Font.GothamMedium
 ExecuteZekroV2.Text = "Execute"
 ExecuteZekroV2.TextColor3 = Color3.fromRGB(255, 255, 255)
 ExecuteZekroV2.TextSize = 14.000
-
+ExecuteZekroV2.MouseButton1Click:Connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/ahmadsgamer2/Zekrom-Hub-X/main/Zekrom-Hub-X-exe", true))()
+end)
 UICorner_25.Parent = ExecuteZekroV2
 
 DexExplorer.Name = "DexExplorer"
@@ -689,7 +825,9 @@ DexExplorer.Position = UDim2.new(0.514218092, 0, 0.193484306, 0)
 DexExplorer.Size = UDim2.new(0, 185, 0, 76)
 DexExplorer.Image = "rbxassetid://16341179758"
 DexExplorer.ScaleType = Enum.ScaleType.Crop
-
+DexExplorer.MouseButton1Click:Connect(function()
+	loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/Dex%20Explorer.txt", true))()
+end)
 UICorner_26.Parent = DexExplorer
 
 ExecuteDexE.Name = "ExecuteDexE"
@@ -783,7 +921,9 @@ TextButton.Font = Enum.Font.GothamMedium
 TextButton.Text = "Execute"
 TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextButton.TextSize = 14.000
-
+TextButton.MouseButton1Click:Connect(function()
+	setfpscap(120)
+end)
 UICorner_31.CornerRadius = UDim.new(0, 6)
 UICorner_31.Parent = TextButton
 
@@ -809,316 +949,13 @@ CloseBTN.Font = Enum.Font.Gotham
 CloseBTN.Text = "×"
 CloseBTN.TextColor3 = Color3.fromRGB(255, 255, 255)
 CloseBTN.TextSize = 20.000
+CloseBTN.MouseButton1Click:Connect(function()
+	Open.Visible = false
+end)
+CloseBTN.MouseButton1Click:Connect(function()
+	Open.Visible = true
+end)
 
--- Scripts:
-
-local function HNAWBM_fake_script() -- Open.LocalScript 
-	local script = Instance.new('LocalScript', Open)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		script.Parent.Visible = false
-	end)
+function identifyexecutor()
+	return "CubiX"
 end
-coroutine.wrap(HNAWBM_fake_script)()
-local function MUNOW_fake_script() -- Open.LocalScript 
-	local script = Instance.new('LocalScript', Open)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		script.Parent.Parent.Tabs.Visible = true
-	end)
-end
-coroutine.wrap(MUNOW_fake_script)()
-local function GIPAP_fake_script() -- TitleWelcome.LocalScript 
-	local script = Instance.new('LocalScript', TitleWelcome)
-
-	local plyr = game.Players.LocalPlayer.Name
-	local txt = script.Parent
-	
-	txt.Text = "Welcome, "..plyr.."!"
-end
-coroutine.wrap(GIPAP_fake_script)()
-local function OXBEHL_fake_script() -- HomeIconBTN.LocalScript 
-	local script = Instance.new('LocalScript', HomeIconBTN)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		script.Parent["Home-Tab"].Visible = true
-		script.Parent.Parent.Parent["Code-Display"]["Code-Icon-BTN"]["Code-Tab"].Visible = false
-		script.Parent.Parent.Parent["ScriptHub-Display"]["ScriptHub-Icon-BTN"]["ScriptHub-Tab"].Visible = false
-		script.Parent.Parent.Parent["Settings-Display"]["Settings-Icon-BTN"]["Settings-Tab"].Visible = false
-	end)
-end
-coroutine.wrap(OXBEHL_fake_script)()
-local function OOIQH_fake_script() -- ClearBTN.LocalScript 
-	local script = Instance.new('LocalScript', ClearBTN)
-
-	local textbox = script.Parent.Parent.Parent.Display.ScrollingFrame.TextBox
-	local btn = script.Parent
-	
-	btn.MouseButton1Click:Connect(function()
-		textbox.Text = ""
-		-- notification
-	
-		local Bindable = Instance.new("BindableFunction")
-		Bindable.OnInvoke = Callback
-	
-		game.StarterGui:SetCore("SendNotification", {
-			Title = "Cubix | Android";
-			Text = "Cleared the script.";
-			Duration = "10";
-			Button1 = "Close Notification";
-			Callback = Bindable
-		})
-	end)
-	
-	function Callback(answer)
-	end
-end
-coroutine.wrap(OOIQH_fake_script)()
-local function HQFJKI_fake_script() -- CopyBTN.LocalScript 
-	local script = Instance.new('LocalScript', CopyBTN)
-
-	local txt = script.Parent.Parent.Parent.Display.ScrollingFrame.TextBox
-	local btn = script.Parent
-	
-	btn.MouseButton1Click:Connect(function()
-		setclipboard(txt.Text)
-		-- notification
-	
-		local Bindable = Instance.new("BindableFunction")
-		Bindable.OnInvoke = Callback
-	
-		game.StarterGui:SetCore("SendNotification", {
-			Title = "Cubix | Android";
-			Text = "Copied the script.";
-			Duration = "10";
-			Button1 = "Close Notification";
-			Callback = Bindable
-		})
-	end)
-	
-	function Callback(answer)
-	end
-	
-end
-coroutine.wrap(HQFJKI_fake_script)()
-local function WZPHDX_fake_script() -- PasteBTN.LocalScript 
-	local script = Instance.new('LocalScript', PasteBTN)
-
-	local txt = script.Parent.Parent.Parent.Display.ScrollingFrame.TextBox
-	local btn = script.Parent
-	
-	btn.MouseButton1Click:Connect(function()
-		txt.Text = getclipboard()
-			
-		local Bindable = Instance.new("BindableFunction")
-		Bindable.OnInvoke = Callback
-	
-		game.StarterGui:SetCore("SendNotification", {
-			Title = "Cubix | Android";
-			Text = "Pasted the script.";
-			Duration = "10";
-			Button1 = "Close Notification";
-			Callback = Bindable
-		})
-	end)
-	
-	function Callback(answer)
-	end
-end
-coroutine.wrap(WZPHDX_fake_script)()
-local function QQFEWD_fake_script() -- ExecBTN.LocalScript 
-	local script = Instance.new('LocalScript', ExecBTN)
-
-	local txtbox = script.Parent.Parent.Parent.Display.ScrollingFrame.TextBox
-	local btn = script.Parent
-	
-	btn.MouseButton1Click:Connect(function()
-	local executecode = executecode and clonefunction(executecode) or function(v)
-		task.spawn(loadstring(v));
-	end
-	executecode(txtbox.Text)
-	
-	-- notification
-	
-	local Bindable = Instance.new("BindableFunction")
-	Bindable.OnInvoke = Callback
-	
-	game.StarterGui:SetCore("SendNotification", {
-		Title = "Cubix | Android";
-		Text = "Executed the script.";
-		Duration = "10";
-		Button1 = "Close Notification";
-		Callback = Bindable
-	})
-	end)
-	
-	function Callback(answer)
-end
-	
-end
-coroutine.wrap(QQFEWD_fake_script)()
-local function FYKHFY_fake_script() -- CodeIconBTN.LocalScript 
-	local script = Instance.new('LocalScript', CodeIconBTN)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		script.Parent["Code-Tab"].Visible = true
-		script.Parent.Parent.Parent["Home-Display"]["Home-Icon-BTN"]["Home-Tab"].Visible = false
-		script.Parent.Parent.Parent["ScriptHub-Display"]["ScriptHub-Icon-BTN"]["ScriptHub-Tab"].Visible = false
-		script.Parent.Parent.Parent["Settings-Display"]["Settings-Icon-BTN"]["Settings-Tab"].Visible = false
-	end)
-end
-coroutine.wrap(FYKHFY_fake_script)()
-local function JBFZAF_fake_script() -- ExecuteSPHX.LocalScript 
-	local script = Instance.new('LocalScript', ExecuteSPHX)
-
-	local GetScriptIY = script.Parent
-	
-	GetScriptIY.MouseButton1Click:Connect(function()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/ahmadsgamer2/Speed-Hub-X/main/SpeedHubX"))()
-	end)
-end
-coroutine.wrap(JBFZAF_fake_script)()
-local function TOUP_fake_script() -- ExecuteIY.LocalScript 
-	local script = Instance.new('LocalScript', ExecuteIY)
-
-	local GetScriptIY = script.Parent
-	
-	GetScriptIY.MouseButton1Click:Connect(function()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source", true))()
-	end)
-end
-coroutine.wrap(TOUP_fake_script)()
-local function ZYEVUV_fake_script() -- ExecuteZekroV2.LocalScript 
-	local script = Instance.new('LocalScript', ExecuteZekroV2)
-
-	local GetScriptIY = script.Parent.Parent
-	
-	GetScriptIY.MouseButton1Click:Connect(function()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/ahmadsgamer2/Zekrom-Hub-X/main/Zekrom-Hub-X-exe", true))()
-	end)
-end
-coroutine.wrap(ZYEVUV_fake_script)()
-local function UTKJN_fake_script() -- ExecuteDexE.LocalScript 
-	local script = Instance.new('LocalScript', ExecuteDexE)
-
-	local GetScriptIY = script.Parent.Parent
-	
-	GetScriptIY.MouseButton1Click:Connect(function()
-		loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/Dex%20Explorer.txt", true))()
-	end)
-end
-coroutine.wrap(UTKJN_fake_script)()
-local function HUSG_fake_script() -- ScriptHubIconBTN.LocalScript 
-	local script = Instance.new('LocalScript', ScriptHubIconBTN)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		script.Parent.Parent.Parent["Home-Display"]["Home-Icon-BTN"]["Home-Tab"].Visible = false
-		script.Parent.Parent.Parent["Code-Display"]["Code-Icon-BTN"]["Code-Tab"].Visible = false
-		script.Parent.Parent["ScriptHub-Icon-BTN"]["ScriptHub-Tab"].Visible = true
-		script.Parent.Parent.Parent["Settings-Display"]["Settings-Icon-BTN"]["Settings-Tab"].Visible = false
-	end)
-end
-coroutine.wrap(HUSG_fake_script)()
-local function IHFMFS_fake_script() -- SettingsIconBTN.LocalScript 
-	local script = Instance.new('LocalScript', SettingsIconBTN)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		script.Parent.Parent.Parent["Home-Display"]["Home-Icon-BTN"]["Home-Tab"].Visible = false
-		script.Parent.Parent.Parent["Code-Display"]["Code-Icon-BTN"]["Code-Tab"].Visible = false
-		script.Parent.Parent.Parent["ScriptHub-Display"]["ScriptHub-Icon-BTN"]["ScriptHub-Tab"].Visible = false
-		script.Parent["Settings-Tab"].Visible = true
-	end)
-end
-coroutine.wrap(IHFMFS_fake_script)()
-local function GANJXUT_fake_script() -- TextButton.LocalScript 
-	local script = Instance.new('LocalScript', TextButton)
-
-	local btn = script.Parent
-	
-	btn.MouseButton1Click:Connect(function()
-		setfpscap(120)
-	end)
-end
-coroutine.wrap(GANJXUT_fake_script)()
-local function EKYWD_fake_script() -- Tabs.CubiX-Drag 
-	local script = Instance.new('LocalScript', Tabs)
-
-	local UserInputService = game:GetService("UserInputService")
-	local runService = (game:GetService("RunService"));
-	
-	local gui = script.Parent
-	
-	local dragging
-	local dragInput
-	local dragStart
-	local startPos
-	
-	function Lerp(a, b, m)
-		return a + (b - a) * m
-	end;
-	
-	local lastMousePos
-	local lastGoalPos
-	local DRAG_SPEED = (8); -- // The speed of the UI darg.
-	function Update(dt)
-		if not (startPos) then return end;
-		if not (dragging) and (lastGoalPos) then
-			gui.Position = UDim2.new(startPos.X.Scale, Lerp(gui.Position.X.Offset, lastGoalPos.X.Offset, dt * DRAG_SPEED), startPos.Y.Scale, Lerp(gui.Position.Y.Offset, lastGoalPos.Y.Offset, dt * DRAG_SPEED))
-			return 
-		end;
-	
-		local delta = (lastMousePos - UserInputService:GetMouseLocation())
-		local xGoal = (startPos.X.Offset - delta.X);
-		local yGoal = (startPos.Y.Offset - delta.Y);
-		lastGoalPos = UDim2.new(startPos.X.Scale, xGoal, startPos.Y.Scale, yGoal)
-		gui.Position = UDim2.new(startPos.X.Scale, Lerp(gui.Position.X.Offset, xGoal, dt * DRAG_SPEED), startPos.Y.Scale, Lerp(gui.Position.Y.Offset, yGoal, dt * DRAG_SPEED))
-	end;
-	
-	gui.InputBegan:Connect(function(input)
-		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
-			dragging = true
-			dragStart = input.Position
-			startPos = gui.Position
-			lastMousePos = UserInputService:GetMouseLocation()
-	
-			input.Changed:Connect(function()
-				if input.UserInputState == Enum.UserInputState.End then
-					dragging = false
-				end
-			end)
-		end
-	end)
-	
-	gui.InputChanged:Connect(function(input)
-		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
-			dragInput = input
-		end
-	end)
-	
-	runService.Heartbeat:Connect(Update)
-end
-coroutine.wrap(EKYWD_fake_script)()
-local function DNYW_fake_script() -- CloseBTN.LocalScript 
-	local script = Instance.new('LocalScript', CloseBTN)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		script.Parent.Parent.Parent.Parent.Tabs.Visible = false
-	end)
-end
-coroutine.wrap(DNYW_fake_script)()
-local function EOUHG_fake_script() -- CloseBTN.LocalScript 
-	local script = Instance.new('LocalScript', CloseBTN)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		script.Parent.Parent.Parent.Parent.Open.Visible = true
-	end)
-end
-coroutine.wrap(EOUHG_fake_script)()
-local function YPMAIZ_fake_script() -- Tabs.LocalScript 
-	local script = Instance.new('LocalScript', Tabs)
-
-	function identifyexecutor()
-		return "CubiX"
-	end
-end
-coroutine.wrap(YPMAIZ_fake_script)()
