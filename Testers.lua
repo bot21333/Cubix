@@ -1,625 +1,1124 @@
-local Cubix = Instance.new("ScreenGui")
-local Cubix_Main = Instance.new("Frame")
-local shadowHolder = Instance.new("Frame")
-local umbraShadow = Instance.new("ImageLabel")
-local penumbraShadow = Instance.new("ImageLabel")
-local ambientShadow = Instance.new("ImageLabel")
+local CubiX = Instance.new("ScreenGui")
+local Open = Instance.new("ImageButton")
 local UICorner = Instance.new("UICorner")
-local ButtonExit = Instance.new("Frame")
+local Tabs = Instance.new("Frame")
 local UICorner_2 = Instance.new("UICorner")
-local ImageButton = Instance.new("ImageButton")
-local ImageLabel = Instance.new("ImageLabel")
-local Tab = Instance.new("Frame")
+local Avatar = Instance.new("ImageLabel")
 local UICorner_3 = Instance.new("UICorner")
-local FrameHome = Instance.new("Frame")
+local HomeDisplay = Instance.new("Frame")
 local UICorner_4 = Instance.new("UICorner")
-local ImageButton_2 = Instance.new("ImageButton")
-local Main = Instance.new("Frame")
+local HomeIconBTN = Instance.new("ImageButton")
+local HomeTab = Instance.new("Frame")
 local UICorner_5 = Instance.new("UICorner")
-local Profile = Instance.new("Frame")
-local ImageLabel_2 = Instance.new("ImageLabel")
+local TitleWelcome = Instance.new("TextLabel")
+local CheckOut = Instance.new("TextLabel")
+local ChangeLogsBG = Instance.new("Frame")
 local UICorner_6 = Instance.new("UICorner")
-local UIStroke = Instance.new("UIStroke")
-local Username = Instance.new("TextLabel")
-local ChangeLog = Instance.new("Frame")
+local TitleChangeLogs = Instance.new("TextLabel")
+local BGX = Instance.new("Frame")
 local UICorner_7 = Instance.new("UICorner")
-local TextChangLog = Instance.new("TextLabel")
+local xx = Instance.new("TextLabel")
+local xx_2 = Instance.new("TextLabel")
+local xx_3 = Instance.new("TextLabel")
+local xx_4 = Instance.new("TextLabel")
+local DiscordInvite = Instance.new("Frame")
 local UICorner_8 = Instance.new("UICorner")
-local FrameDiscord = Instance.new("Frame")
+local LogoTmrx = Instance.new("ImageLabel")
 local UICorner_9 = Instance.new("UICorner")
 local DiscordLogo = Instance.new("ImageLabel")
+local JoinDiscord = Instance.new("TextButton")
 local UICorner_10 = Instance.new("UICorner")
-local JoinServer = Instance.new("TextButton")
+local TextLabel = Instance.new("TextLabel")
+local CodeDisplay = Instance.new("Frame")
 local UICorner_11 = Instance.new("UICorner")
-local TextMemeber = Instance.new("TextLabel")
-local ImageLabel_3 = Instance.new("ImageLabel")
-local FrameExecute = Instance.new("Frame")
+local CodeIconBTN = Instance.new("ImageButton")
+local CodeTab = Instance.new("Frame")
 local UICorner_12 = Instance.new("UICorner")
-local ImageButton_3 = Instance.new("ImageButton")
-local Main_2 = Instance.new("Frame")
+local TitleCode = Instance.new("TextLabel")
+local Display = Instance.new("Frame")
 local UICorner_13 = Instance.new("UICorner")
-local TextFrame = Instance.new("Frame")
-local UICorner_14 = Instance.new("UICorner")
 local ScrollingFrame = Instance.new("ScrollingFrame")
-local UICorner_15 = Instance.new("UICorner")
 local TextBox = Instance.new("TextBox")
+local ClearDisplay = Instance.new("Frame")
+local UICorner_14 = Instance.new("UICorner")
+local ClearBTN = Instance.new("TextButton")
+local CopyDisplay = Instance.new("Frame")
+local UICorner_15 = Instance.new("UICorner")
+local CopyBTN = Instance.new("TextButton")
+local PasteDisplay = Instance.new("Frame")
 local UICorner_16 = Instance.new("UICorner")
-local UIStroke_2 = Instance.new("UIStroke")
-local ExecuteButton = Instance.new("TextButton")
+local PasteBTN = Instance.new("TextButton")
+local ExecDisplay = Instance.new("Frame")
 local UICorner_17 = Instance.new("UICorner")
-local ClearButton = Instance.new("TextButton")
+local ExecBTN = Instance.new("TextButton")
+local ScriptHubDisplay = Instance.new("Frame")
 local UICorner_18 = Instance.new("UICorner")
-local PasteButton = Instance.new("TextButton")
+local ScriptHubIconBTN = Instance.new("ImageButton")
+local ScriptHubTab = Instance.new("Frame")
 local UICorner_19 = Instance.new("UICorner")
-local FrameSetting = Instance.new("Frame")
+local TitleScriptHub = Instance.new("TextLabel")
+local ScrollingFrame_2 = Instance.new("ScrollingFrame")
+local SpeedHubX = Instance.new("ImageLabel")
 local UICorner_20 = Instance.new("UICorner")
-local ImageButton_4 = Instance.new("ImageButton")
-local Main_3 = Instance.new("Frame")
+local ExecuteSPHX = Instance.new("TextButton")
 local UICorner_21 = Instance.new("UICorner")
-local HopServer = Instance.new("TextButton")
+local IY = Instance.new("ImageLabel")
 local UICorner_22 = Instance.new("UICorner")
-local Rejoin = Instance.new("TextButton")
+local ExecuteIY = Instance.new("TextButton")
 local UICorner_23 = Instance.new("UICorner")
+local ZekromHubX = Instance.new("ImageLabel")
+local UICorner_24 = Instance.new("UICorner")
+local ExecuteZekroV2 = Instance.new("TextButton")
+local UICorner_25 = Instance.new("UICorner")
+local DexExplorer = Instance.new("ImageLabel")
+local UICorner_26 = Instance.new("UICorner")
+local ExecuteDexE = Instance.new("TextButton")
+local UICorner_27 = Instance.new("UICorner")
+local SettingsDisplay = Instance.new("Frame")
+local UICorner_28 = Instance.new("UICorner")
+local SettingsIconBTN = Instance.new("ImageButton")
+local SettingsTab = Instance.new("Frame")
+local UICorner_29 = Instance.new("UICorner")
+local FPSBG = Instance.new("Frame")
+local UICorner_30 = Instance.new("UICorner")
+local FPSTitle = Instance.new("TextLabel")
+local ToggleFramePS = Instance.new("Frame")
+local TextButton = Instance.new("TextButton")
+local UICorner_31 = Instance.new("UICorner")
+local CloseDisplay = Instance.new("Frame")
+local UICorner_32 = Instance.new("UICorner")
+local CloseBTN = Instance.new("TextButton")
 loadstring(game:HttpGet("https://raw.githubusercontent.com/bot21333/sss/main/Setting.lua"))();
-
-local Hide = Instance.new("ScreenGui")
-local Hide_2 = Instance.new("ImageButton")
-local UICorner = Instance.new("UICorner")
-
--- Properties:
-
-Hide.Name = "Hide"
-Hide.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-Hide.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-
-Hide_2.Name = "Hide"
-Hide_2.Parent = Hide
-Hide_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-Hide_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Hide_2.BorderSizePixel = 0
-Hide_2.Position = UDim2.new(0.472500026, 0, 0.0724637657, 0)
-Hide_2.Size = UDim2.new(0, 50, 0, 49)
-Hide_2.Image = "rbxassetid://16163653051"
-Hide_2.Visible = false
-
-UICorner.CornerRadius = UDim.new(2.5, 0)
-UICorner.Parent = Hide_2
-
-Cubix.Name = "Cubix"
-Cubix.Parent = (gethui() or game:GetService("CoreGui"))
-Cubix.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-
-Cubix_Main.Name = "Cubix_Main"
-Cubix_Main.Parent = Cubix
-Cubix_Main.AnchorPoint = Vector2.new(0.5, 0.5)
-Cubix_Main.BackgroundColor3 = Color3.fromRGB(16, 16, 16)
-Cubix_Main.BackgroundTransparency = 0.100
-Cubix_Main.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Cubix_Main.BorderSizePixel = 0
-Cubix_Main.Position = UDim2.new(0.5, 0, 0.449275285, 0)
-Cubix_Main.Size = UDim2.new(0, 574, 0, 308)
-
-shadowHolder.Name = "shadowHolder"
-shadowHolder.Parent = Cubix_Main
-shadowHolder.BackgroundTransparency = 1.000
-shadowHolder.Size = UDim2.new(1, 0, 1, 0)
-shadowHolder.ZIndex = 0
-
-umbraShadow.Name = "umbraShadow"
-umbraShadow.Parent = shadowHolder
-umbraShadow.AnchorPoint = Vector2.new(0.5, 0.5)
-umbraShadow.BackgroundTransparency = 1.000
-umbraShadow.Position = UDim2.new(0.5, 0, 0.5, 2)
-umbraShadow.Size = UDim2.new(1, 4, 1, 4)
-umbraShadow.ZIndex = 0
-umbraShadow.Image = "rbxassetid://1316045217"
-umbraShadow.ImageColor3 = Color3.fromRGB(0, 0, 0)
-umbraShadow.ImageTransparency = 0.860
-umbraShadow.ScaleType = Enum.ScaleType.Slice
-umbraShadow.SliceCenter = Rect.new(10, 10, 118, 118)
-
-penumbraShadow.Name = "penumbraShadow"
-penumbraShadow.Parent = shadowHolder
-penumbraShadow.AnchorPoint = Vector2.new(0.5, 0.5)
-penumbraShadow.BackgroundTransparency = 1.000
-penumbraShadow.Position = UDim2.new(0.5, 0, 0.5, 2)
-penumbraShadow.Size = UDim2.new(1, 4, 1, 4)
-penumbraShadow.ZIndex = 0
-penumbraShadow.Image = "rbxassetid://1316045217"
-penumbraShadow.ImageColor3 = Color3.fromRGB(0, 0, 0)
-penumbraShadow.ImageTransparency = 0.880
-penumbraShadow.ScaleType = Enum.ScaleType.Slice
-penumbraShadow.SliceCenter = Rect.new(10, 10, 118, 118)
-
-ambientShadow.Name = "ambientShadow"
-ambientShadow.Parent = shadowHolder
-ambientShadow.AnchorPoint = Vector2.new(0.5, 0.5)
-ambientShadow.BackgroundTransparency = 1.000
-ambientShadow.Position = UDim2.new(0.5, 0, 0.5, 2)
-ambientShadow.Size = UDim2.new(1, 4, 1, 4)
-ambientShadow.ZIndex = 0
-ambientShadow.Image = "rbxassetid://1316045217"
-ambientShadow.ImageColor3 = Color3.fromRGB(0, 0, 0)
-ambientShadow.ImageTransparency = 0.880
-ambientShadow.ScaleType = Enum.ScaleType.Slice
-ambientShadow.SliceCenter = Rect.new(10, 10, 118, 118)
-
-UICorner.Parent = Cubix_Main
-
-ButtonExit.Name = "ButtonExit"
-ButtonExit.Parent = Cubix_Main
-ButtonExit.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
-ButtonExit.BorderColor3 = Color3.fromRGB(0, 0, 0)
-ButtonExit.BorderSizePixel = 0
-ButtonExit.Position = UDim2.new(0.926829278, 0, 0.0422077924, 0)
-ButtonExit.Size = UDim2.new(0, 29, 0, 26)
-
-UICorner_2.Parent = ButtonExit
-
-ImageButton.Parent = ButtonExit
-ImageButton.BackgroundColor3 = Color3.fromRGB(200, 200, 200)
-ImageButton.BackgroundTransparency = 1.000
-ImageButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
-ImageButton.BorderSizePixel = 0
-ImageButton.Position = UDim2.new(0.103448279, 0, 0.15384616, 0)
-ImageButton.Size = UDim2.new(0, 23, 0, 18)
-ImageButton.Image = "rbxassetid://10747384394"
-ImageButton.MouseButton1Down:connect(function()
-    Cubix_Main.Visible = false
-    Hide_2.Visible = true
+spawn(function()
+    if setfpscap then
+        setfpscap(100)
+    end
 end)
-Hide_2.MouseButton1Down:connect(function()
-    Cubix_Main.Visible = true
-    Hide_2.Visible = false
-end)
-ImageLabel.Parent = Cubix_Main
-ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ImageLabel.BackgroundTransparency = 1.000
-ImageLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
-ImageLabel.BorderSizePixel = 0
-ImageLabel.Position = UDim2.new(0.022648083, 0, 0.0097402595, 0)
-ImageLabel.Size = UDim2.new(0, 43, 0, 45)
-ImageLabel.Image = "rbxassetid://16163653051"
 
-Tab.Name = "Tab"
-Tab.Parent = Cubix_Main
-Tab.BackgroundColor3 = Color3.fromRGB(21, 21, 21)
-Tab.BackgroundTransparency = 0.100
-Tab.BorderColor3 = Color3.fromRGB(29, 29, 29)
-Tab.BorderSizePixel = 0
-Tab.Position = UDim2.new(0.00348432059, 0, 1.0129869, 0)
-Tab.Size = UDim2.new(0, 574, 0, 39)
+CubiX.Name = "CubiX"
+CubiX.Parent = gethui()
+CubiX.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+CubiX.ResetOnSpawn = false
 
-UICorner_3.Parent = Tab
+Open.Name = "Open"
+Open.Parent = CubiX
+Open.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+Open.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Open.BorderSizePixel = 0
+Open.Position = UDim2.new(0.901421309, 0, 0.0284554306, 0)
+Open.Size = UDim2.new(0, 46, 0, 46)
+Open.Image = "rbxassetid://16163653051"
+Open.ScaleType = Enum.ScaleType.Fit
 
-FrameHome.Name = "FrameHome"
-FrameHome.Parent = Tab
-FrameHome.BackgroundColor3 = Color3.fromRGB(24, 24, 24)
-FrameHome.BorderColor3 = Color3.fromRGB(0, 0, 0)
-FrameHome.BorderSizePixel = 0
-FrameHome.Position = UDim2.new(0.0296167247, 0, 0.102564104, 0)
-FrameHome.Size = UDim2.new(0, 33, 0, 35)
+UICorner.CornerRadius = UDim.new(0, 50)
+UICorner.Parent = Open
 
-UICorner_4.Parent = FrameHome
+Tabs.Name = "Tabs"
+Tabs.Parent = CubiX
+Tabs.BackgroundColor3 = Color3.fromRGB(8, 8, 8)
+Tabs.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Tabs.BorderSizePixel = 0
+Tabs.Position = UDim2.new(0.110799439, 0, 0.151771486, 0)
+Tabs.Size = UDim2.new(0, 56, 0, 250)
+Tabs.Visible = false
 
-ImageButton_2.Parent = FrameHome
-ImageButton_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ImageButton_2.BackgroundTransparency = 1.000
-ImageButton_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-ImageButton_2.BorderSizePixel = 0
-ImageButton_2.Position = UDim2.new(0.152060762, 0, 0.119233049, 0)
-ImageButton_2.Rotation = 1.000
-ImageButton_2.Size = UDim2.new(0, 23, 0, 22)
-ImageButton_2.Image = "rbxassetid://7733960981"
+UICorner_2.Parent = Tabs
 
-Main.Name = "Main"
-Main.Parent = FrameHome
-Main.BackgroundColor3 = Color3.fromRGB(4, 4, 4)
-Main.BackgroundTransparency = 0.100
-Main.BorderColor3 = Color3.fromRGB(12, 12, 12)
-Main.BorderSizePixel = 0
-Main.Position = UDim2.new(-0.0985643789, 0, -7.57402611, 0)
-Main.Size = UDim2.new(0, 547, 0, 248)
+Avatar.Name = "Avatar"
+Avatar.Parent = Tabs
+Avatar.BackgroundColor3 = Color3.fromRGB(7, 7, 7)
+Avatar.BackgroundTransparency = 1.000
+Avatar.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Avatar.BorderSizePixel = 0
+Avatar.Position = UDim2.new(0.12731497, 0, 0.0232727658, 0)
+Avatar.Size = UDim2.new(0, 41, 0, 42)
+Avatar.Image = "rbxassetid://16163653051"
+Avatar.ScaleType = Enum.ScaleType.Fit
 
-UICorner_5.Parent = Main
+UICorner_3.CornerRadius = UDim.new(0, 6)
+UICorner_3.Parent = Avatar
 
-Profile.Name = "Profile"
-Profile.Parent = Main
-Profile.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
-Profile.BackgroundTransparency = 0.200
-Profile.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Profile.BorderSizePixel = 0
-Profile.Position = UDim2.new(0.0182815362, 0, 0.0282258056, 0)
-Profile.Size = UDim2.new(0, 526, 0, 234)
+HomeDisplay.Name = "Home-Display"
+HomeDisplay.Parent = Tabs
+HomeDisplay.BackgroundColor3 = Color3.fromRGB(16, 16, 16)
+HomeDisplay.BorderColor3 = Color3.fromRGB(0, 0, 0)
+HomeDisplay.BorderSizePixel = 0
+HomeDisplay.Position = UDim2.new(0.189153403, 0, 0.209818169, 0)
+HomeDisplay.Size = UDim2.new(0, 34, 0, 33)
 
-ImageLabel_2.Parent = Profile
-ImageLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ImageLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-ImageLabel_2.BorderSizePixel = 0
-ImageLabel_2.Position = UDim2.new(0.0152091254, 0, 0.0341880359, 0)
-ImageLabel_2.Size = UDim2.new(0, 100, 0, 100)
-ImageLabel_2.Image = "https://www.roblox.com/headshot-thumbnail/image?userId="..game.Players.LocalPlayer.UserId.."&width=420&height=420&format=png"
+UICorner_4.CornerRadius = UDim.new(0, 7)
+UICorner_4.Parent = HomeDisplay
 
-UICorner_6.CornerRadius = UDim.new(2.5, 0)
-UICorner_6.Parent = ImageLabel_2
+HomeIconBTN.Name = "Home-Icon-BTN"
+HomeIconBTN.Parent = HomeDisplay
+HomeIconBTN.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+HomeIconBTN.BackgroundTransparency = 1.000
+HomeIconBTN.BorderColor3 = Color3.fromRGB(0, 0, 0)
+HomeIconBTN.BorderSizePixel = 0
+HomeIconBTN.Position = UDim2.new(0.0882352963, 0, 0.121212125, 0)
+HomeIconBTN.Size = UDim2.new(0, 27, 0, 25)
+HomeIconBTN.Image = "rbxassetid://7733960981"
+HomeIconBTN.ScaleType = Enum.ScaleType.Fit
 
-UIStroke.Thickness = 2
-UIStroke.Parent = ImageLabel_2
+HomeTab.Name = "Home-Tab"
+HomeTab.Parent = HomeIconBTN
+HomeTab.BackgroundColor3 = Color3.fromRGB(8, 8, 8)
+HomeTab.BorderColor3 = Color3.fromRGB(0, 0, 0)
+HomeTab.BorderSizePixel = 0
+HomeTab.Position = UDim2.new(1.74074125, 0, -2.27999973, 0)
+HomeTab.Size = UDim2.new(0, 445, 0, 249)
 
-Username.Name = "Username"
-Username.Parent = ImageLabel_2
-Username.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Username.BackgroundTransparency = 1.000
-Username.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Username.BorderSizePixel = 0
-Username.Position = UDim2.new(1.10000002, 0, 0.25, 0)
-Username.Size = UDim2.new(0, 200, 0, 50)
-Username.Font = Enum.Font.ArialBold
-Username.Text = "Hello, "..game.Players.LocalPlayer.Name
-Username.TextColor3 = Color3.fromRGB(255, 255, 255)
-Username.TextSize = 23.000
-Username.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-Username.TextXAlignment = Enum.TextXAlignment.Left
+UICorner_5.CornerRadius = UDim.new(0, 11)
+UICorner_5.Parent = HomeTab
 
-ChangeLog.Name = "ChangeLog"
-ChangeLog.Parent = Profile
-ChangeLog.BackgroundColor3 = Color3.fromRGB(13, 13, 13)
-ChangeLog.BorderColor3 = Color3.fromRGB(0, 0, 0)
-ChangeLog.BorderSizePixel = 0
-ChangeLog.Position = UDim2.new(0.693916321, 0, 0.0341880359, 0)
-ChangeLog.Size = UDim2.new(0, 154, 0, 219)
+TitleWelcome.Name = "TitleWelcome"
+TitleWelcome.Parent = HomeTab
+TitleWelcome.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TitleWelcome.BackgroundTransparency = 1.000
+TitleWelcome.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TitleWelcome.BorderSizePixel = 0
+TitleWelcome.Position = UDim2.new(0.027777778, 0, 0.0519851372, 0)
+TitleWelcome.Size = UDim2.new(0, 200, 0, 32)
+TitleWelcome.Font = Enum.Font.GothamMedium
+TitleWelcome.Text = "Welcome, User!"
+TitleWelcome.TextColor3 = Color3.fromRGB(255, 255, 255)
+TitleWelcome.TextSize = 18.000
+TitleWelcome.TextXAlignment = Enum.TextXAlignment.Left
 
-UICorner_7.Parent = ChangeLog
+CheckOut.Name = "Check-Out"
+CheckOut.Parent = HomeTab
+CheckOut.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CheckOut.BackgroundTransparency = 1.000
+CheckOut.BorderColor3 = Color3.fromRGB(0, 0, 0)
+CheckOut.BorderSizePixel = 0
+CheckOut.Position = UDim2.new(0.0462962948, 0, 0.174434111, 0)
+CheckOut.Size = UDim2.new(0, 183, 0, 24)
+CheckOut.Font = Enum.Font.GothamMedium
+CheckOut.Text = "Check out what's new:"
+CheckOut.TextColor3 = Color3.fromRGB(255, 255, 255)
+CheckOut.TextScaled = true
+CheckOut.TextSize = 14.000
+CheckOut.TextWrapped = true
+CheckOut.TextXAlignment = Enum.TextXAlignment.Left
 
-TextChangLog.Name = "TextChangLog"
-TextChangLog.Parent = ChangeLog
-TextChangLog.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextChangLog.BackgroundTransparency = 1.000
-TextChangLog.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextChangLog.BorderSizePixel = 0
-TextChangLog.Size = UDim2.new(0, 154, 0, 219)
-TextChangLog.Font = Enum.Font.SourceSans
-TextChangLog.Text = "\\n-- > Change Log Cubix < --\\n\\n-- Fixed Blox Fruit\\n-- Fixed Laggy\\n-- Fixed blade Ball\\n-- New Ui\\n"
-TextChangLog.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextChangLog.TextSize = 17.000
-TextChangLog.TextXAlignment = Enum.TextXAlignment.Left
-TextChangLog.TextYAlignment = Enum.TextYAlignment.Top
+ChangeLogsBG.Name = "Change-Logs BG"
+ChangeLogsBG.Parent = HomeTab
+ChangeLogsBG.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+ChangeLogsBG.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ChangeLogsBG.BorderSizePixel = 0
+ChangeLogsBG.Position = UDim2.new(0.56706202, 0, 0.159454226, 0)
+ChangeLogsBG.Size = UDim2.new(0, 181, 0, 171)
 
-UICorner_8.Parent = TextChangLog
+UICorner_6.CornerRadius = UDim.new(0, 7)
+UICorner_6.Parent = ChangeLogsBG
 
-FrameDiscord.Name = "FrameDiscord"
-FrameDiscord.Parent = Main
-FrameDiscord.BackgroundColor3 = Color3.fromRGB(13, 13, 13)
-FrameDiscord.BorderColor3 = Color3.fromRGB(0, 0, 0)
-FrameDiscord.BorderSizePixel = 0
-FrameDiscord.Position = UDim2.new(0.0329067633, 0, 0.564516127, 0)
-FrameDiscord.Size = UDim2.new(0, 349, 0, 94)
+TitleChangeLogs.Name = "TitleChangeLogs"
+TitleChangeLogs.Parent = ChangeLogsBG
+TitleChangeLogs.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TitleChangeLogs.BackgroundTransparency = 1.000
+TitleChangeLogs.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TitleChangeLogs.BorderSizePixel = 0
+TitleChangeLogs.Position = UDim2.new(0.034285713, 0, 0.0198954977, 0)
+TitleChangeLogs.Size = UDim2.new(0, 110, 0, 24)
+TitleChangeLogs.Font = Enum.Font.GothamMedium
+TitleChangeLogs.Text = "Changelogs:"
+TitleChangeLogs.TextColor3 = Color3.fromRGB(255, 255, 255)
+TitleChangeLogs.TextSize = 18.000
+TitleChangeLogs.TextXAlignment = Enum.TextXAlignment.Left
 
-UICorner_9.Parent = FrameDiscord
+BGX.Name = "BGX"
+BGX.Parent = ChangeLogsBG
+BGX.BackgroundColor3 = Color3.fromRGB(8, 8, 8)
+BGX.BorderColor3 = Color3.fromRGB(0, 0, 0)
+BGX.BorderSizePixel = 0
+BGX.Position = UDim2.new(0.0342855714, 0, 0.157894731, 0)
+BGX.Size = UDim2.new(0, 168, 0, 137)
+
+UICorner_7.CornerRadius = UDim.new(0, 6)
+UICorner_7.Parent = BGX
+
+xx.Name = "xx"
+xx.Parent = BGX
+xx.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+xx.BackgroundTransparency = 1.000
+xx.BorderColor3 = Color3.fromRGB(0, 0, 0)
+xx.BorderSizePixel = 0
+xx.Position = UDim2.new(0.0432098769, 0, 0.0364963487, 0)
+xx.Size = UDim2.new(0, 154, 0, 22)
+xx.Font = Enum.Font.Gotham
+xx.Text = "- Fixed Crashes & Bugs"
+xx.TextColor3 = Color3.fromRGB(255, 255, 255)
+xx.TextSize = 14.000
+xx.TextWrapped = true
+xx.TextXAlignment = Enum.TextXAlignment.Left
+
+xx_2.Name = "xx"
+xx_2.Parent = BGX
+xx_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+xx_2.BackgroundTransparency = 1.000
+xx_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+xx_2.BorderSizePixel = 0
+xx_2.Position = UDim2.new(0.0432098769, 0, 0.197080299, 0)
+xx_2.Size = UDim2.new(0, 148, 0, 36)
+xx_2.Font = Enum.Font.Gotham
+xx_2.Text = "- Added Script Hub & Settings!"
+xx_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+xx_2.TextSize = 14.000
+xx_2.TextWrapped = true
+xx_2.TextXAlignment = Enum.TextXAlignment.Left
+
+xx_3.Name = "xx"
+xx_3.Parent = BGX
+xx_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+xx_3.BackgroundTransparency = 1.000
+xx_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+xx_3.BorderSizePixel = 0
+xx_3.Position = UDim2.new(0.0432098024, 0, 0.459854007, 0)
+xx_3.Size = UDim2.new(0, 148, 0, 21)
+xx_3.Font = Enum.Font.Gotham
+xx_3.Text = "- New User Interface"
+xx_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+xx_3.TextSize = 14.000
+xx_3.TextWrapped = true
+xx_3.TextXAlignment = Enum.TextXAlignment.Left
+
+xx_4.Name = "xx"
+xx_4.Parent = BGX
+xx_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+xx_4.BackgroundTransparency = 1.000
+xx_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+xx_4.BorderSizePixel = 0
+xx_4.Position = UDim2.new(0.0432099849, 0, 0.554744542, 0)
+xx_4.Size = UDim2.new(0, 148, 0, 36)
+xx_4.Font = Enum.Font.Gotham
+xx_4.Text = "- Updated to V1.2"
+xx_4.TextColor3 = Color3.fromRGB(255, 255, 255)
+xx_4.TextSize = 14.000
+xx_4.TextWrapped = true
+xx_4.TextXAlignment = Enum.TextXAlignment.Left
+
+DiscordInvite.Name = "DiscordInvite"
+DiscordInvite.Parent = HomeTab
+DiscordInvite.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
+DiscordInvite.BorderColor3 = Color3.fromRGB(0, 0, 0)
+DiscordInvite.BorderSizePixel = 0
+DiscordInvite.Position = UDim2.new(0.0269662924, 0, 0.506024003, 0)
+DiscordInvite.Size = UDim2.new(0, 226, 0, 84)
+
+UICorner_8.Parent = DiscordInvite
+
+LogoTmrx.Name = "LogoTmrx"
+LogoTmrx.Parent = DiscordInvite
+LogoTmrx.BackgroundColor3 = Color3.fromRGB(24, 24, 24)
+LogoTmrx.BackgroundTransparency = 1.000
+LogoTmrx.BorderColor3 = Color3.fromRGB(0, 0, 0)
+LogoTmrx.BorderSizePixel = 0
+LogoTmrx.Size = UDim2.new(0, 56, 0, 45)
+LogoTmrx.Image = "rbxassetid://16172891740"
+
+UICorner_9.Parent = LogoTmrx
 
 DiscordLogo.Name = "DiscordLogo"
-DiscordLogo.Parent = FrameDiscord
-DiscordLogo.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
-DiscordLogo.BackgroundTransparency = 0.200
+DiscordLogo.Parent = DiscordInvite
+DiscordLogo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+DiscordLogo.BackgroundTransparency = 1.000
 DiscordLogo.BorderColor3 = Color3.fromRGB(0, 0, 0)
 DiscordLogo.BorderSizePixel = 0
-DiscordLogo.Position = UDim2.new(0.0200573057, 0, 0.097560972, 0)
-DiscordLogo.Size = UDim2.new(0, 48, 0, 39)
-DiscordLogo.Image = "rbxassetid://16172891740"
+DiscordLogo.Position = UDim2.new(0.869919777, 0, 0.028808957, 0)
+DiscordLogo.Size = UDim2.new(0, 27, 0, 22)
+DiscordLogo.Image = "rbxassetid://16241762064"
 
-UICorner_10.Parent = DiscordLogo
-
-JoinServer.Name = "JoinServer"
-JoinServer.Parent = FrameDiscord
-JoinServer.BackgroundColor3 = Color3.fromRGB(0, 197, 0)
-JoinServer.BorderColor3 = Color3.fromRGB(0, 0, 0)
-JoinServer.BorderSizePixel = 0
-JoinServer.Position = UDim2.new(0.037249282, 0, 0.615723968, 0)
-JoinServer.Size = UDim2.new(0, 324, 0, 28)
-JoinServer.Font = Enum.Font.SourceSansBold
-JoinServer.Text = "Join Server"
-JoinServer.TextColor3 = Color3.fromRGB(255, 255, 255)
-JoinServer.TextSize = 14.000
-JoinServer.MouseButton1Down:connect(function()
-    setclipboard(getgenv().Discord)
-    JoinServer.Text = "Copied to Clipboard"
-    wait(.4)
-    JoinServer.Text = "Join Server"
+JoinDiscord.Name = "Join Discord"
+JoinDiscord.Parent = DiscordInvite
+JoinDiscord.BackgroundColor3 = Color3.fromRGB(0, 141, 0)
+JoinDiscord.BorderColor3 = Color3.fromRGB(0, 0, 0)
+JoinDiscord.BorderSizePixel = 0
+JoinDiscord.Position = UDim2.new(0.0380613618, 0, 0.61552608, 0)
+JoinDiscord.Size = UDim2.new(0, 211, 0, 25)
+JoinDiscord.Font = Enum.Font.SourceSansBold
+JoinDiscord.Text = "Join Server"
+JoinDiscord.TextColor3 = Color3.fromRGB(255, 255, 255)
+JoinDiscord.TextSize = 21.000
+JoinDiscord.MouseButton1Click:Connect(function()
+	setclipboard(getgenv().Discord)
+	JoinDiscord.Text = "Copied to Clipboard"
+	wait(.4)
+	JoinDiscord.Text = "Join Server"
 end)
 
-UICorner_11.Parent = JoinServer
+UICorner_10.Parent = JoinDiscord
 
-TextMemeber.Name = "TextMemeber"
-TextMemeber.Parent = FrameDiscord
-TextMemeber.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextMemeber.BackgroundTransparency = 1.000
-TextMemeber.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextMemeber.BorderSizePixel = 0
-TextMemeber.Position = UDim2.new(0.180515766, 0, 0.170212761, 0)
-TextMemeber.Size = UDim2.new(0, 200, 0, 24)
-TextMemeber.Font = Enum.Font.SourceSansBold
-TextMemeber.Text = "11,000 - Memeber"
-TextMemeber.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextMemeber.TextSize = 14.000
-TextMemeber.TextXAlignment = Enum.TextXAlignment.Left
+TextLabel.Parent = DiscordInvite
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0.207964599, 0, 0.127430141, 0)
+TextLabel.Size = UDim2.new(0, 111, 0, 25)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "TMR 𝕏 Community | 2024"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextSize = 14.000
+TextLabel.TextXAlignment = Enum.TextXAlignment.Left
 
-ImageLabel_3.Parent = FrameDiscord
-ImageLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ImageLabel_3.BackgroundTransparency = 1.000
-ImageLabel_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
-ImageLabel_3.Position = UDim2.new(0.853868186, 0, 0.0975611284, 0)
-ImageLabel_3.Size = UDim2.new(0, 39, 0, 36)
-ImageLabel_3.Image = "rbxassetid://16241762064"
+CodeDisplay.Name = "Code-Display"
+CodeDisplay.Parent = Tabs
+CodeDisplay.BackgroundColor3 = Color3.fromRGB(16, 16, 16)
+CodeDisplay.BorderColor3 = Color3.fromRGB(0, 0, 0)
+CodeDisplay.BorderSizePixel = 0
+CodeDisplay.Position = UDim2.new(0.193121776, 0, 0.381818175, 0)
+CodeDisplay.Size = UDim2.new(0, 34, 0, 33)
 
-FrameExecute.Name = "FrameExecute"
-FrameExecute.Parent = Tab
-FrameExecute.BackgroundColor3 = Color3.fromRGB(24, 24, 24)
-FrameExecute.BorderColor3 = Color3.fromRGB(0, 0, 0)
-FrameExecute.BorderSizePixel = 0
-FrameExecute.Position = UDim2.new(0.106271774, 0, 0.051282052, 0)
-FrameExecute.Size = UDim2.new(0, 33, 0, 35)
+UICorner_11.CornerRadius = UDim.new(0, 7)
+UICorner_11.Parent = CodeDisplay
 
-UICorner_12.Parent = FrameExecute
+CodeIconBTN.Name = "Code-Icon-BTN"
+CodeIconBTN.Parent = CodeDisplay
+CodeIconBTN.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CodeIconBTN.BackgroundTransparency = 1.000
+CodeIconBTN.BorderColor3 = Color3.fromRGB(0, 0, 0)
+CodeIconBTN.BorderSizePixel = 0
+CodeIconBTN.Position = UDim2.new(0.0882352963, 0, 0.121212125, 0)
+CodeIconBTN.Size = UDim2.new(0, 27, 0, 25)
+CodeIconBTN.Image = "rbxassetid://7733920644"
+CodeIconBTN.ScaleType = Enum.ScaleType.Fit
 
-ImageButton_3.Parent = FrameExecute
-ImageButton_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ImageButton_3.BackgroundTransparency = 1.000
-ImageButton_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
-ImageButton_3.BorderSizePixel = 0
-ImageButton_3.Position = UDim2.new(0.121757738, 0, 0.233518764, 0)
-ImageButton_3.Rotation = 1.000
-ImageButton_3.Size = UDim2.new(0, 23, 0, 22)
-ImageButton_3.Image = "rbxassetid://7734079055"
+CodeTab.Name = "Code-Tab"
+CodeTab.Parent = CodeIconBTN
+CodeTab.BackgroundColor3 = Color3.fromRGB(8, 8, 8)
+CodeTab.BorderColor3 = Color3.fromRGB(0, 0, 0)
+CodeTab.BorderSizePixel = 0
+CodeTab.Position = UDim2.new(1.74074078, 0, -3.99999976, 0)
+CodeTab.Size = UDim2.new(0, 444, 0, 249)
+CodeTab.Visible = false
 
-Main_2.Name = "Main"
-Main_2.Parent = FrameExecute
-Main_2.BackgroundColor3 = Color3.fromRGB(4, 4, 4)
-Main_2.BackgroundTransparency = 0.100
-Main_2.BorderColor3 = Color3.fromRGB(12, 12, 12)
-Main_2.BorderSizePixel = 0
-Main_2.Position = UDim2.new(-1.46220076, 0, -7.51688337, 0)
-Main_2.Size = UDim2.new(0, 547, 0, 248)
-Main_2.Visible = false
+UICorner_12.CornerRadius = UDim.new(0, 11)
+UICorner_12.Parent = CodeTab
 
-UICorner_13.Parent = Main_2
+TitleCode.Name = "TitleCode"
+TitleCode.Parent = CodeTab
+TitleCode.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TitleCode.BackgroundTransparency = 1.000
+TitleCode.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TitleCode.BorderSizePixel = 0
+TitleCode.Position = UDim2.new(0.0254629627, 0, 0.0111688105, 0)
+TitleCode.Size = UDim2.new(0, 200, 0, 32)
+TitleCode.Font = Enum.Font.GothamMedium
+TitleCode.Text = "Script Editor"
+TitleCode.TextColor3 = Color3.fromRGB(255, 255, 255)
+TitleCode.TextSize = 18.000
+TitleCode.TextXAlignment = Enum.TextXAlignment.Left
 
-TextFrame.Name = "TextFrame"
-TextFrame.Parent = Main_2
-TextFrame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
-TextFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextFrame.BorderSizePixel = 0
-TextFrame.Position = UDim2.new(0.0146252289, 0, 0.0282258056, 0)
-TextFrame.Size = UDim2.new(0, 530, 0, 192)
+Display.Name = "Display"
+Display.Parent = CodeTab
+Display.BackgroundColor3 = Color3.fromRGB(3, 3, 3)
+Display.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Display.BorderSizePixel = 0
+Display.Position = UDim2.new(0.0250877868, 0, 0.119088657, 0)
+Display.Size = UDim2.new(0, 420, 0, 156)
 
-UICorner_14.Parent = TextFrame
+UICorner_13.CornerRadius = UDim.new(0, 6)
+UICorner_13.Parent = Display
 
-ScrollingFrame.Parent = TextFrame
+ScrollingFrame.Parent = Display
 ScrollingFrame.Active = true
 ScrollingFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 ScrollingFrame.BackgroundTransparency = 1.000
 ScrollingFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 ScrollingFrame.BorderSizePixel = 0
-ScrollingFrame.Size = UDim2.new(0, 530, 0, 192)
-ScrollingFrame.BottomImage = ""
-ScrollingFrame.CanvasSize = UDim2.new(0, 0, 0, 0)
-ScrollingFrame.BottomImage = ""
+ScrollingFrame.Position = UDim2.new(0.0196559001, 0, 0.0409837365, 0)
+ScrollingFrame.Size = UDim2.new(0, 405, 0, 144)
+ScrollingFrame.CanvasSize = UDim2.new(0, 0, 2, 5)
 ScrollingFrame.ScrollBarImageColor3 = Color3.fromRGB(0, 0, 0)
-
-UICorner_15.Parent = ScrollingFrame
 
 TextBox.Parent = ScrollingFrame
 TextBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextBox.BackgroundTransparency = 1.000
 TextBox.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextBox.BorderSizePixel = 0
-TextBox.Position = UDim2.new(0.0113207549, 0, 0.00520833349, 0)
-TextBox.Size = UDim2.new(0, 530, 0, 192)
+TextBox.Size = UDim2.new(0, 398, 0, 317)
 TextBox.ClearTextOnFocus = false
-TextBox.Font = Enum.Font.SourceSansBold
+TextBox.Font = Enum.Font.Gotham
+TextBox.PlaceholderText = "-- Here you can execute your favorite scripts!"
 TextBox.Text = ""
 TextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextBox.TextSize = 19.000
+TextBox.TextSize = 14.000
+TextBox.TextWrapped = true
 TextBox.TextXAlignment = Enum.TextXAlignment.Left
 TextBox.TextYAlignment = Enum.TextYAlignment.Top
 
-UICorner_16.Parent = TextBox
+ClearDisplay.Name = "Clear-Display"
+ClearDisplay.Parent = CodeTab
+ClearDisplay.BackgroundColor3 = Color3.fromRGB(4, 4, 4)
+ClearDisplay.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ClearDisplay.BorderSizePixel = 0
+ClearDisplay.Position = UDim2.new(0.0270270277, 0, 0.779116333, 0)
+ClearDisplay.Size = UDim2.new(0, 104, 0, 44)
 
-UIStroke_2.Thickness = 1.100000023841858
-UIStroke_2.Parent = TextBox
+UICorner_14.CornerRadius = UDim.new(0, 6)
+UICorner_14.Parent = ClearDisplay
 
-ExecuteButton.Name = "ExecuteButton"
-ExecuteButton.Parent = Main_2
-ExecuteButton.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
-ExecuteButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
-ExecuteButton.BorderSizePixel = 0
-ExecuteButton.Position = UDim2.new(0.0164533816, 0, 0.84677422, 0)
-ExecuteButton.Size = UDim2.new(0, 219, 0, 31)
-ExecuteButton.Font = Enum.Font.SourceSansBold
-ExecuteButton.Text = "Execute"
-ExecuteButton.TextColor3 = Color3.fromRGB(255, 255, 255)
-ExecuteButton.TextSize = 30.000
-ExecuteButton.MouseButton1Down:connect(function()
-    executecode(TextBox.Text)
-end)
+ClearBTN.Name = "Clear-BTN"
+ClearBTN.Parent = ClearDisplay
+ClearBTN.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ClearBTN.BackgroundTransparency = 1.000
+ClearBTN.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ClearBTN.BorderSizePixel = 0
+ClearBTN.Size = UDim2.new(0, 104, 0, 44)
+ClearBTN.Font = Enum.Font.Gotham
+ClearBTN.Text = "Clear"
+ClearBTN.TextColor3 = Color3.fromRGB(255, 255, 255)
+ClearBTN.TextSize = 18.000
 
-UICorner_17.Parent = ExecuteButton
+CopyDisplay.Name = "Copy-Display"
+CopyDisplay.Parent = CodeTab
+CopyDisplay.BackgroundColor3 = Color3.fromRGB(4, 4, 4)
+CopyDisplay.BorderColor3 = Color3.fromRGB(0, 0, 0)
+CopyDisplay.BorderSizePixel = 0
+CopyDisplay.Position = UDim2.new(0.283783793, 0, 0.779116333, 0)
+CopyDisplay.Size = UDim2.new(0, 102, 0, 44)
 
-ClearButton.Name = "ClearButton"
-ClearButton.Parent = Main_2
-ClearButton.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
-ClearButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
-ClearButton.BorderSizePixel = 0
-ClearButton.Position = UDim2.new(0.436928689, 0, 0.84677422, 0)
-ClearButton.Size = UDim2.new(0, 140, 0, 31)
-ClearButton.Font = Enum.Font.SourceSansBold
-ClearButton.Text = "Clear"
-ClearButton.TextColor3 = Color3.fromRGB(255, 255, 255)
-ClearButton.TextSize = 30.000
-ClearButton.MouseButton1Down:connect(function()
-    TextBox.Text = ""
-end)
-UICorner_18.Parent = ClearButton
+UICorner_15.CornerRadius = UDim.new(0, 6)
+UICorner_15.Parent = CopyDisplay
 
-PasteButton.Name = "PasteButton"
-PasteButton.Parent = Main_2
-PasteButton.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
-PasteButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
-PasteButton.BorderSizePixel = 0
-PasteButton.Position = UDim2.new(0.727605104, 0, 0.84677422, 0)
-PasteButton.Size = UDim2.new(0, 140, 0, 31)
-PasteButton.Font = Enum.Font.SourceSansBold
-PasteButton.Text = "Paste"
-PasteButton.TextColor3 = Color3.fromRGB(255, 255, 255)
-PasteButton.TextSize = 30.000
-PasteButton.MouseButton1Down:connect(function()
-    TextBox.Text = getclipboard()
-end)
+CopyBTN.Name = "Copy-BTN"
+CopyBTN.Parent = CopyDisplay
+CopyBTN.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CopyBTN.BackgroundTransparency = 1.000
+CopyBTN.BorderColor3 = Color3.fromRGB(0, 0, 0)
+CopyBTN.BorderSizePixel = 0
+CopyBTN.Position = UDim2.new(-0.00152288703, 0, 0, 0)
+CopyBTN.Size = UDim2.new(0, 103, 0, 44)
+CopyBTN.Font = Enum.Font.Gotham
+CopyBTN.Text = "Copy Text"
+CopyBTN.TextColor3 = Color3.fromRGB(255, 255, 255)
+CopyBTN.TextSize = 18.000
 
-UICorner_19.Parent = PasteButton
+PasteDisplay.Name = "Paste-Display"
+PasteDisplay.Parent = CodeTab
+PasteDisplay.BackgroundColor3 = Color3.fromRGB(4, 4, 4)
+PasteDisplay.BorderColor3 = Color3.fromRGB(0, 0, 0)
+PasteDisplay.BorderSizePixel = 0
+PasteDisplay.Position = UDim2.new(0.533783793, 0, 0.779116333, 0)
+PasteDisplay.Size = UDim2.new(0, 96, 0, 44)
 
-FrameSetting.Name = "FrameSetting"
-FrameSetting.Parent = Tab
-FrameSetting.BackgroundColor3 = Color3.fromRGB(24, 24, 24)
-FrameSetting.BorderColor3 = Color3.fromRGB(0, 0, 0)
-FrameSetting.BorderSizePixel = 0
-FrameSetting.Position = UDim2.new(0.932055771, 0, 0.051282052, 0)
-FrameSetting.Size = UDim2.new(0, 33, 0, 35)
+UICorner_16.CornerRadius = UDim.new(0, 6)
+UICorner_16.Parent = PasteDisplay
 
-UICorner_20.Parent = FrameSetting
+PasteBTN.Name = "Paste-BTN"
+PasteBTN.Parent = PasteDisplay
+PasteBTN.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+PasteBTN.BackgroundTransparency = 1.000
+PasteBTN.BorderColor3 = Color3.fromRGB(0, 0, 0)
+PasteBTN.BorderSizePixel = 0
+PasteBTN.Size = UDim2.new(0, 96, 0, 44)
+PasteBTN.Font = Enum.Font.Gotham
+PasteBTN.Text = "Paste Text"
+PasteBTN.TextColor3 = Color3.fromRGB(255, 255, 255)
+PasteBTN.TextSize = 18.000
 
-ImageButton_4.Parent = FrameSetting
-ImageButton_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ImageButton_4.BackgroundTransparency = 1.000
-ImageButton_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
-ImageButton_4.BorderSizePixel = 0
-ImageButton_4.Position = UDim2.new(0.121757738, 0, 0.233518764, 0)
-ImageButton_4.Rotation = 1.000
-ImageButton_4.Size = UDim2.new(0, 23, 0, 22)
-ImageButton_4.Image = "rbxassetid://10734950309"
+ExecDisplay.Name = "Exec-Display"
+ExecDisplay.Parent = CodeTab
+ExecDisplay.BackgroundColor3 = Color3.fromRGB(4, 4, 4)
+ExecDisplay.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ExecDisplay.BorderSizePixel = 0
+ExecDisplay.Position = UDim2.new(0.765765786, 0, 0.779116333, 0)
+ExecDisplay.Size = UDim2.new(0, 92, 0, 44)
 
-Main_3.Name = "Main"
-Main_3.Parent = FrameSetting
-Main_3.BackgroundColor3 = Color3.fromRGB(4, 4, 4)
-Main_3.BackgroundTransparency = 0.100
-Main_3.BorderColor3 = Color3.fromRGB(12, 12, 12)
-Main_3.BorderSizePixel = 0
-Main_3.Position = UDim2.new(-15.8258371, 0, -7.60259771, 0)
-Main_3.Size = UDim2.new(0, 547, 0, 248)
-Main_3.Visible = false
+UICorner_17.CornerRadius = UDim.new(0, 6)
+UICorner_17.Parent = ExecDisplay
 
-UICorner_21.Parent = Main_3
+ExecBTN.Name = "Exec-BTN"
+ExecBTN.Parent = ExecDisplay
+ExecBTN.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ExecBTN.BackgroundTransparency = 1.000
+ExecBTN.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ExecBTN.BorderSizePixel = 0
+ExecBTN.Size = UDim2.new(0, 92, 0, 44)
+ExecBTN.Font = Enum.Font.Gotham
+ExecBTN.Text = "Execute"
+ExecBTN.TextColor3 = Color3.fromRGB(255, 255, 255)
+ExecBTN.TextSize = 18.000
 
-function Hop()
-    local PlaceID = game.PlaceId
-    local AllIDs = {}
-    local foundAnything = ""
-    local actualHour = os.date("!*t").hour
-    local Deleted = false
-    function TPReturner()
-        local Site;
-        if foundAnything == "" then
-            Site = game.HttpService:JSONDecode(game:HttpGet('https://games.roblox.com/v1/games/' .. PlaceID .. '/servers/Public?sortOrder=Asc&limit=100'))
-        else
-            Site = game.HttpService:JSONDecode(game:HttpGet('https://games.roblox.com/v1/games/' .. PlaceID .. '/servers/Public?sortOrder=Asc&limit=100&cursor=' .. foundAnything))
-        end
-        local ID = ""
-        if Site.nextPageCursor and Site.nextPageCursor ~= "null" and Site.nextPageCursor ~= nil then
-            foundAnything = Site.nextPageCursor
-        end
-        local num = 0;
-        for i,v in pairs(Site.data) do
-            local Possible = true
-            ID = tostring(v.id)
-            if tonumber(v.maxPlayers) > tonumber(v.playing) then
-                for _,Existing in pairs(AllIDs) do
-                    if num ~= 0 then
-                        if ID == tostring(Existing) then
-                            Possible = false
-                        end
-                    else
-                        if tonumber(actualHour) ~= tonumber(Existing) then
-                            local delFile = pcall(function()
-                                AllIDs = {}
-                                table.insert(AllIDs, actualHour)
-                            end)
-                        end
-                    end
-                    num = num + 1
-                end
-                if Possible == true then
-                    table.insert(AllIDs, ID)
-                    wait()
-                    pcall(function()
-                        wait()
-                        game:GetService("TeleportService"):TeleportToPlaceInstance(PlaceID, ID, game.Players.LocalPlayer)
-                    end)
-                    wait(4)
-                end
-            end
-        end
-    end
-    function Teleport() 
-        while wait() do
-            pcall(function()
-                TPReturner()
-                if foundAnything ~= "" then
-                    TPReturner()
-                end
-            end)
-        end
-    end
-    Teleport()
+ScriptHubDisplay.Name = "ScriptHub-Display"
+ScriptHubDisplay.Parent = Tabs
+ScriptHubDisplay.BackgroundColor3 = Color3.fromRGB(16, 16, 16)
+ScriptHubDisplay.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScriptHubDisplay.BorderSizePixel = 0
+ScriptHubDisplay.Position = UDim2.new(0.195143014, 0, 0.552999973, 0)
+ScriptHubDisplay.Size = UDim2.new(0, 34, 0, 33)
+
+UICorner_18.CornerRadius = UDim.new(0, 7)
+UICorner_18.Parent = ScriptHubDisplay
+
+ScriptHubIconBTN.Name = "ScriptHub-Icon-BTN"
+ScriptHubIconBTN.Parent = ScriptHubDisplay
+ScriptHubIconBTN.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ScriptHubIconBTN.BackgroundTransparency = 1.000
+ScriptHubIconBTN.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScriptHubIconBTN.BorderSizePixel = 0
+ScriptHubIconBTN.Position = UDim2.new(0.0882352963, 0, 0.121212125, 0)
+ScriptHubIconBTN.Size = UDim2.new(0, 27, 0, 25)
+ScriptHubIconBTN.Image = "rbxassetid://7733779730"
+ScriptHubIconBTN.ScaleType = Enum.ScaleType.Fit
+
+ScriptHubTab.Name = "ScriptHub-Tab"
+ScriptHubTab.Parent = ScriptHubIconBTN
+ScriptHubTab.BackgroundColor3 = Color3.fromRGB(8, 8, 8)
+ScriptHubTab.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScriptHubTab.BorderSizePixel = 0
+ScriptHubTab.Position = UDim2.new(1.772331, 0, -5.741817, 0)
+ScriptHubTab.Size = UDim2.new(0, 443, 0, 249)
+ScriptHubTab.Visible = false
+
+UICorner_19.CornerRadius = UDim.new(0, 11)
+UICorner_19.Parent = ScriptHubTab
+
+TitleScriptHub.Name = "TitleScriptHub"
+TitleScriptHub.Parent = ScriptHubTab
+TitleScriptHub.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TitleScriptHub.BackgroundTransparency = 1.000
+TitleScriptHub.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TitleScriptHub.BorderSizePixel = 0
+TitleScriptHub.Position = UDim2.new(0.0338600464, 0, 0.0522088371, 0)
+TitleScriptHub.Size = UDim2.new(0, 200, 0, 25)
+TitleScriptHub.Font = Enum.Font.Gotham
+TitleScriptHub.Text = "Script Hub"
+TitleScriptHub.TextColor3 = Color3.fromRGB(255, 255, 255)
+TitleScriptHub.TextSize = 21.000
+TitleScriptHub.TextXAlignment = Enum.TextXAlignment.Left
+
+ScrollingFrame_2.Parent = ScriptHubTab
+ScrollingFrame_2.Active = true
+ScrollingFrame_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ScrollingFrame_2.BackgroundTransparency = 1.000
+ScrollingFrame_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScrollingFrame_2.BorderSizePixel = 0
+ScrollingFrame_2.Position = UDim2.new(0.0203160271, 0, 0.172690794, 0)
+ScrollingFrame_2.Size = UDim2.new(0, 422, 0, 197)
+ScrollingFrame_2.ScrollBarImageColor3 = Color3.fromRGB(0, 0, 0)
+
+SpeedHubX.Name = "SpeedHubX"
+SpeedHubX.Parent = ScrollingFrame_2
+SpeedHubX.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SpeedHubX.BackgroundTransparency = 1.000
+SpeedHubX.BorderColor3 = Color3.fromRGB(0, 0, 0)
+SpeedHubX.BorderSizePixel = 0
+SpeedHubX.Position = UDim2.new(0.0142180091, 0, 0.00891485065, 0)
+SpeedHubX.Size = UDim2.new(0, 185, 0, 76)
+SpeedHubX.Image = "rbxassetid://16022917595"
+SpeedHubX.ScaleType = Enum.ScaleType.Crop
+
+UICorner_20.Parent = SpeedHubX
+
+ExecuteSPHX.Name = "ExecuteSPHX"
+ExecuteSPHX.Parent = SpeedHubX
+ExecuteSPHX.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ExecuteSPHX.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ExecuteSPHX.BorderSizePixel = 0
+ExecuteSPHX.Position = UDim2.new(0.562162161, 0, 0.644736826, 0)
+ExecuteSPHX.Size = UDim2.new(0, 74, 0, 24)
+ExecuteSPHX.Font = Enum.Font.GothamMedium
+ExecuteSPHX.Text = "Execute"
+ExecuteSPHX.TextColor3 = Color3.fromRGB(255, 255, 255)
+ExecuteSPHX.TextSize = 14.000
+
+UICorner_21.Parent = ExecuteSPHX
+
+IY.Name = "IY"
+IY.Parent = ScrollingFrame_2
+IY.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+IY.BackgroundTransparency = 1.000
+IY.BorderColor3 = Color3.fromRGB(0, 0, 0)
+IY.BorderSizePixel = 0
+IY.Position = UDim2.new(0.514218092, 0, 0.0118914768, 0)
+IY.Size = UDim2.new(0, 185, 0, 76)
+IY.Image = "http://www.roblox.com/asset/?id=15914349618"
+IY.ScaleType = Enum.ScaleType.Crop
+
+UICorner_22.Parent = IY
+
+ExecuteIY.Name = "ExecuteIY"
+ExecuteIY.Parent = IY
+ExecuteIY.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ExecuteIY.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ExecuteIY.BorderSizePixel = 0
+ExecuteIY.Position = UDim2.new(0.562162161, 0, 0.644736826, 0)
+ExecuteIY.Size = UDim2.new(0, 74, 0, 24)
+ExecuteIY.Font = Enum.Font.GothamMedium
+ExecuteIY.Text = "Execute"
+ExecuteIY.TextColor3 = Color3.fromRGB(255, 255, 255)
+ExecuteIY.TextSize = 14.000
+
+UICorner_23.Parent = ExecuteIY
+
+ZekromHubX.Name = "ZekromHubX"
+ZekromHubX.Parent = ScrollingFrame_2
+ZekromHubX.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ZekromHubX.BackgroundTransparency = 1.000
+ZekromHubX.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ZekromHubX.BorderSizePixel = 0
+ZekromHubX.Position = UDim2.new(0.0189573467, 0, 0.190048754, 0)
+ZekromHubX.Size = UDim2.new(0, 185, 0, 76)
+ZekromHubX.Image = "rbxassetid://16172861652"
+ZekromHubX.ScaleType = Enum.ScaleType.Crop
+
+UICorner_24.Parent = ZekromHubX
+
+ExecuteZekroV2.Name = "ExecuteZekroV2"
+ExecuteZekroV2.Parent = ZekromHubX
+ExecuteZekroV2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ExecuteZekroV2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ExecuteZekroV2.BorderSizePixel = 0
+ExecuteZekroV2.Position = UDim2.new(0.562162161, 0, 0.644736826, 0)
+ExecuteZekroV2.Size = UDim2.new(0, 74, 0, 24)
+ExecuteZekroV2.Font = Enum.Font.GothamMedium
+ExecuteZekroV2.Text = "Execute"
+ExecuteZekroV2.TextColor3 = Color3.fromRGB(255, 255, 255)
+ExecuteZekroV2.TextSize = 14.000
+
+UICorner_25.Parent = ExecuteZekroV2
+
+DexExplorer.Name = "DexExplorer"
+DexExplorer.Parent = ScrollingFrame_2
+DexExplorer.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+DexExplorer.BackgroundTransparency = 1.000
+DexExplorer.BorderColor3 = Color3.fromRGB(0, 0, 0)
+DexExplorer.BorderSizePixel = 0
+DexExplorer.Position = UDim2.new(0.514218092, 0, 0.193484306, 0)
+DexExplorer.Size = UDim2.new(0, 185, 0, 76)
+DexExplorer.Image = "rbxassetid://16341179758"
+DexExplorer.ScaleType = Enum.ScaleType.Crop
+
+UICorner_26.Parent = DexExplorer
+
+ExecuteDexE.Name = "ExecuteDexE"
+ExecuteDexE.Parent = DexExplorer
+ExecuteDexE.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ExecuteDexE.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ExecuteDexE.BorderSizePixel = 0
+ExecuteDexE.Position = UDim2.new(0.562162161, 0, 0.644736826, 0)
+ExecuteDexE.Size = UDim2.new(0, 74, 0, 24)
+ExecuteDexE.Font = Enum.Font.GothamMedium
+ExecuteDexE.Text = "Execute"
+ExecuteDexE.TextColor3 = Color3.fromRGB(255, 255, 255)
+ExecuteDexE.TextSize = 14.000
+
+UICorner_27.Parent = ExecuteDexE
+
+SettingsDisplay.Name = "Settings-Display"
+SettingsDisplay.Parent = Tabs
+SettingsDisplay.BackgroundColor3 = Color3.fromRGB(16, 16, 16)
+SettingsDisplay.BorderColor3 = Color3.fromRGB(0, 0, 0)
+SettingsDisplay.BorderSizePixel = 0
+SettingsDisplay.Position = UDim2.new(0.180886403, 0, 0.721818089, 0)
+SettingsDisplay.Size = UDim2.new(0, 34, 0, 33)
+
+UICorner_28.CornerRadius = UDim.new(0, 7)
+UICorner_28.Parent = SettingsDisplay
+
+SettingsIconBTN.Name = "Settings-Icon-BTN"
+SettingsIconBTN.Parent = SettingsDisplay
+SettingsIconBTN.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SettingsIconBTN.BackgroundTransparency = 1.000
+SettingsIconBTN.BorderColor3 = Color3.fromRGB(0, 0, 0)
+SettingsIconBTN.BorderSizePixel = 0
+SettingsIconBTN.Position = UDim2.new(0.0850839019, 0, 0.133939803, 0)
+SettingsIconBTN.Size = UDim2.new(0, 27, 0, 25)
+SettingsIconBTN.Image = "rbxassetid://7734053495"
+SettingsIconBTN.ScaleType = Enum.ScaleType.Fit
+
+SettingsTab.Name = "Settings-Tab"
+SettingsTab.Parent = SettingsIconBTN
+SettingsTab.BackgroundColor3 = Color3.fromRGB(8, 8, 8)
+SettingsTab.BorderColor3 = Color3.fromRGB(0, 0, 0)
+SettingsTab.BorderSizePixel = 0
+SettingsTab.Position = UDim2.new(1.8311553, 0, -7.44484758, 0)
+SettingsTab.Size = UDim2.new(0, 443, 0, 249)
+SettingsTab.Visible = false
+
+UICorner_29.CornerRadius = UDim.new(0, 11)
+UICorner_29.Parent = SettingsTab
+
+FPSBG.Name = "FPS-BG"
+FPSBG.Parent = SettingsTab
+FPSBG.BackgroundColor3 = Color3.fromRGB(24, 24, 24)
+FPSBG.BorderColor3 = Color3.fromRGB(0, 0, 0)
+FPSBG.BorderSizePixel = 0
+FPSBG.Position = UDim2.new(0.0203160271, 0, 0.0646836609, 0)
+FPSBG.Size = UDim2.new(0, 212, 0, 43)
+
+UICorner_30.Parent = FPSBG
+
+FPSTitle.Name = "FPSTitle"
+FPSTitle.Parent = FPSBG
+FPSTitle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+FPSTitle.BackgroundTransparency = 1.000
+FPSTitle.BorderColor3 = Color3.fromRGB(0, 0, 0)
+FPSTitle.BorderSizePixel = 0
+FPSTitle.Position = UDim2.new(0.0377358496, 0, 0.25, 0)
+FPSTitle.Size = UDim2.new(0, 200, 0, 21)
+FPSTitle.Font = Enum.Font.Gotham
+FPSTitle.Text = "FPS Unlocker"
+FPSTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
+FPSTitle.TextSize = 14.000
+FPSTitle.TextXAlignment = Enum.TextXAlignment.Left
+
+ToggleFramePS.Name = "ToggleFramePS"
+ToggleFramePS.Parent = FPSBG
+ToggleFramePS.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ToggleFramePS.BackgroundTransparency = 1.000
+ToggleFramePS.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ToggleFramePS.BorderSizePixel = 0
+ToggleFramePS.Position = UDim2.new(-0.00091682293, 0, -0.0749067813, 0)
+ToggleFramePS.Size = UDim2.new(0, 207, 0, 44)
+
+TextButton.Parent = ToggleFramePS
+TextButton.BackgroundColor3 = Color3.fromRGB(12, 12, 12)
+TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.BorderSizePixel = 0
+TextButton.Position = UDim2.new(0.560386896, 0, 0.25, 0)
+TextButton.Size = UDim2.new(0, 85, 0, 27)
+TextButton.Font = Enum.Font.GothamMedium
+TextButton.Text = "Execute"
+TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.TextSize = 14.000
+
+UICorner_31.CornerRadius = UDim.new(0, 6)
+UICorner_31.Parent = TextButton
+
+CloseDisplay.Name = "Close-Display"
+CloseDisplay.Parent = Tabs
+CloseDisplay.BackgroundColor3 = Color3.fromRGB(4, 4, 4)
+CloseDisplay.BorderColor3 = Color3.fromRGB(0, 0, 0)
+CloseDisplay.BorderSizePixel = 0
+CloseDisplay.Position = UDim2.new(8.3214283, 0, 0.0226706546, 0)
+CloseDisplay.Size = UDim2.new(0, 27, 0, 25)
+
+UICorner_32.CornerRadius = UDim.new(0, 5)
+UICorner_32.Parent = CloseDisplay
+
+CloseBTN.Name = "Close-BTN"
+CloseBTN.Parent = CloseDisplay
+CloseBTN.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CloseBTN.BackgroundTransparency = 1.000
+CloseBTN.BorderColor3 = Color3.fromRGB(0, 0, 0)
+CloseBTN.BorderSizePixel = 0
+CloseBTN.Size = UDim2.new(0, 27, 0, 25)
+CloseBTN.Font = Enum.Font.Gotham
+CloseBTN.Text = "×"
+CloseBTN.TextColor3 = Color3.fromRGB(255, 255, 255)
+CloseBTN.TextSize = 20.000
+
+-- Scripts:
+
+local function HNAWBM_fake_script() -- Open.LocalScript 
+	local script = Instance.new('LocalScript', Open)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Visible = false
+	end)
 end
+coroutine.wrap(HNAWBM_fake_script)()
+local function MUNOW_fake_script() -- Open.LocalScript 
+	local script = Instance.new('LocalScript', Open)
 
-HopServer.Name = "Hop Server"
-HopServer.Parent = Main_3
-HopServer.BackgroundColor3 = Color3.fromRGB(27, 27, 27)
-HopServer.BorderColor3 = Color3.fromRGB(0, 0, 0)
-HopServer.BorderSizePixel = 0
-HopServer.Position = UDim2.new(0.0201096889, 0, 0.0483870953, 0)
-HopServer.Size = UDim2.new(0, 200, 0, 50)
-HopServer.Font = Enum.Font.SourceSansBold
-HopServer.Text = "Hop Server"
-HopServer.TextColor3 = Color3.fromRGB(255, 255, 255)
-HopServer.TextSize = 25.000
-HopServer.MouseButton1Down:connect(function()
-    Hop()
-end)
-
-UICorner_22.Parent = HopServer
-
-Rejoin.Name = "Rejoin"
-Rejoin.Parent = Main_3
-Rejoin.BackgroundColor3 = Color3.fromRGB(27, 27, 27)
-Rejoin.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Rejoin.BorderSizePixel = 0
-Rejoin.Position = UDim2.new(0.0201096889, 0, 0.32661289, 0)
-Rejoin.Size = UDim2.new(0, 200, 0, 50)
-Rejoin.Font = Enum.Font.SourceSansBold
-Rejoin.Text = "Rejoin"
-Rejoin.TextColor3 = Color3.fromRGB(255, 255, 255)
-Rejoin.TextSize = 25.000
-UICorner_23.Parent = Rejoin
-Rejoin.MouseButton1Down:connect(function()
-    game:GetService("TeleportService"):Teleport(game.PlaceId, game:GetService("Players").LocalPlayer)
-end)
-ImageButton_2.MouseButton1Down:connect(function()
-	Main_3.Visible = false
-	FrameExecute.Visible = false
-	Main.Visible = true
-end)
-ImageButton_3.MouseButton1Down:connect(function()
-	Main_3.Visible = false
-	FrameExecute.Visible = true
-	Main.Visible = false
-end)
-
-ImageButton_4.MouseButton1Down:connect(function()
-	Main_3.Visible = true
-	FrameExecute.Visible = false
-	Main.Visible = false
-end)
-
-function identifyexecutor()
-    return "Cubix"
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Tabs.Visible = true
+	end)
 end
+coroutine.wrap(MUNOW_fake_script)()
+local function GIPAP_fake_script() -- TitleWelcome.LocalScript 
+	local script = Instance.new('LocalScript', TitleWelcome)
+
+	local plyr = game.Players.LocalPlayer.Name
+	local txt = script.Parent
+	
+	txt.Text = "Welcome, "..plyr.."!"
+end
+coroutine.wrap(GIPAP_fake_script)()
+local function OXBEHL_fake_script() -- HomeIconBTN.LocalScript 
+	local script = Instance.new('LocalScript', HomeIconBTN)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent["Home-Tab"].Visible = true
+		script.Parent.Parent.Parent["Code-Display"]["Code-Icon-BTN"]["Code-Tab"].Visible = false
+		script.Parent.Parent.Parent["ScriptHub-Display"]["ScriptHub-Icon-BTN"]["ScriptHub-Tab"].Visible = false
+		script.Parent.Parent.Parent["Settings-Display"]["Settings-Icon-BTN"]["Settings-Tab"].Visible = false
+	end)
+end
+coroutine.wrap(OXBEHL_fake_script)()
+local function OOIQH_fake_script() -- ClearBTN.LocalScript 
+	local script = Instance.new('LocalScript', ClearBTN)
+
+	local textbox = script.Parent.Parent.Parent.Display.ScrollingFrame.TextBox
+	local btn = script.Parent
+	
+	btn.MouseButton1Click:Connect(function()
+		textbox.Text = ""
+		-- notification
+	
+		local Bindable = Instance.new("BindableFunction")
+		Bindable.OnInvoke = Callback
+	
+		game.StarterGui:SetCore("SendNotification", {
+			Title = "Cubix | Android";
+			Text = "Cleared the script.";
+			Duration = "10";
+			Button1 = "Close Notification";
+			Callback = Bindable
+		})
+	end)
+	
+	function Callback(answer)
+	end
+end
+coroutine.wrap(OOIQH_fake_script)()
+local function HQFJKI_fake_script() -- CopyBTN.LocalScript 
+	local script = Instance.new('LocalScript', CopyBTN)
+
+	local txt = script.Parent.Parent.Parent.Display.ScrollingFrame.TextBox
+	local btn = script.Parent
+	
+	btn.MouseButton1Click:Connect(function()
+		setclipboard(txt.Text)
+		-- notification
+	
+		local Bindable = Instance.new("BindableFunction")
+		Bindable.OnInvoke = Callback
+	
+		game.StarterGui:SetCore("SendNotification", {
+			Title = "Cubix | Android";
+			Text = "Copied the script.";
+			Duration = "10";
+			Button1 = "Close Notification";
+			Callback = Bindable
+		})
+	end)
+	
+	function Callback(answer)
+	end
+	
+end
+coroutine.wrap(HQFJKI_fake_script)()
+local function WZPHDX_fake_script() -- PasteBTN.LocalScript 
+	local script = Instance.new('LocalScript', PasteBTN)
+
+	local txt = script.Parent.Parent.Parent.Display.ScrollingFrame.TextBox
+	local btn = script.Parent
+	
+	btn.MouseButton1Click:Connect(function()
+		txt.Text = getclipboard()
+			
+		local Bindable = Instance.new("BindableFunction")
+		Bindable.OnInvoke = Callback
+	
+		game.StarterGui:SetCore("SendNotification", {
+			Title = "Cubix | Android";
+			Text = "Pasted the script.";
+			Duration = "10";
+			Button1 = "Close Notification";
+			Callback = Bindable
+		})
+	end)
+	
+	function Callback(answer)
+	end
+end
+coroutine.wrap(WZPHDX_fake_script)()
+local function QQFEWD_fake_script() -- ExecBTN.LocalScript 
+	local script = Instance.new('LocalScript', ExecBTN)
+
+	local txtbox = script.Parent.Parent.Parent.Display.ScrollingFrame.TextBox
+	local btn = script.Parent
+	
+	btn.MouseButton1Click:Connect(function()
+	local executecode = executecode and clonefunction(executecode) or function(v)
+		task.spawn(loadstring(v));
+	end
+	executecode(txtbox.Text)
+	
+	-- notification
+	
+	local Bindable = Instance.new("BindableFunction")
+	Bindable.OnInvoke = Callback
+	
+	game.StarterGui:SetCore("SendNotification", {
+		Title = "Cubix | Android";
+		Text = "Executed the script.";
+		Duration = "10";
+		Button1 = "Close Notification";
+		Callback = Bindable
+	})
+	end)
+	
+	function Callback(answer)
+end
+	
+end
+coroutine.wrap(QQFEWD_fake_script)()
+local function FYKHFY_fake_script() -- CodeIconBTN.LocalScript 
+	local script = Instance.new('LocalScript', CodeIconBTN)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent["Code-Tab"].Visible = true
+		script.Parent.Parent.Parent["Home-Display"]["Home-Icon-BTN"]["Home-Tab"].Visible = false
+		script.Parent.Parent.Parent["ScriptHub-Display"]["ScriptHub-Icon-BTN"]["ScriptHub-Tab"].Visible = false
+		script.Parent.Parent.Parent["Settings-Display"]["Settings-Icon-BTN"]["Settings-Tab"].Visible = false
+	end)
+end
+coroutine.wrap(FYKHFY_fake_script)()
+local function JBFZAF_fake_script() -- ExecuteSPHX.LocalScript 
+	local script = Instance.new('LocalScript', ExecuteSPHX)
+
+	local GetScriptIY = script.Parent
+	
+	GetScriptIY.MouseButton1Click:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/ahmadsgamer2/Speed-Hub-X/main/SpeedHubX"))()
+	end)
+end
+coroutine.wrap(JBFZAF_fake_script)()
+local function TOUP_fake_script() -- ExecuteIY.LocalScript 
+	local script = Instance.new('LocalScript', ExecuteIY)
+
+	local GetScriptIY = script.Parent
+	
+	GetScriptIY.MouseButton1Click:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source", true))()
+	end)
+end
+coroutine.wrap(TOUP_fake_script)()
+local function ZYEVUV_fake_script() -- ExecuteZekroV2.LocalScript 
+	local script = Instance.new('LocalScript', ExecuteZekroV2)
+
+	local GetScriptIY = script.Parent.Parent
+	
+	GetScriptIY.MouseButton1Click:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/ahmadsgamer2/Zekrom-Hub-X/main/Zekrom-Hub-X-exe", true))()
+	end)
+end
+coroutine.wrap(ZYEVUV_fake_script)()
+local function UTKJN_fake_script() -- ExecuteDexE.LocalScript 
+	local script = Instance.new('LocalScript', ExecuteDexE)
+
+	local GetScriptIY = script.Parent.Parent
+	
+	GetScriptIY.MouseButton1Click:Connect(function()
+		loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/Dex%20Explorer.txt", true))()
+	end)
+end
+coroutine.wrap(UTKJN_fake_script)()
+local function HUSG_fake_script() -- ScriptHubIconBTN.LocalScript 
+	local script = Instance.new('LocalScript', ScriptHubIconBTN)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Parent["Home-Display"]["Home-Icon-BTN"]["Home-Tab"].Visible = false
+		script.Parent.Parent.Parent["Code-Display"]["Code-Icon-BTN"]["Code-Tab"].Visible = false
+		script.Parent.Parent["ScriptHub-Icon-BTN"]["ScriptHub-Tab"].Visible = true
+		script.Parent.Parent.Parent["Settings-Display"]["Settings-Icon-BTN"]["Settings-Tab"].Visible = false
+	end)
+end
+coroutine.wrap(HUSG_fake_script)()
+local function IHFMFS_fake_script() -- SettingsIconBTN.LocalScript 
+	local script = Instance.new('LocalScript', SettingsIconBTN)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Parent["Home-Display"]["Home-Icon-BTN"]["Home-Tab"].Visible = false
+		script.Parent.Parent.Parent["Code-Display"]["Code-Icon-BTN"]["Code-Tab"].Visible = false
+		script.Parent.Parent.Parent["ScriptHub-Display"]["ScriptHub-Icon-BTN"]["ScriptHub-Tab"].Visible = false
+		script.Parent["Settings-Tab"].Visible = true
+	end)
+end
+coroutine.wrap(IHFMFS_fake_script)()
+local function GANJXUT_fake_script() -- TextButton.LocalScript 
+	local script = Instance.new('LocalScript', TextButton)
+
+	local btn = script.Parent
+	
+	btn.MouseButton1Click:Connect(function()
+		setfpscap(120)
+	end)
+end
+coroutine.wrap(GANJXUT_fake_script)()
+local function EKYWD_fake_script() -- Tabs.CubiX-Drag 
+	local script = Instance.new('LocalScript', Tabs)
+
+	local UserInputService = game:GetService("UserInputService")
+	local runService = (game:GetService("RunService"));
+	
+	local gui = script.Parent
+	
+	local dragging
+	local dragInput
+	local dragStart
+	local startPos
+	
+	function Lerp(a, b, m)
+		return a + (b - a) * m
+	end;
+	
+	local lastMousePos
+	local lastGoalPos
+	local DRAG_SPEED = (8); -- // The speed of the UI darg.
+	function Update(dt)
+		if not (startPos) then return end;
+		if not (dragging) and (lastGoalPos) then
+			gui.Position = UDim2.new(startPos.X.Scale, Lerp(gui.Position.X.Offset, lastGoalPos.X.Offset, dt * DRAG_SPEED), startPos.Y.Scale, Lerp(gui.Position.Y.Offset, lastGoalPos.Y.Offset, dt * DRAG_SPEED))
+			return 
+		end;
+	
+		local delta = (lastMousePos - UserInputService:GetMouseLocation())
+		local xGoal = (startPos.X.Offset - delta.X);
+		local yGoal = (startPos.Y.Offset - delta.Y);
+		lastGoalPos = UDim2.new(startPos.X.Scale, xGoal, startPos.Y.Scale, yGoal)
+		gui.Position = UDim2.new(startPos.X.Scale, Lerp(gui.Position.X.Offset, xGoal, dt * DRAG_SPEED), startPos.Y.Scale, Lerp(gui.Position.Y.Offset, yGoal, dt * DRAG_SPEED))
+	end;
+	
+	gui.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+			dragging = true
+			dragStart = input.Position
+			startPos = gui.Position
+			lastMousePos = UserInputService:GetMouseLocation()
+	
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragging = false
+				end
+			end)
+		end
+	end)
+	
+	gui.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			dragInput = input
+		end
+	end)
+	
+	runService.Heartbeat:Connect(Update)
+end
+coroutine.wrap(EKYWD_fake_script)()
+local function DNYW_fake_script() -- CloseBTN.LocalScript 
+	local script = Instance.new('LocalScript', CloseBTN)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Parent.Parent.Tabs.Visible = false
+	end)
+end
+coroutine.wrap(DNYW_fake_script)()
+local function EOUHG_fake_script() -- CloseBTN.LocalScript 
+	local script = Instance.new('LocalScript', CloseBTN)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Parent.Parent.Open.Visible = true
+	end)
+end
+coroutine.wrap(EOUHG_fake_script)()
+local function YPMAIZ_fake_script() -- Tabs.LocalScript 
+	local script = Instance.new('LocalScript', Tabs)
+
+	function identifyexecutor()
+		return "CubiX"
+	end
+end
+coroutine.wrap(YPMAIZ_fake_script)()
