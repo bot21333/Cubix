@@ -162,7 +162,8 @@ Tabs.BorderSizePixel = 0
 Tabs.Position = UDim2.new(0.110799439, 0, 0.151771486, 0)
 Tabs.Size = UDim2.new(0, 56, 0, 250)
 Tabs.Visible = false
-MakeDraggable(CubiX, Tabs)
+MakeDraggable(Tabs, Tabs)
+
 UICorner_2.Parent = Tabs
 
 Avatar.Name = "Avatar"
