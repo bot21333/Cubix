@@ -1,5 +1,8 @@
 local CubixUI = {};
 
+spawn(function()
+
+end)
 -- StarterGui.CubiX
 CubixUI["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
 CubixUI["1"]["IgnoreGuiInset"] = true;
@@ -906,13 +909,7 @@ task.spawn(C_31);
 local function C_35()
 local script = CubixUI["35"];
 	local txtbox = script.Parent.Parent.Parent.Display.ScrollingFrame.TextBox
-	
-	local executecode = executecode and clonefunction(executecode) or function(v)
-		task.spawn(loadstring(v));
-	end
-	
 	executecode(txtbox.Text)
-	
 end;
 task.spawn(C_35);
 -- StarterGui.CubiX.Tabs.Code-Display.Code-Icon-BTN.LocalScript
@@ -928,43 +925,31 @@ end;
 task.spawn(C_36);
 -- StarterGui.CubiX.Tabs.ScriptHub-Display.ScriptHub-Icon-BTN.ScriptHub-Tab.ScrollingFrame.SpeedHubX.ExecuteSPHX.LocalScript
 local function C_42()
-local script = CubixUI["42"];
-	local GetScriptIY = script.Parent.Parent
-	
-	GetScriptIY.MouseButton1Click:Connect(function()
+	CubixUI["42"].MouseButton1Click:Connect(function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/ahmadsgamer2/Speed-Hub-X/main/SpeedHubX"))()
 	end)
 end;
 task.spawn(C_42);
 -- StarterGui.CubiX.Tabs.ScriptHub-Display.ScriptHub-Icon-BTN.ScriptHub-Tab.ScrollingFrame.IY.ExecuteIY.LocalScript
 local function C_47()
-local script = CubixUI["47"];
-	local GetScriptIY = script.Parent.Parent
-	
-	GetScriptIY.MouseButton1Click:Connect(function()
+	CubixUI["47"].MouseButton1Click:Connect(function()
 		loadstring(game:HttpGet(("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source")))()
 	end)
 end;
 task.spawn(C_47);
 -- StarterGui.CubiX.Tabs.ScriptHub-Display.ScriptHub-Icon-BTN.ScriptHub-Tab.ScrollingFrame.ZekromHubX.ExecuteZekroV2.LocalScript
 local function C_4c()
-local script = CubixUI["4c"];
-	local GetScriptIY = script.Parent.Parent
-	
-	GetScriptIY.MouseButton1Click:Connect(function()
+CubixUI["4c"].MouseButton1Click:Connect(function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/ahmadsgamer2/Zekrom-Hub-X/main/Zekrom-Hub-X-exe"))()
 	end)
 end;
 task.spawn(C_4c);
 -- StarterGui.CubiX.Tabs.ScriptHub-Display.ScriptHub-Icon-BTN.ScriptHub-Tab.ScrollingFrame.DexExplorer.ExecuteDexE.LocalScript
 local function C_51()
-local script = CubixUI["51"];
-	local GetScriptIY = script.Parent.Parent
-	
-	GetScriptIY.MouseButton1Click:Connect(function()
+	CubixUI["51"].MouseButton1Click:Connect(function()
 		loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/Dex%20Explorer.txt"))()
 	end)
-end;
+end
 task.spawn(C_51);
 -- StarterGui.CubiX.Tabs.ScriptHub-Display.ScriptHub-Icon-BTN.LocalScript
 local function C_52()
