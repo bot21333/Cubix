@@ -38,7 +38,6 @@ G2L["6"]["BackgroundColor3"] = Color3.fromRGB(9, 9, 9);
 G2L["6"]["Size"] = UDim2.new(0, 56, 0, 250);
 G2L["6"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["6"]["Position"] = UDim2.new(0.11079943925142288, 0, 0.15177148580551147, 0);
-G2L["6"]["Visible"] = false;
 G2L["6"]["Name"] = [[Tabs]];
 
 -- StarterGui.CubiX.Tabs.UICorner
@@ -817,8 +816,12 @@ G2L["63"]["BackgroundTransparency"] = 1;
 G2L["64"] = Instance.new("LocalScript", G2L["63"]);
 
 
+-- StarterGui.CubiX.Tabs.Close-Display.Close-BTN.LocalScript
+G2L["65"] = Instance.new("LocalScript", G2L["63"]);
+
+
 -- StarterGui.CubiX.Tabs.LocalScript
-G2L["65"] = Instance.new("LocalScript", G2L["6"]);
+G2L["66"] = Instance.new("LocalScript", G2L["6"]);
 
 
 -- StarterGui.CubiX.Open.LocalScript
@@ -1120,13 +1123,21 @@ local script = G2L["64"];
 	end)
 end;
 task.spawn(C_64);
--- StarterGui.CubiX.Tabs.LocalScript
+-- StarterGui.CubiX.Tabs.Close-Display.Close-BTN.LocalScript
 local function C_65()
 local script = G2L["65"];
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Visible = true
+	end)
+end;
+task.spawn(C_65);
+-- StarterGui.CubiX.Tabs.LocalScript
+local function C_66()
+local script = G2L["66"];
 	function identifyexecutor()
 		return "CubiX V1.1"
 	end
 end;
-task.spawn(C_65);
+task.spawn(C_66);
 
 return G2L["1"], require;
