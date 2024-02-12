@@ -1,10 +1,7 @@
 local CubixUI = {};
 
-spawn(function()
-
-end)
 -- StarterGui.CubiX
-CubixUI["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
+CubixUI["1"] = Instance.new("ScreenGui", game:GetService("CoreGui") or gethui());
 CubixUI["1"]["IgnoreGuiInset"] = true;
 CubixUI["1"]["ScreenInsets"] = Enum.ScreenInsets.DeviceSafeInsets;
 CubixUI["1"]["Name"] = [[CubiX]];
