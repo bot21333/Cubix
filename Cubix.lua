@@ -38,6 +38,7 @@ G2L["6"]["BackgroundColor3"] = Color3.fromRGB(9, 9, 9);
 G2L["6"]["Size"] = UDim2.new(0, 56, 0, 250);
 G2L["6"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["6"]["Position"] = UDim2.new(0.11079943925142288, 0, 0.15177148580551147, 0);
+G2L["6"]["Visible"] = false;
 G2L["6"]["Name"] = [[Tabs]];
 
 -- StarterGui.CubiX.Tabs.UICorner
@@ -1127,7 +1128,7 @@ task.spawn(C_64);
 local function C_65()
 local script = G2L["65"];
 	script.Parent.MouseButton1Click:Connect(function()
-		script.Parent.Visible = true
+		script.Parent.Parent.Parent.Parent.Open.Visible = true
 	end)
 end;
 task.spawn(C_65);
