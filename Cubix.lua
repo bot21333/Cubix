@@ -822,17 +822,6 @@ G2L["64"] = Instance.new("LocalScript", G2L["63"]);
 G2L["65"] = Instance.new("LocalScript", G2L["6"]);
 
 
--- StarterGui.CubiX.Dark-BG
-G2L["66"] = Instance.new("Frame", G2L["1"]);
-G2L["66"]["BorderSizePixel"] = 0;
-G2L["66"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["66"]["BackgroundTransparency"] = 0.5;
-G2L["66"]["Size"] = UDim2.new(0, 781, 0, 359);
-G2L["66"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["66"]["Position"] = UDim2.new(-0.049088358879089355, 0, 0, 0);
-G2L["66"]["Visible"] = false;
-G2L["66"]["Name"] = [[Dark-BG]];
-
 -- StarterGui.CubiX.Open.LocalScript
 local function C_4()
 local script = G2L["4"];
@@ -953,7 +942,15 @@ task.spawn(C_31);
 local function C_35()
 local script = G2L["35"];
 	local txtbox = script.Parent.Parent.Parent.Display.ScrollingFrame.TextBox
-	loadstring(txtbox.Text)
+	local btn = script.Parent
+	
+	btn.MouseButton1Click:Connect(function()
+	local executecode = executecode and clonefunction(executecode) or function(v)
+		task.spawn(loadstring(v));
+	end
+	
+	executecode(txtbox.Text)
+	
 	-- notification
 	
 	local Bindable = Instance.new("BindableFunction")
@@ -966,10 +963,12 @@ local script = G2L["35"];
 		Button1 = "Close Notification";
 		Callback = Bindable
 	})
-	
+	end)
 	
 	function Callback(answer)
 	end
+	
+	
 	
 end;
 task.spawn(C_35);
