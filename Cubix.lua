@@ -1,1113 +1,888 @@
-local G2L = {};
-
--- StarterGui.CubiX
-G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
-G2L["1"]["IgnoreGuiInset"] = true;
-G2L["1"]["ScreenInsets"] = Enum.ScreenInsets.DeviceSafeInsets;
-G2L["1"]["Name"] = [[CubiX]];
-G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
-G2L["1"]["ResetOnSpawn"] = false;
-
--- StarterGui.CubiX.Open
-G2L["2"] = Instance.new("ImageButton", G2L["1"]);
-G2L["2"]["BorderSizePixel"] = 0;
-G2L["2"]["ScaleType"] = Enum.ScaleType.Fit;
-G2L["2"]["BackgroundColor3"] = Color3.fromRGB(21, 21, 21);
-G2L["2"]["Image"] = [[rbxassetid://16163653051]];
-G2L["2"]["Size"] = UDim2.new(0, 46, 0, 46);
-G2L["2"]["Name"] = [[Open]];
-G2L["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["2"]["Position"] = UDim2.new(0.901421308517456, 0, 0.028455430641770363, 0);
-
--- StarterGui.CubiX.Open.UICorner
-G2L["3"] = Instance.new("UICorner", G2L["2"]);
-G2L["3"]["CornerRadius"] = UDim.new(0, 50);
-
--- StarterGui.CubiX.Open.LocalScript
-G2L["4"] = Instance.new("LocalScript", G2L["2"]);
-
-
--- StarterGui.CubiX.Open.LocalScript
-G2L["5"] = Instance.new("LocalScript", G2L["2"]);
-
-
--- StarterGui.CubiX.Tabs
-G2L["6"] = Instance.new("Frame", G2L["1"]);
-G2L["6"]["BorderSizePixel"] = 0;
-G2L["6"]["BackgroundColor3"] = Color3.fromRGB(9, 9, 9);
-G2L["6"]["Size"] = UDim2.new(0, 56, 0, 250);
-G2L["6"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["6"]["Position"] = UDim2.new(0.11079943925142288, 0, 0.15177148580551147, 0);
-G2L["6"]["Visible"] = false;
-G2L["6"]["Name"] = [[Tabs]];
-
--- StarterGui.CubiX.Tabs.UICorner
-G2L["7"] = Instance.new("UICorner", G2L["6"]);
-
-
--- StarterGui.CubiX.Tabs.Avatar
-G2L["8"] = Instance.new("ImageLabel", G2L["6"]);
-G2L["8"]["BorderSizePixel"] = 0;
-G2L["8"]["ScaleType"] = Enum.ScaleType.Fit;
-G2L["8"]["BackgroundColor3"] = Color3.fromRGB(8, 8, 8);
-G2L["8"]["Image"] = [[rbxassetid://16163653051]];
-G2L["8"]["Size"] = UDim2.new(0, 41, 0, 42);
-G2L["8"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["8"]["Name"] = [[Avatar]];
-G2L["8"]["BackgroundTransparency"] = 1;
-G2L["8"]["Position"] = UDim2.new(0.1273149698972702, 0, 0.023272765800356865, 0);
-
--- StarterGui.CubiX.Tabs.Avatar.UICorner
-G2L["9"] = Instance.new("UICorner", G2L["8"]);
-G2L["9"]["CornerRadius"] = UDim.new(0, 6);
-
--- StarterGui.CubiX.Tabs.Home-Display
-G2L["a"] = Instance.new("Frame", G2L["6"]);
-G2L["a"]["BorderSizePixel"] = 0;
-G2L["a"]["BackgroundColor3"] = Color3.fromRGB(17, 17, 17);
-G2L["a"]["Size"] = UDim2.new(0, 34, 0, 33);
-G2L["a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["a"]["Position"] = UDim2.new(0.18915340304374695, 0, 0.20981816947460175, 0);
-G2L["a"]["Name"] = [[Home-Display]];
-
--- StarterGui.CubiX.Tabs.Home-Display.UICorner
-G2L["b"] = Instance.new("UICorner", G2L["a"]);
-G2L["b"]["CornerRadius"] = UDim.new(0, 7);
-
--- StarterGui.CubiX.Tabs.Home-Display.Home-Icon-BTN
-G2L["c"] = Instance.new("ImageButton", G2L["a"]);
-G2L["c"]["BorderSizePixel"] = 0;
-G2L["c"]["ScaleType"] = Enum.ScaleType.Fit;
-G2L["c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["c"]["Image"] = [[rbxassetid://7733960981]];
-G2L["c"]["Size"] = UDim2.new(0, 27, 0, 25);
-G2L["c"]["Name"] = [[Home-Icon-BTN]];
-G2L["c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["c"]["Position"] = UDim2.new(0.0882352963089943, 0, 0.12121212482452393, 0);
-G2L["c"]["BackgroundTransparency"] = 1;
-
--- StarterGui.CubiX.Tabs.Home-Display.Home-Icon-BTN.Home-Tab
-G2L["d"] = Instance.new("Frame", G2L["c"]);
-G2L["d"]["BorderSizePixel"] = 0;
-G2L["d"]["BackgroundColor3"] = Color3.fromRGB(9, 9, 9);
-G2L["d"]["Size"] = UDim2.new(0, 445, 0, 249);
-G2L["d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["d"]["Position"] = UDim2.new(1.74074125289917, 0, -2.2799997329711914, 0);
-G2L["d"]["Name"] = [[Home-Tab]];
-
--- StarterGui.CubiX.Tabs.Home-Display.Home-Icon-BTN.Home-Tab.UICorner
-G2L["e"] = Instance.new("UICorner", G2L["d"]);
-G2L["e"]["CornerRadius"] = UDim.new(0, 11);
-
--- StarterGui.CubiX.Tabs.Home-Display.Home-Icon-BTN.Home-Tab.TitleWelcome
-G2L["f"] = Instance.new("TextLabel", G2L["d"]);
-G2L["f"]["BorderSizePixel"] = 0;
-G2L["f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["f"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["f"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Medium, Enum.FontStyle.Normal);
-G2L["f"]["TextSize"] = 18;
-G2L["f"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["f"]["Size"] = UDim2.new(0, 200, 0, 32);
-G2L["f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["f"]["Text"] = [[Welcome, User!]];
-G2L["f"]["Name"] = [[TitleWelcome]];
-G2L["f"]["BackgroundTransparency"] = 1;
-G2L["f"]["Position"] = UDim2.new(0.02777777798473835, 0, 0.05198513716459274, 0);
-
--- StarterGui.CubiX.Tabs.Home-Display.Home-Icon-BTN.Home-Tab.TitleWelcome.LocalScript
-G2L["10"] = Instance.new("LocalScript", G2L["f"]);
-
-
--- StarterGui.CubiX.Tabs.Home-Display.Home-Icon-BTN.Home-Tab.Check-Out
-G2L["11"] = Instance.new("TextLabel", G2L["d"]);
-G2L["11"]["TextWrapped"] = true;
-G2L["11"]["BorderSizePixel"] = 0;
-G2L["11"]["TextScaled"] = true;
-G2L["11"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["11"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["11"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Medium, Enum.FontStyle.Normal);
-G2L["11"]["TextSize"] = 14;
-G2L["11"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["11"]["Size"] = UDim2.new(0, 183, 0, 24);
-G2L["11"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["11"]["Text"] = [[Check out what's new:]];
-G2L["11"]["Name"] = [[Check-Out]];
-G2L["11"]["BackgroundTransparency"] = 1;
-G2L["11"]["Position"] = UDim2.new(0.046296294778585434, 0, 0.1744341105222702, 0);
-
--- StarterGui.CubiX.Tabs.Home-Display.Home-Icon-BTN.Home-Tab.Change-Logs BG
-G2L["12"] = Instance.new("Frame", G2L["d"]);
-G2L["12"]["BorderSizePixel"] = 0;
-G2L["12"]["BackgroundColor3"] = Color3.fromRGB(16, 16, 16);
-G2L["12"]["Size"] = UDim2.new(0, 181, 0, 171);
-G2L["12"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["12"]["Position"] = UDim2.new(0.5670620203018188, 0, 0.15945422649383545, 0);
-G2L["12"]["Name"] = [[Change-Logs BG]];
-
--- StarterGui.CubiX.Tabs.Home-Display.Home-Icon-BTN.Home-Tab.Change-Logs BG.UICorner
-G2L["13"] = Instance.new("UICorner", G2L["12"]);
-G2L["13"]["CornerRadius"] = UDim.new(0, 7);
-
--- StarterGui.CubiX.Tabs.Home-Display.Home-Icon-BTN.Home-Tab.Change-Logs BG.TitleChangeLogs
-G2L["14"] = Instance.new("TextLabel", G2L["12"]);
-G2L["14"]["BorderSizePixel"] = 0;
-G2L["14"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["14"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["14"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Medium, Enum.FontStyle.Normal);
-G2L["14"]["TextSize"] = 18;
-G2L["14"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["14"]["Size"] = UDim2.new(0, 110, 0, 24);
-G2L["14"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["14"]["Text"] = [[Changelogs:]];
-G2L["14"]["Name"] = [[TitleChangeLogs]];
-G2L["14"]["BackgroundTransparency"] = 1;
-G2L["14"]["Position"] = UDim2.new(0.034285712987184525, 0, 0.01989549770951271, 0);
-
--- StarterGui.CubiX.Tabs.Home-Display.Home-Icon-BTN.Home-Tab.Change-Logs BG.BGX
-G2L["15"] = Instance.new("Frame", G2L["12"]);
-G2L["15"]["BorderSizePixel"] = 0;
-G2L["15"]["BackgroundColor3"] = Color3.fromRGB(9, 9, 9);
-G2L["15"]["Size"] = UDim2.new(0, 168, 0, 137);
-G2L["15"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["15"]["Position"] = UDim2.new(0.03428557142615318, 0, 0.15789473056793213, 0);
-G2L["15"]["Name"] = [[BGX]];
-
--- StarterGui.CubiX.Tabs.Home-Display.Home-Icon-BTN.Home-Tab.Change-Logs BG.BGX.UICorner
-G2L["16"] = Instance.new("UICorner", G2L["15"]);
-G2L["16"]["CornerRadius"] = UDim.new(0, 6);
-
--- StarterGui.CubiX.Tabs.Home-Display.Home-Icon-BTN.Home-Tab.Change-Logs BG.BGX.xx
-G2L["17"] = Instance.new("TextLabel", G2L["15"]);
-G2L["17"]["TextWrapped"] = true;
-G2L["17"]["BorderSizePixel"] = 0;
-G2L["17"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["17"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["17"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["17"]["TextSize"] = 14;
-G2L["17"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["17"]["Size"] = UDim2.new(0, 154, 0, 22);
-G2L["17"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["17"]["Text"] = [[- Fixed Crashes & Bugs]];
-G2L["17"]["Name"] = [[xx]];
-G2L["17"]["BackgroundTransparency"] = 1;
-G2L["17"]["Position"] = UDim2.new(0.043209876865148544, 0, 0.036496348679065704, 0);
-
--- StarterGui.CubiX.Tabs.Home-Display.Home-Icon-BTN.Home-Tab.Change-Logs BG.BGX.xx
-G2L["18"] = Instance.new("TextLabel", G2L["15"]);
-G2L["18"]["TextWrapped"] = true;
-G2L["18"]["BorderSizePixel"] = 0;
-G2L["18"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["18"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["18"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["18"]["TextSize"] = 14;
-G2L["18"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["18"]["Size"] = UDim2.new(0, 148, 0, 36);
-G2L["18"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["18"]["Text"] = [[- Added Script Hub & Settings!]];
-G2L["18"]["Name"] = [[xx]];
-G2L["18"]["BackgroundTransparency"] = 1;
-G2L["18"]["Position"] = UDim2.new(0.043209876865148544, 0, 0.19708029925823212, 0);
-
--- StarterGui.CubiX.Tabs.Home-Display.Home-Icon-BTN.Home-Tab.Change-Logs BG.BGX.xx
-G2L["19"] = Instance.new("TextLabel", G2L["15"]);
-G2L["19"]["TextWrapped"] = true;
-G2L["19"]["BorderSizePixel"] = 0;
-G2L["19"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["19"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["19"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["19"]["TextSize"] = 14;
-G2L["19"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["19"]["Size"] = UDim2.new(0, 148, 0, 21);
-G2L["19"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["19"]["Text"] = [[- New User Interface]];
-G2L["19"]["Name"] = [[xx]];
-G2L["19"]["BackgroundTransparency"] = 1;
-G2L["19"]["Position"] = UDim2.new(0.043209802359342575, 0, 0.45985400676727295, 0);
-
--- StarterGui.CubiX.Tabs.Home-Display.Home-Icon-BTN.Home-Tab.Change-Logs BG.BGX.xx
-G2L["1a"] = Instance.new("TextLabel", G2L["15"]);
-G2L["1a"]["TextWrapped"] = true;
-G2L["1a"]["BorderSizePixel"] = 0;
-G2L["1a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["1a"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["1a"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["1a"]["TextSize"] = 14;
-G2L["1a"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["1a"]["Size"] = UDim2.new(0, 148, 0, 36);
-G2L["1a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["1a"]["Text"] = [[- Updated to V1.2]];
-G2L["1a"]["Name"] = [[xx]];
-G2L["1a"]["BackgroundTransparency"] = 1;
-G2L["1a"]["Position"] = UDim2.new(0.0432099848985672, 0, 0.55474454164505, 0);
-
--- StarterGui.CubiX.Tabs.Home-Display.Home-Icon-BTN.LocalScript
-G2L["1b"] = Instance.new("LocalScript", G2L["c"]);
-
-
--- StarterGui.CubiX.Tabs.Code-Display
-G2L["1c"] = Instance.new("Frame", G2L["6"]);
-G2L["1c"]["BorderSizePixel"] = 0;
-G2L["1c"]["BackgroundColor3"] = Color3.fromRGB(17, 17, 17);
-G2L["1c"]["Size"] = UDim2.new(0, 34, 0, 33);
-G2L["1c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["1c"]["Position"] = UDim2.new(0.1931217759847641, 0, 0.38181817531585693, 0);
-G2L["1c"]["Name"] = [[Code-Display]];
-
--- StarterGui.CubiX.Tabs.Code-Display.UICorner
-G2L["1d"] = Instance.new("UICorner", G2L["1c"]);
-G2L["1d"]["CornerRadius"] = UDim.new(0, 7);
-
--- StarterGui.CubiX.Tabs.Code-Display.Code-Icon-BTN
-G2L["1e"] = Instance.new("ImageButton", G2L["1c"]);
-G2L["1e"]["BorderSizePixel"] = 0;
-G2L["1e"]["ScaleType"] = Enum.ScaleType.Fit;
-G2L["1e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["1e"]["Image"] = [[rbxassetid://7733920644]];
-G2L["1e"]["Size"] = UDim2.new(0, 27, 0, 25);
-G2L["1e"]["Name"] = [[Code-Icon-BTN]];
-G2L["1e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["1e"]["Position"] = UDim2.new(0.0882352963089943, 0, 0.12121212482452393, 0);
-G2L["1e"]["BackgroundTransparency"] = 1;
-
--- StarterGui.CubiX.Tabs.Code-Display.Code-Icon-BTN.Code-Tab
-G2L["1f"] = Instance.new("Frame", G2L["1e"]);
-G2L["1f"]["BorderSizePixel"] = 0;
-G2L["1f"]["BackgroundColor3"] = Color3.fromRGB(9, 9, 9);
-G2L["1f"]["Size"] = UDim2.new(0, 444, 0, 249);
-G2L["1f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["1f"]["Position"] = UDim2.new(1.7407407760620117, 0, -3.999999761581421, 0);
-G2L["1f"]["Name"] = [[Code-Tab]];
-
--- StarterGui.CubiX.Tabs.Code-Display.Code-Icon-BTN.Code-Tab.UICorner
-G2L["20"] = Instance.new("UICorner", G2L["1f"]);
-G2L["20"]["CornerRadius"] = UDim.new(0, 11);
-
--- StarterGui.CubiX.Tabs.Code-Display.Code-Icon-BTN.Code-Tab.TitleCode
-G2L["21"] = Instance.new("TextLabel", G2L["1f"]);
-G2L["21"]["BorderSizePixel"] = 0;
-G2L["21"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["21"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["21"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Medium, Enum.FontStyle.Normal);
-G2L["21"]["TextSize"] = 18;
-G2L["21"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["21"]["Size"] = UDim2.new(0, 200, 0, 32);
-G2L["21"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["21"]["Text"] = [[Script Editor]];
-G2L["21"]["Name"] = [[TitleCode]];
-G2L["21"]["BackgroundTransparency"] = 1;
-G2L["21"]["Position"] = UDim2.new(0.025462962687015533, 0, 0.011168810538947582, 0);
-
--- StarterGui.CubiX.Tabs.Code-Display.Code-Icon-BTN.Code-Tab.Display
-G2L["22"] = Instance.new("Frame", G2L["1f"]);
-G2L["22"]["BorderSizePixel"] = 0;
-G2L["22"]["BackgroundColor3"] = Color3.fromRGB(4, 4, 4);
-G2L["22"]["Size"] = UDim2.new(0, 420, 0, 156);
-G2L["22"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["22"]["Position"] = UDim2.new(0.025087786838412285, 0, 0.11908865720033646, 0);
-G2L["22"]["Name"] = [[Display]];
-
--- StarterGui.CubiX.Tabs.Code-Display.Code-Icon-BTN.Code-Tab.Display.UICorner
-G2L["23"] = Instance.new("UICorner", G2L["22"]);
-G2L["23"]["CornerRadius"] = UDim.new(0, 6);
-
--- StarterGui.CubiX.Tabs.Code-Display.Code-Icon-BTN.Code-Tab.Display.ScrollingFrame
-G2L["24"] = Instance.new("ScrollingFrame", G2L["22"]);
-G2L["24"]["Active"] = true;
-G2L["24"]["BorderSizePixel"] = 0;
-G2L["24"]["CanvasSize"] = UDim2.new(0, 0, 2, 5);
-G2L["24"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["24"]["BackgroundTransparency"] = 1;
-G2L["24"]["Size"] = UDim2.new(0, 405, 0, 144);
-G2L["24"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["24"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["24"]["Position"] = UDim2.new(0.019655900076031685, 0, 0.040983736515045166, 0);
-
--- StarterGui.CubiX.Tabs.Code-Display.Code-Icon-BTN.Code-Tab.Display.ScrollingFrame.TextBox
-G2L["25"] = Instance.new("TextBox", G2L["24"]);
-G2L["25"]["CursorPosition"] = -1;
-G2L["25"]["BorderSizePixel"] = 0;
-G2L["25"]["TextSize"] = 14;
-G2L["25"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["25"]["TextWrapped"] = true;
-G2L["25"]["TextYAlignment"] = Enum.TextYAlignment.Top;
-G2L["25"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["25"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["25"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["25"]["BackgroundTransparency"] = 1;
-G2L["25"]["PlaceholderText"] = [[-- Here you can execute your favorite scripts!]];
-G2L["25"]["Size"] = UDim2.new(0, 398, 0, 317);
-G2L["25"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["25"]["Text"] = [[]];
-G2L["25"]["ClearTextOnFocus"] = false;
-
--- StarterGui.CubiX.Tabs.Code-Display.Code-Icon-BTN.Code-Tab.Clear-Display
-G2L["26"] = Instance.new("Frame", G2L["1f"]);
-G2L["26"]["BorderSizePixel"] = 0;
-G2L["26"]["BackgroundColor3"] = Color3.fromRGB(5, 5, 5);
-G2L["26"]["Size"] = UDim2.new(0, 104, 0, 44);
-G2L["26"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["26"]["Position"] = UDim2.new(0.027027027681469917, 0, 0.7791163325309753, 0);
-G2L["26"]["Name"] = [[Clear-Display]];
-
--- StarterGui.CubiX.Tabs.Code-Display.Code-Icon-BTN.Code-Tab.Clear-Display.UICorner
-G2L["27"] = Instance.new("UICorner", G2L["26"]);
-G2L["27"]["CornerRadius"] = UDim.new(0, 6);
-
--- StarterGui.CubiX.Tabs.Code-Display.Code-Icon-BTN.Code-Tab.Clear-Display.Clear-BTN
-G2L["28"] = Instance.new("TextButton", G2L["26"]);
-G2L["28"]["BorderSizePixel"] = 0;
-G2L["28"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["28"]["TextSize"] = 18;
-G2L["28"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["28"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["28"]["Size"] = UDim2.new(0, 104, 0, 44);
-G2L["28"]["Name"] = [[Clear-BTN]];
-G2L["28"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["28"]["Text"] = [[Clear]];
-G2L["28"]["BackgroundTransparency"] = 1;
-
--- StarterGui.CubiX.Tabs.Code-Display.Code-Icon-BTN.Code-Tab.Clear-Display.Clear-BTN.LocalScript
-G2L["29"] = Instance.new("LocalScript", G2L["28"]);
-
-
--- StarterGui.CubiX.Tabs.Code-Display.Code-Icon-BTN.Code-Tab.Copy-Display
-G2L["2a"] = Instance.new("Frame", G2L["1f"]);
-G2L["2a"]["BorderSizePixel"] = 0;
-G2L["2a"]["BackgroundColor3"] = Color3.fromRGB(5, 5, 5);
-G2L["2a"]["Size"] = UDim2.new(0, 102, 0, 44);
-G2L["2a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["2a"]["Position"] = UDim2.new(0.28378379344940186, 0, 0.7791163325309753, 0);
-G2L["2a"]["Name"] = [[Copy-Display]];
-
--- StarterGui.CubiX.Tabs.Code-Display.Code-Icon-BTN.Code-Tab.Copy-Display.UICorner
-G2L["2b"] = Instance.new("UICorner", G2L["2a"]);
-G2L["2b"]["CornerRadius"] = UDim.new(0, 6);
-
--- StarterGui.CubiX.Tabs.Code-Display.Code-Icon-BTN.Code-Tab.Copy-Display.Copy-BTN
-G2L["2c"] = Instance.new("TextButton", G2L["2a"]);
-G2L["2c"]["BorderSizePixel"] = 0;
-G2L["2c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["2c"]["TextSize"] = 18;
-G2L["2c"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["2c"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["2c"]["Size"] = UDim2.new(0, 103, 0, 44);
-G2L["2c"]["Name"] = [[Copy-BTN]];
-G2L["2c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["2c"]["Text"] = [[Copy Text]];
-G2L["2c"]["Position"] = UDim2.new(-0.0015228870324790478, 0, 0, 0);
-G2L["2c"]["BackgroundTransparency"] = 1;
-
--- StarterGui.CubiX.Tabs.Code-Display.Code-Icon-BTN.Code-Tab.Copy-Display.Copy-BTN.LocalScript
-G2L["2d"] = Instance.new("LocalScript", G2L["2c"]);
-
-
--- StarterGui.CubiX.Tabs.Code-Display.Code-Icon-BTN.Code-Tab.Paste-Display
-G2L["2e"] = Instance.new("Frame", G2L["1f"]);
-G2L["2e"]["BorderSizePixel"] = 0;
-G2L["2e"]["BackgroundColor3"] = Color3.fromRGB(5, 5, 5);
-G2L["2e"]["Size"] = UDim2.new(0, 96, 0, 44);
-G2L["2e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["2e"]["Position"] = UDim2.new(0.5337837934494019, 0, 0.7791163325309753, 0);
-G2L["2e"]["Name"] = [[Paste-Display]];
-
--- StarterGui.CubiX.Tabs.Code-Display.Code-Icon-BTN.Code-Tab.Paste-Display.UICorner
-G2L["2f"] = Instance.new("UICorner", G2L["2e"]);
-G2L["2f"]["CornerRadius"] = UDim.new(0, 6);
-
--- StarterGui.CubiX.Tabs.Code-Display.Code-Icon-BTN.Code-Tab.Paste-Display.Paste-BTN
-G2L["30"] = Instance.new("TextButton", G2L["2e"]);
-G2L["30"]["BorderSizePixel"] = 0;
-G2L["30"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["30"]["TextSize"] = 18;
-G2L["30"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["30"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["30"]["Size"] = UDim2.new(0, 96, 0, 44);
-G2L["30"]["Name"] = [[Paste-BTN]];
-G2L["30"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["30"]["Text"] = [[Paste Text]];
-G2L["30"]["BackgroundTransparency"] = 1;
-
--- StarterGui.CubiX.Tabs.Code-Display.Code-Icon-BTN.Code-Tab.Paste-Display.Paste-BTN.LocalScript
-G2L["31"] = Instance.new("LocalScript", G2L["30"]);
-
-
--- StarterGui.CubiX.Tabs.Code-Display.Code-Icon-BTN.Code-Tab.Exec-Display
-G2L["32"] = Instance.new("Frame", G2L["1f"]);
-G2L["32"]["BorderSizePixel"] = 0;
-G2L["32"]["BackgroundColor3"] = Color3.fromRGB(5, 5, 5);
-G2L["32"]["Size"] = UDim2.new(0, 92, 0, 44);
-G2L["32"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["32"]["Position"] = UDim2.new(0.7657657861709595, 0, 0.7791163325309753, 0);
-G2L["32"]["Name"] = [[Exec-Display]];
-
--- StarterGui.CubiX.Tabs.Code-Display.Code-Icon-BTN.Code-Tab.Exec-Display.UICorner
-G2L["33"] = Instance.new("UICorner", G2L["32"]);
-G2L["33"]["CornerRadius"] = UDim.new(0, 6);
-
--- StarterGui.CubiX.Tabs.Code-Display.Code-Icon-BTN.Code-Tab.Exec-Display.Exec-BTN
-G2L["34"] = Instance.new("TextButton", G2L["32"]);
-G2L["34"]["BorderSizePixel"] = 0;
-G2L["34"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["34"]["TextSize"] = 18;
-G2L["34"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["34"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["34"]["Size"] = UDim2.new(0, 92, 0, 44);
-G2L["34"]["Name"] = [[Exec-BTN]];
-G2L["34"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["34"]["Text"] = [[Execute]];
-G2L["34"]["BackgroundTransparency"] = 1;
-
--- StarterGui.CubiX.Tabs.Code-Display.Code-Icon-BTN.Code-Tab.Exec-Display.Exec-BTN.LocalScript
-G2L["35"] = Instance.new("LocalScript", G2L["34"]);
-
-
--- StarterGui.CubiX.Tabs.Code-Display.Code-Icon-BTN.LocalScript
-G2L["36"] = Instance.new("LocalScript", G2L["1e"]);
-
-
--- StarterGui.CubiX.Tabs.ScriptHub-Display
-G2L["37"] = Instance.new("Frame", G2L["6"]);
-G2L["37"]["BorderSizePixel"] = 0;
-G2L["37"]["BackgroundColor3"] = Color3.fromRGB(17, 17, 17);
-G2L["37"]["Size"] = UDim2.new(0, 34, 0, 33);
-G2L["37"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["37"]["Position"] = UDim2.new(0.19514301419258118, 0, 0.5529999732971191, 0);
-G2L["37"]["Name"] = [[ScriptHub-Display]];
-
--- StarterGui.CubiX.Tabs.ScriptHub-Display.UICorner
-G2L["38"] = Instance.new("UICorner", G2L["37"]);
-G2L["38"]["CornerRadius"] = UDim.new(0, 7);
-
--- StarterGui.CubiX.Tabs.ScriptHub-Display.ScriptHub-Icon-BTN
-G2L["39"] = Instance.new("ImageButton", G2L["37"]);
-G2L["39"]["BorderSizePixel"] = 0;
-G2L["39"]["ScaleType"] = Enum.ScaleType.Fit;
-G2L["39"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["39"]["Image"] = [[rbxassetid://7733779730]];
-G2L["39"]["Size"] = UDim2.new(0, 27, 0, 25);
-G2L["39"]["Name"] = [[ScriptHub-Icon-BTN]];
-G2L["39"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["39"]["Position"] = UDim2.new(0.0882352963089943, 0, 0.12121212482452393, 0);
-G2L["39"]["BackgroundTransparency"] = 1;
-
--- StarterGui.CubiX.Tabs.ScriptHub-Display.ScriptHub-Icon-BTN.ScriptHub-Tab
-G2L["3a"] = Instance.new("Frame", G2L["39"]);
-G2L["3a"]["BorderSizePixel"] = 0;
-G2L["3a"]["BackgroundColor3"] = Color3.fromRGB(9, 9, 9);
-G2L["3a"]["Size"] = UDim2.new(0, 443, 0, 249);
-G2L["3a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["3a"]["Position"] = UDim2.new(1.7723309993743896, 0, -5.741816997528076, 0);
-G2L["3a"]["Visible"] = false;
-G2L["3a"]["Name"] = [[ScriptHub-Tab]];
-
--- StarterGui.CubiX.Tabs.ScriptHub-Display.ScriptHub-Icon-BTN.ScriptHub-Tab.UICorner
-G2L["3b"] = Instance.new("UICorner", G2L["3a"]);
-G2L["3b"]["CornerRadius"] = UDim.new(0, 11);
-
--- StarterGui.CubiX.Tabs.ScriptHub-Display.ScriptHub-Icon-BTN.ScriptHub-Tab.TitleScriptHub
-G2L["3c"] = Instance.new("TextLabel", G2L["3a"]);
-G2L["3c"]["BorderSizePixel"] = 0;
-G2L["3c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["3c"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["3c"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["3c"]["TextSize"] = 21;
-G2L["3c"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["3c"]["Size"] = UDim2.new(0, 200, 0, 25);
-G2L["3c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["3c"]["Text"] = [[Script Hub]];
-G2L["3c"]["Name"] = [[TitleScriptHub]];
-G2L["3c"]["BackgroundTransparency"] = 1;
-G2L["3c"]["Position"] = UDim2.new(0.03386004641652107, 0, 0.05220883712172508, 0);
-
--- StarterGui.CubiX.Tabs.ScriptHub-Display.ScriptHub-Icon-BTN.ScriptHub-Tab.ScrollingFrame
-G2L["3d"] = Instance.new("ScrollingFrame", G2L["3a"]);
-G2L["3d"]["Active"] = true;
-G2L["3d"]["BorderSizePixel"] = 0;
-G2L["3d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["3d"]["BackgroundTransparency"] = 1;
-G2L["3d"]["Size"] = UDim2.new(0, 422, 0, 197);
-G2L["3d"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["3d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["3d"]["Position"] = UDim2.new(0.020316027104854584, 0, 0.17269079387187958, 0);
-
--- StarterGui.CubiX.Tabs.ScriptHub-Display.ScriptHub-Icon-BTN.ScriptHub-Tab.ScrollingFrame.SpeedHubX
-G2L["3e"] = Instance.new("ImageLabel", G2L["3d"]);
-G2L["3e"]["BorderSizePixel"] = 0;
-G2L["3e"]["ScaleType"] = Enum.ScaleType.Crop;
-G2L["3e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["3e"]["Image"] = [[rbxassetid://16022917595]];
-G2L["3e"]["Size"] = UDim2.new(0, 185, 0, 76);
-G2L["3e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["3e"]["Name"] = [[SpeedHubX]];
-G2L["3e"]["BackgroundTransparency"] = 1;
-G2L["3e"]["Position"] = UDim2.new(0.014218009077012539, 0, 0.008914850652217865, 0);
-
--- StarterGui.CubiX.Tabs.ScriptHub-Display.ScriptHub-Icon-BTN.ScriptHub-Tab.ScrollingFrame.SpeedHubX.UICorner
-G2L["3f"] = Instance.new("UICorner", G2L["3e"]);
-
-
--- StarterGui.CubiX.Tabs.ScriptHub-Display.ScriptHub-Icon-BTN.ScriptHub-Tab.ScrollingFrame.SpeedHubX.ExecuteSPHX
-G2L["40"] = Instance.new("TextButton", G2L["3e"]);
-G2L["40"]["BorderSizePixel"] = 0;
-G2L["40"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["40"]["TextSize"] = 14;
-G2L["40"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Medium, Enum.FontStyle.Normal);
-G2L["40"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["40"]["Size"] = UDim2.new(0, 74, 0, 24);
-G2L["40"]["Name"] = [[ExecuteSPHX]];
-G2L["40"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["40"]["Text"] = [[Execute]];
-G2L["40"]["Position"] = UDim2.new(0.5621621608734131, 0, 0.6447368264198303, 0);
-
--- StarterGui.CubiX.Tabs.ScriptHub-Display.ScriptHub-Icon-BTN.ScriptHub-Tab.ScrollingFrame.SpeedHubX.ExecuteSPHX.UICorner
-G2L["41"] = Instance.new("UICorner", G2L["40"]);
-
-
--- StarterGui.CubiX.Tabs.ScriptHub-Display.ScriptHub-Icon-BTN.ScriptHub-Tab.ScrollingFrame.SpeedHubX.ExecuteSPHX.LocalScript
-G2L["42"] = Instance.new("LocalScript", G2L["40"]);
-
-
--- StarterGui.CubiX.Tabs.ScriptHub-Display.ScriptHub-Icon-BTN.ScriptHub-Tab.ScrollingFrame.IY
-G2L["43"] = Instance.new("ImageLabel", G2L["3d"]);
-G2L["43"]["BorderSizePixel"] = 0;
-G2L["43"]["ScaleType"] = Enum.ScaleType.Crop;
-G2L["43"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["43"]["Image"] = [[http://www.roblox.com/asset/?id=15914349618]];
-G2L["43"]["Size"] = UDim2.new(0, 185, 0, 76);
-G2L["43"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["43"]["Name"] = [[IY]];
-G2L["43"]["BackgroundTransparency"] = 1;
-G2L["43"]["Position"] = UDim2.new(0.5142180919647217, 0, 0.011891476809978485, 0);
-
--- StarterGui.CubiX.Tabs.ScriptHub-Display.ScriptHub-Icon-BTN.ScriptHub-Tab.ScrollingFrame.IY.UICorner
-G2L["44"] = Instance.new("UICorner", G2L["43"]);
-
-
--- StarterGui.CubiX.Tabs.ScriptHub-Display.ScriptHub-Icon-BTN.ScriptHub-Tab.ScrollingFrame.IY.ExecuteIY
-G2L["45"] = Instance.new("TextButton", G2L["43"]);
-G2L["45"]["BorderSizePixel"] = 0;
-G2L["45"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["45"]["TextSize"] = 14;
-G2L["45"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Medium, Enum.FontStyle.Normal);
-G2L["45"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["45"]["Size"] = UDim2.new(0, 74, 0, 24);
-G2L["45"]["Name"] = [[ExecuteIY]];
-G2L["45"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["45"]["Text"] = [[Execute]];
-G2L["45"]["Position"] = UDim2.new(0.5621621608734131, 0, 0.6447368264198303, 0);
-
--- StarterGui.CubiX.Tabs.ScriptHub-Display.ScriptHub-Icon-BTN.ScriptHub-Tab.ScrollingFrame.IY.ExecuteIY.UICorner
-G2L["46"] = Instance.new("UICorner", G2L["45"]);
-
-
--- StarterGui.CubiX.Tabs.ScriptHub-Display.ScriptHub-Icon-BTN.ScriptHub-Tab.ScrollingFrame.IY.ExecuteIY.LocalScript
-G2L["47"] = Instance.new("LocalScript", G2L["45"]);
-
-
--- StarterGui.CubiX.Tabs.ScriptHub-Display.ScriptHub-Icon-BTN.ScriptHub-Tab.ScrollingFrame.ZekromHubX
-G2L["48"] = Instance.new("ImageLabel", G2L["3d"]);
-G2L["48"]["BorderSizePixel"] = 0;
-G2L["48"]["ScaleType"] = Enum.ScaleType.Crop;
-G2L["48"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["48"]["Image"] = [[rbxassetid://16172861652]];
-G2L["48"]["Size"] = UDim2.new(0, 185, 0, 76);
-G2L["48"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["48"]["Name"] = [[ZekromHubX]];
-G2L["48"]["BackgroundTransparency"] = 1;
-G2L["48"]["Position"] = UDim2.new(0.28436020016670227, 0, 0.20124003291130066, 0);
-
--- StarterGui.CubiX.Tabs.ScriptHub-Display.ScriptHub-Icon-BTN.ScriptHub-Tab.ScrollingFrame.ZekromHubX.UICorner
-G2L["49"] = Instance.new("UICorner", G2L["48"]);
-
-
--- StarterGui.CubiX.Tabs.ScriptHub-Display.ScriptHub-Icon-BTN.ScriptHub-Tab.ScrollingFrame.ZekromHubX.ExecuteZekroV2
-G2L["4a"] = Instance.new("TextButton", G2L["48"]);
-G2L["4a"]["BorderSizePixel"] = 0;
-G2L["4a"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["4a"]["TextSize"] = 14;
-G2L["4a"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Medium, Enum.FontStyle.Normal);
-G2L["4a"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["4a"]["Size"] = UDim2.new(0, 74, 0, 24);
-G2L["4a"]["Name"] = [[ExecuteZekroV2]];
-G2L["4a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["4a"]["Text"] = [[Execute]];
-G2L["4a"]["Position"] = UDim2.new(0.5621621608734131, 0, 0.6447368264198303, 0);
-
--- StarterGui.CubiX.Tabs.ScriptHub-Display.ScriptHub-Icon-BTN.ScriptHub-Tab.ScrollingFrame.ZekromHubX.ExecuteZekroV2.UICorner
-G2L["4b"] = Instance.new("UICorner", G2L["4a"]);
-
-
--- StarterGui.CubiX.Tabs.ScriptHub-Display.ScriptHub-Icon-BTN.ScriptHub-Tab.ScrollingFrame.ZekromHubX.ExecuteZekroV2.LocalScript
-G2L["4c"] = Instance.new("LocalScript", G2L["4a"]);
-
-
--- StarterGui.CubiX.Tabs.ScriptHub-Display.ScriptHub-Icon-BTN.LocalScript
-G2L["4d"] = Instance.new("LocalScript", G2L["39"]);
-
-
--- StarterGui.CubiX.Tabs.Settings-Display
-G2L["4e"] = Instance.new("Frame", G2L["6"]);
-G2L["4e"]["BorderSizePixel"] = 0;
-G2L["4e"]["BackgroundColor3"] = Color3.fromRGB(17, 17, 17);
-G2L["4e"]["Size"] = UDim2.new(0, 34, 0, 33);
-G2L["4e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["4e"]["Position"] = UDim2.new(0.1808864027261734, 0, 0.7218180894851685, 0);
-G2L["4e"]["Name"] = [[Settings-Display]];
-
--- StarterGui.CubiX.Tabs.Settings-Display.UICorner
-G2L["4f"] = Instance.new("UICorner", G2L["4e"]);
-G2L["4f"]["CornerRadius"] = UDim.new(0, 7);
-
--- StarterGui.CubiX.Tabs.Settings-Display.Settings-Icon-BTN
-G2L["50"] = Instance.new("ImageButton", G2L["4e"]);
-G2L["50"]["BorderSizePixel"] = 0;
-G2L["50"]["ScaleType"] = Enum.ScaleType.Fit;
-G2L["50"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["50"]["Image"] = [[rbxassetid://7734053495]];
-G2L["50"]["Size"] = UDim2.new(0, 27, 0, 25);
-G2L["50"]["Name"] = [[Settings-Icon-BTN]];
-G2L["50"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["50"]["Position"] = UDim2.new(0.08508390188217163, 0, 0.13393980264663696, 0);
-G2L["50"]["BackgroundTransparency"] = 1;
-
--- StarterGui.CubiX.Tabs.Settings-Display.Settings-Icon-BTN.LocalScript
-G2L["51"] = Instance.new("LocalScript", G2L["50"]);
-
-
--- StarterGui.CubiX.Tabs.Settings-Display.Settings-Icon-BTN.Settings-Tab
-G2L["52"] = Instance.new("Frame", G2L["50"]);
-G2L["52"]["BorderSizePixel"] = 0;
-G2L["52"]["BackgroundColor3"] = Color3.fromRGB(9, 9, 9);
-G2L["52"]["Size"] = UDim2.new(0, 443, 0, 249);
-G2L["52"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["52"]["Position"] = UDim2.new(1.8311553001403809, 0, -7.444847583770752, 0);
-G2L["52"]["Visible"] = false;
-G2L["52"]["Name"] = [[Settings-Tab]];
-
--- StarterGui.CubiX.Tabs.Settings-Display.Settings-Icon-BTN.Settings-Tab.UICorner
-G2L["53"] = Instance.new("UICorner", G2L["52"]);
-G2L["53"]["CornerRadius"] = UDim.new(0, 11);
-
--- StarterGui.CubiX.Tabs.Settings-Display.Settings-Icon-BTN.Settings-Tab.FPS-BG
-G2L["54"] = Instance.new("Frame", G2L["52"]);
-G2L["54"]["BorderSizePixel"] = 0;
-G2L["54"]["BackgroundColor3"] = Color3.fromRGB(25, 25, 25);
-G2L["54"]["Size"] = UDim2.new(0, 212, 0, 43);
-G2L["54"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["54"]["Position"] = UDim2.new(0.020316027104854584, 0, 0.06468366086483002, 0);
-G2L["54"]["Name"] = [[FPS-BG]];
-
--- StarterGui.CubiX.Tabs.Settings-Display.Settings-Icon-BTN.Settings-Tab.FPS-BG.UICorner
-G2L["55"] = Instance.new("UICorner", G2L["54"]);
-
-
--- StarterGui.CubiX.Tabs.Settings-Display.Settings-Icon-BTN.Settings-Tab.FPS-BG.FPSTitle
-G2L["56"] = Instance.new("TextLabel", G2L["54"]);
-G2L["56"]["BorderSizePixel"] = 0;
-G2L["56"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["56"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["56"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["56"]["TextSize"] = 14;
-G2L["56"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["56"]["Size"] = UDim2.new(0, 200, 0, 21);
-G2L["56"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["56"]["Text"] = [[FPS Unlocker]];
-G2L["56"]["Name"] = [[FPSTitle]];
-G2L["56"]["BackgroundTransparency"] = 1;
-G2L["56"]["Position"] = UDim2.new(0.03773584961891174, 0, 0.25, 0);
-
--- StarterGui.CubiX.Tabs.Settings-Display.Settings-Icon-BTN.Settings-Tab.FPS-BG.ToggleFramePS
-G2L["57"] = Instance.new("Frame", G2L["54"]);
-G2L["57"]["BorderSizePixel"] = 0;
-G2L["57"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["57"]["BackgroundTransparency"] = 1;
-G2L["57"]["Size"] = UDim2.new(0, 207, 0, 44);
-G2L["57"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["57"]["Position"] = UDim2.new(-0.000916822929866612, 0, -0.07490678131580353, 0);
-G2L["57"]["Name"] = [[ToggleFramePS]];
-
--- StarterGui.CubiX.Tabs.Settings-Display.Settings-Icon-BTN.Settings-Tab.FPS-BG.ToggleFramePS.FPS-BTN
-G2L["58"] = Instance.new("TextButton", G2L["57"]);
-G2L["58"]["BorderSizePixel"] = 0;
-G2L["58"]["BackgroundColor3"] = Color3.fromRGB(13, 13, 13);
-G2L["58"]["TextSize"] = 14;
-G2L["58"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Medium, Enum.FontStyle.Normal);
-G2L["58"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["58"]["Size"] = UDim2.new(0, 85, 0, 27);
-G2L["58"]["Name"] = [[FPS-BTN]];
-G2L["58"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["58"]["Text"] = [[Execute]];
-G2L["58"]["Position"] = UDim2.new(0.5603868961334229, 0, 0.25, 0);
-
--- StarterGui.CubiX.Tabs.Settings-Display.Settings-Icon-BTN.Settings-Tab.FPS-BG.ToggleFramePS.FPS-BTN.LocalScript
-G2L["59"] = Instance.new("LocalScript", G2L["58"]);
-
-
--- StarterGui.CubiX.Tabs.Settings-Display.Settings-Icon-BTN.Settings-Tab.FPS-BG.ToggleFramePS.FPS-BTN.UICorner
-G2L["5a"] = Instance.new("UICorner", G2L["58"]);
-G2L["5a"]["CornerRadius"] = UDim.new(0, 6);
-
--- StarterGui.CubiX.Tabs.CubiX-Drag
-G2L["5b"] = Instance.new("LocalScript", G2L["6"]);
-G2L["5b"]["Name"] = [[CubiX-Drag]];
-
--- StarterGui.CubiX.Tabs.Close-Display
-G2L["5c"] = Instance.new("Frame", G2L["6"]);
-G2L["5c"]["BorderSizePixel"] = 0;
-G2L["5c"]["BackgroundColor3"] = Color3.fromRGB(5, 5, 5);
-G2L["5c"]["Size"] = UDim2.new(0, 27, 0, 25);
-G2L["5c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["5c"]["Position"] = UDim2.new(8.321428298950195, 0, 0.022670654579997063, 0);
-G2L["5c"]["Name"] = [[Close-Display]];
-
--- StarterGui.CubiX.Tabs.Close-Display.UICorner
-G2L["5d"] = Instance.new("UICorner", G2L["5c"]);
-G2L["5d"]["CornerRadius"] = UDim.new(0, 5);
-
--- StarterGui.CubiX.Tabs.Close-Display.Close-BTN
-G2L["5e"] = Instance.new("TextButton", G2L["5c"]);
-G2L["5e"]["BorderSizePixel"] = 0;
-G2L["5e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["5e"]["TextSize"] = 20;
-G2L["5e"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["5e"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["5e"]["Size"] = UDim2.new(0, 27, 0, 25);
-G2L["5e"]["Name"] = [[Close-BTN]];
-G2L["5e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["5e"]["Text"] = [[×]];
-G2L["5e"]["BackgroundTransparency"] = 1;
-
--- StarterGui.CubiX.Tabs.Close-Display.Close-BTN.LocalScript
-G2L["5f"] = Instance.new("LocalScript", G2L["5e"]);
-
-
--- StarterGui.CubiX.Tabs.Close-Display.Close-BTN.LocalScript
-G2L["60"] = Instance.new("LocalScript", G2L["5e"]);
-
-
--- StarterGui.CubiX.Tabs.LocalScript
-G2L["61"] = Instance.new("LocalScript", G2L["6"]);
-
-
--- StarterGui.CubiX.Open.LocalScript
-local function C_4()
-local script = G2L["4"];
-	script.Parent.MouseButton1Click:Connect(function()
-		script.Parent.Visible = false
-	end)
-end;
-task.spawn(C_4);
--- StarterGui.CubiX.Open.LocalScript
-local function C_5()
-local script = G2L["5"];
-	script.Parent.MouseButton1Click:Connect(function()
-		script.Parent.Parent.Tabs.Visible = true
-	end)
-end;
-task.spawn(C_5);
--- StarterGui.CubiX.Tabs.Home-Display.Home-Icon-BTN.Home-Tab.TitleWelcome.LocalScript
-local function C_10()
-local script = G2L["10"];
-	local plyr = game.Players.LocalPlayer.Name
-	local txt = script.Parent
-	
-	txt.Text = "Welcome, "..plyr.."!"
-end;
-task.spawn(C_10);
--- StarterGui.CubiX.Tabs.Home-Display.Home-Icon-BTN.LocalScript
-local function C_1b()
-local script = G2L["1b"];
-	script.Parent.MouseButton1Click:Connect(function()
-		script.Parent["Home-Tab"].Visible = true
-		script.Parent.Parent.Parent["Code-Display"]["Code-Icon-BTN"]["Code-Tab"].Visible = false
-		script.Parent.Parent.Parent["ScriptHub-Display"]["ScriptHub-Icon-BTN"]["ScriptHub-Tab"].Visible = false
-		script.Parent.Parent.Parent["Settings-Display"]["Settings-Icon-BTN"]["Settings-Tab"].Visible = false
-	end)
-end;
-task.spawn(C_1b);
--- StarterGui.CubiX.Tabs.Code-Display.Code-Icon-BTN.Code-Tab.Clear-Display.Clear-BTN.LocalScript
-local function C_29()
-local script = G2L["29"];
-	local textbox = script.Parent.Parent.Parent.Display.ScrollingFrame.TextBox
-	local btn = script.Parent
-	
-	btn.MouseButton1Click:Connect(function()
-		textbox.Text = ""
-		-- notification
-	
-		local Bindable = Instance.new("BindableFunction")
-		Bindable.OnInvoke = Callback
-	
-		game.StarterGui:SetCore("SendNotification", {
-			Title = "Cubix | Android";
-			Text = "Cleared the script.";
-			Duration = "10";
-			Button1 = "Close Notification";
-			Callback = Bindable
-		})
-	end)
-	
-	function Callback(answer)
+local instance = {obj = {}}
+function instance.new(class, properties)
+	local inst = Instance.new(class)
+	for property, value in next, properties do
+		inst[property] = value
 	end
-end;
-task.spawn(C_29);
--- StarterGui.CubiX.Tabs.Code-Display.Code-Icon-BTN.Code-Tab.Copy-Display.Copy-BTN.LocalScript
-local function C_2d()
-local script = G2L["2d"];
-	local txt = script.Parent.Parent.Parent.Display.ScrollingFrame.TextBox
-	local btn = script.Parent
-	
-	btn.MouseButton1Click:Connect(function()
-		setclipboard(txt.Text)
-		-- notification
-	
-		local Bindable = Instance.new("BindableFunction")
-		Bindable.OnInvoke = Callback
-	
-		game.StarterGui:SetCore("SendNotification", {
-			Title = "Cubix | Android";
-			Text = "Copied the script.";
-			Duration = "10";
-			Button1 = "Close Notification";
-			Callback = Bindable
-		})
-	end)
-	
-	function Callback(answer)
-	end
-	
-end;
-task.spawn(C_2d);
--- StarterGui.CubiX.Tabs.Code-Display.Code-Icon-BTN.Code-Tab.Paste-Display.Paste-BTN.LocalScript
-local function C_31()
-local script = G2L["31"];
-	local txt = script.Parent.Parent.Parent.Display.ScrollingFrame.TextBox
-	local btn = script.Parent
-	
-	btn.MouseButton1Click:Connect(function()
-		txt.Text = getclipboard()
-		
-	-- notification
-	
-		local Bindable = Instance.new("BindableFunction")
-		Bindable.OnInvoke = Callback
-	
-		game.StarterGui:SetCore("SendNotification", {
-			Title = "Cubix | Android";
-			Text = "Pasted the script.";
-			Duration = "10";
-			Button1 = "Close Notification";
-			Callback = Bindable
-		})
-	end)
-	
-	function Callback(answer)
-	end
-end;
-task.spawn(C_31);
--- StarterGui.CubiX.Tabs.Code-Display.Code-Icon-BTN.Code-Tab.Exec-Display.Exec-BTN.LocalScript
-local function C_35()
-local script = G2L["35"];
-	local txtbox = script.Parent.Parent.Parent.Display.ScrollingFrame.TextBox
-	local btn = script.Parent
-	
-	btn.MouseButton1Click:Connect(function()
-	local executecode = executecode and clonefunction(executecode) or function(v)
-		task.spawn(loadstring(v));
-	
-	executecode(txtbox.Text)
-	end
-	-- notification
-	
-	local Bindable = Instance.new("BindableFunction")
-	Bindable.OnInvoke = Callback
-	
-	game.StarterGui:SetCore("SendNotification", {
-		Title = "Cubix | Android";
-		Text = "Executed the script.";
-		Duration = "10";
-		Button1 = "Close Notification";
-		Callback = Bindable
-	})
-	end)
-	
-	function Callback(answer)
-	end
-	
-	
-	
-end;
-task.spawn(C_35);
--- StarterGui.CubiX.Tabs.Code-Display.Code-Icon-BTN.LocalScript
-local function C_36()
-local script = G2L["36"];
-	script.Parent.MouseButton1Click:Connect(function()
-		script.Parent["Code-Tab"].Visible = true
-		script.Parent.Parent.Parent["Home-Display"]["Home-Icon-BTN"]["Home-Tab"].Visible = false
-		script.Parent.Parent.Parent["ScriptHub-Display"]["ScriptHub-Icon-BTN"]["ScriptHub-Tab"].Visible = false
-		script.Parent.Parent.Parent["Settings-Display"]["Settings-Icon-BTN"]["Settings-Tab"].Visible = false
-	end)
-end;
-task.spawn(C_36);
--- StarterGui.CubiX.Tabs.ScriptHub-Display.ScriptHub-Icon-BTN.ScriptHub-Tab.ScrollingFrame.SpeedHubX.ExecuteSPHX.LocalScript
-local function C_42()
-local script = G2L["42"];
-	local GetScriptIY = script.Parent
-	
-	GetScriptIY.MouseButton1Click:Connect(function()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/ahmadsgamer2/Speed-Hub-X/main/SpeedHubX"))()
-	end)
-end;
-task.spawn(C_42);
--- StarterGui.CubiX.Tabs.ScriptHub-Display.ScriptHub-Icon-BTN.ScriptHub-Tab.ScrollingFrame.IY.ExecuteIY.LocalScript
-local function C_47()
-local script = G2L["47"];
-	local GetScriptIY = script.Parent
-	
-	GetScriptIY.MouseButton1Click:Connect(function()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source", true))()
-	end)
-end;
-task.spawn(C_47);
--- StarterGui.CubiX.Tabs.ScriptHub-Display.ScriptHub-Icon-BTN.ScriptHub-Tab.ScrollingFrame.ZekromHubX.ExecuteZekroV2.LocalScript
-local function C_4c()
-local script = G2L["4c"];
-	local GetScriptIY = script.Parent.Parent
-	
-	GetScriptIY.MouseButton1Click:Connect(function()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/ahmadsgamer2/Zekrom-Hub-X/main/Zekrom-Hub-X-exe", true))()
-	end)
-end;
-task.spawn(C_4c);
--- StarterGui.CubiX.Tabs.ScriptHub-Display.ScriptHub-Icon-BTN.LocalScript
-local function C_4d()
-local script = G2L["4d"];
-	script.Parent.MouseButton1Click:Connect(function()
-		script.Parent.Parent.Parent["Home-Display"]["Home-Icon-BTN"]["Home-Tab"].Visible = false
-		script.Parent.Parent.Parent["Code-Display"]["Code-Icon-BTN"]["Code-Tab"].Visible = false
-		script.Parent.Parent["ScriptHub-Icon-BTN"]["ScriptHub-Tab"].Visible = true
-		script.Parent.Parent.Parent["Settings-Display"]["Settings-Icon-BTN"]["Settings-Tab"].Visible = false
-	end)
-end;
-task.spawn(C_4d);
--- StarterGui.CubiX.Tabs.Settings-Display.Settings-Icon-BTN.LocalScript
-local function C_51()
-local script = G2L["51"];
-	script.Parent.MouseButton1Click:Connect(function()
-		script.Parent.Parent.Parent["Home-Display"]["Home-Icon-BTN"]["Home-Tab"].Visible = false
-		script.Parent.Parent.Parent["Code-Display"]["Code-Icon-BTN"]["Code-Tab"].Visible = false
-		script.Parent.Parent.Parent["ScriptHub-Display"]["ScriptHub-Icon-BTN"]["ScriptHub-Tab"].Visible = false
-		script.Parent["Settings-Tab"].Visible = true
-	end)
-end;
-task.spawn(C_51);
--- StarterGui.CubiX.Tabs.Settings-Display.Settings-Icon-BTN.Settings-Tab.FPS-BG.ToggleFramePS.FPS-BTN.LocalScript
-local function C_59()
-local script = G2L["59"];
-	local btn = script.Parent
-	
-	btn.MouseButton1Click:Connect(function()
-		setfpscap(120)
-		-- notification
-	
-		local Bindable = Instance.new("BindableFunction")
-		Bindable.OnInvoke = Callback
-	
-		game.StarterGui:SetCore("SendNotification", {
-			Title = "Cubix | Android";
-			Text = "FPS is now 120!.";
-			Duration = "10";
-			Button1 = "Close Notification";
-			Callback = Bindable
-		})
-	end)
-	
-	function Callback(answer)
-	end
-	
-end;
-task.spawn(C_59);
--- StarterGui.CubiX.Tabs.CubiX-Drag
-local function C_5b()
-local script = G2L["5b"];
-	local UserInputService = game:GetService("UserInputService")
-	local runService = (game:GetService("RunService"));
-	
-	local gui = script.Parent
-	
-	local dragging
-	local dragInput
-	local dragStart
-	local startPos
-	
-	function Lerp(a, b, m)
-		return a + (b - a) * m
-	end;
-	
-	local lastMousePos
-	local lastGoalPos
-	local DRAG_SPEED = (8); -- // The speed of the UI darg.
-	function Update(dt)
-		if not (startPos) then return end;
-		if not (dragging) and (lastGoalPos) then
-			gui.Position = UDim2.new(startPos.X.Scale, Lerp(gui.Position.X.Offset, lastGoalPos.X.Offset, dt * DRAG_SPEED), startPos.Y.Scale, Lerp(gui.Position.Y.Offset, lastGoalPos.Y.Offset, dt * DRAG_SPEED))
-			return 
-		end;
-	
-		local delta = (lastMousePos - UserInputService:GetMouseLocation())
-		local xGoal = (startPos.X.Offset - delta.X);
-		local yGoal = (startPos.Y.Offset - delta.Y);
-		lastGoalPos = UDim2.new(startPos.X.Scale, xGoal, startPos.Y.Scale, yGoal)
-		gui.Position = UDim2.new(startPos.X.Scale, Lerp(gui.Position.X.Offset, xGoal, dt * DRAG_SPEED), startPos.Y.Scale, Lerp(gui.Position.Y.Offset, yGoal, dt * DRAG_SPEED))
-	end;
-	
-	gui.InputBegan:Connect(function(input)
-		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
-			dragging = true
-			dragStart = input.Position
-			startPos = gui.Position
-			lastMousePos = UserInputService:GetMouseLocation()
-	
-			input.Changed:Connect(function()
-				if input.UserInputState == Enum.UserInputState.End then
-					dragging = false
-				end
-			end)
-		end
-	end)
-	
-	gui.InputChanged:Connect(function(input)
-		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
-			dragInput = input
-		end
-	end)
-	
-	runService.Heartbeat:Connect(Update)
-end;
-task.spawn(C_5b);
--- StarterGui.CubiX.Tabs.Close-Display.Close-BTN.LocalScript
-local function C_5f()
-local script = G2L["5f"];
-	script.Parent.MouseButton1Click:Connect(function()
-		script.Parent.Parent.Parent.Parent.Tabs.Visible = false
-	end)
-end;
-task.spawn(C_5f);
--- StarterGui.CubiX.Tabs.Close-Display.Close-BTN.LocalScript
-local function C_60()
-local script = G2L["60"];
-	script.Parent.MouseButton1Click:Connect(function()
-		script.Parent.Parent.Parent.Parent.Open.Visible = true
-	end)
-end;
-task.spawn(C_60);
--- StarterGui.CubiX.Tabs.LocalScript
-local function C_61()
-local script = G2L["61"];
-	function identifyexecutor()
-		return "CubiX V1.1"
-	end
-end;
-task.spawn(C_61);
+	table.insert(instance.obj, inst)
+	return inst
+end
 
-return G2L["1"], require;
+local object = instance.obj
+
+object.CubiX = instance.new("ScreenGui", {
+	Name = "CubiX";
+	Parent = game.CoreGui;
+	ResetOnSpawn = false;
+	ZIndexBehavior = Enum.ZIndexBehavior.Sibling;
+})
+
+object.Open = instance.new("ImageButton", {
+	BackgroundColor3 = Color3.fromRGB(20, 20, 20);
+	BorderColor3 = Color3.fromRGB(0, 0, 0);
+	BorderSizePixel = 0;
+	Image = "rbxassetid://16163653051";
+	Name = "Open";
+	Parent = object.CubiX;
+	Position = UDim2.new(0.901421309, 0, 0.0284554306, 0);
+	ScaleType = Enum.ScaleType.Fit;
+	Size = UDim2.new(0, 46, 0, 46);
+})
+
+object.UICorner = instance.new("UICorner", {
+	CornerRadius = UDim.new(0, 50);
+	Parent = object.Open;
+})
+
+object.DarkBG = instance.new("Frame", {
+	BackgroundColor3 = Color3.fromRGB(0, 0, 0);
+	BackgroundTransparency = 0.500;
+	BorderColor3 = Color3.fromRGB(0, 0, 0);
+	BorderSizePixel = 0;
+	Name = "Dark-BG";
+	Parent = object.CubiX;
+	Size = UDim2.new(0, 1000, 0, 1000);
+	Visible = false;
+})
+
+object.Tabs = instance.new("Frame", {
+	BackgroundColor3 = Color3.fromRGB(8, 8, 8);
+	BorderColor3 = Color3.fromRGB(0, 0, 0);
+	BorderSizePixel = 0;
+	Name = "Tabs";
+	Parent = object.DarkBG;
+	Position = UDim2.new(-0.0108301509, 0, 0, 0);
+	Size = UDim2.new(0, 66, 0, 359);
+})
+
+object.UICorner = instance.new("UICorner", {
+	Parent = object.Tabs;
+})
+
+object.Avatar = instance.new("ImageLabel", {
+	BackgroundColor3 = Color3.fromRGB(7, 7, 7);
+	BackgroundTransparency = 1.000;
+	BorderColor3 = Color3.fromRGB(0, 0, 0);
+	BorderSizePixel = 0;
+	Image = "rbxassetid://16163653051";
+	Name = "Avatar";
+	Parent = object.Tabs;
+	Position = UDim2.new(0.248527065, 0, 0.0260582827, 0);
+	ScaleType = Enum.ScaleType.Fit;
+	Size = UDim2.new(0, 41, 0, 42);
+})
+
+object.UICorner = instance.new("UICorner", {
+	CornerRadius = UDim.new(0, 6);
+	Parent = object.Avatar;
+})
+
+object.HomeDisplay = instance.new("Frame", {
+	BackgroundColor3 = Color3.fromRGB(16, 16, 16);
+	BorderColor3 = Color3.fromRGB(0, 0, 0);
+	BorderSizePixel = 0;
+	Name = "Home-Display";
+	Parent = object.Tabs;
+	Position = UDim2.new(0.310365498, 0, 0.201461628, 0);
+	Size = UDim2.new(0, 34, 0, 33);
+})
+
+object.UICorner = instance.new("UICorner", {
+	CornerRadius = UDim.new(0, 7);
+	Parent = object.HomeDisplay;
+})
+
+object.HomeIconBTN = instance.new("ImageButton", {
+	BackgroundColor3 = Color3.fromRGB(255, 255, 255);
+	BackgroundTransparency = 1.000;
+	BorderColor3 = Color3.fromRGB(0, 0, 0);
+	BorderSizePixel = 0;
+	Image = "rbxassetid://7733960981";
+	Name = "Home-Icon-BTN";
+	Parent = object.HomeDisplay;
+	Position = UDim2.new(0.0882352963, 0, 0.121212125, 0);
+	ScaleType = Enum.ScaleType.Fit;
+	Size = UDim2.new(0, 27, 0, 25);
+})
+
+object.HomeTab = instance.new("Frame", {
+	BackgroundColor3 = Color3.fromRGB(8, 8, 8);
+	BorderColor3 = Color3.fromRGB(0, 0, 0);
+	BorderSizePixel = 0;
+	Name = "Home-Tab";
+	Parent = object.HomeIconBTN;
+	Position = UDim2.new(2.00000072, 0, -2.75999928, 0);
+	Size = UDim2.new(0, 639, 0, 337);
+})
+
+object.UICorner = instance.new("UICorner", {
+	CornerRadius = UDim.new(0, 11);
+	Parent = object.HomeTab;
+})
+
+object.CheckOut = instance.new("TextLabel", {
+	BackgroundColor3 = Color3.fromRGB(255, 255, 255);
+	BackgroundTransparency = 1.000;
+	BorderColor3 = Color3.fromRGB(0, 0, 0);
+	BorderSizePixel = 0;
+	FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Medium, Enum.FontStyle.Normal);
+	Name = "Check-Out";
+	Parent = object.HomeTab;
+	Position = UDim2.new(0.024387056, 0, 0.278291702, 0);
+	Size = UDim2.new(0, 183, 0, 24);
+	Text = "Check out what's new:";
+	TextColor3 = Color3.fromRGB(255, 255, 255);
+	TextScaled = true;
+	TextSize = 20.000;
+	TextWrapped = true;
+	TextXAlignment = Enum.TextXAlignment.Left;
+})
+
+object.ChangeLogsBG = instance.new("Frame", {
+	BackgroundColor3 = Color3.fromRGB(15, 15, 15);
+	BorderColor3 = Color3.fromRGB(0, 0, 0);
+	BorderSizePixel = 0;
+	Name = "Change-Logs BG";
+	Parent = object.HomeTab;
+	Position = UDim2.new(0.673478127, 0, 0.126813218, 0);
+	Size = UDim2.new(0, 191, 0, 258);
+})
+
+object.UICorner = instance.new("UICorner", {
+	CornerRadius = UDim.new(0, 7);
+	Parent = object.ChangeLogsBG;
+})
+
+object.TitleChangeLogs = instance.new("TextLabel", {
+	BackgroundColor3 = Color3.fromRGB(255, 255, 255);
+	BackgroundTransparency = 1.000;
+	BorderColor3 = Color3.fromRGB(0, 0, 0);
+	BorderSizePixel = 0;
+	FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Medium, Enum.FontStyle.Normal);
+	Name = "TitleChangeLogs";
+	Parent = object.ChangeLogsBG;
+	Position = UDim2.new(0.034285713, 0, 0.0198954977, 0);
+	Size = UDim2.new(0, 110, 0, 24);
+	Text = "Changelogs:";
+	TextColor3 = Color3.fromRGB(255, 255, 255);
+	TextSize = 18.000;
+	TextXAlignment = Enum.TextXAlignment.Left;
+})
+
+object.BGX = instance.new("Frame", {
+	BackgroundColor3 = Color3.fromRGB(8, 8, 8);
+	BorderColor3 = Color3.fromRGB(0, 0, 0);
+	BorderSizePixel = 0;
+	Name = "BGX";
+	Parent = object.ChangeLogsBG;
+	Position = UDim2.new(0.0342854597, 0, 0.15789476, 0);
+	Size = UDim2.new(0, 175, 0, 208);
+})
+
+object.UICorner = instance.new("UICorner", {
+	CornerRadius = UDim.new(0, 6);
+	Parent = object.BGX;
+})
+
+object.xx = instance.new("TextLabel", {
+	BackgroundColor3 = Color3.fromRGB(255, 255, 255);
+	BackgroundTransparency = 1.000;
+	BorderColor3 = Color3.fromRGB(0, 0, 0);
+	BorderSizePixel = 0;
+	FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+	Name = "xx";
+	Parent = object.BGX;
+	Position = UDim2.new(0.0432098769, 0, 0.0364963487, 0);
+	Size = UDim2.new(0, 154, 0, 22);
+	Text = "- Fixed Crashes & Bugs";
+	TextColor3 = Color3.fromRGB(255, 255, 255);
+	TextSize = 14.000;
+	TextWrapped = true;
+	TextXAlignment = Enum.TextXAlignment.Left;
+})
+
+object.xx = instance.new("TextLabel", {
+	BackgroundColor3 = Color3.fromRGB(255, 255, 255);
+	BackgroundTransparency = 1.000;
+	BorderColor3 = Color3.fromRGB(0, 0, 0);
+	BorderSizePixel = 0;
+	FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+	Name = "xx";
+	Parent = object.BGX;
+	Position = UDim2.new(0.0432098769, 0, 0.197080299, 0);
+	Size = UDim2.new(0, 148, 0, 36);
+	Text = "- Added Script Hub & Settings!";
+	TextColor3 = Color3.fromRGB(255, 255, 255);
+	TextSize = 14.000;
+	TextWrapped = true;
+	TextXAlignment = Enum.TextXAlignment.Left;
+})
+
+object.xx = instance.new("TextLabel", {
+	BackgroundColor3 = Color3.fromRGB(255, 255, 255);
+	BackgroundTransparency = 1.000;
+	BorderColor3 = Color3.fromRGB(0, 0, 0);
+	BorderSizePixel = 0;
+	FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+	Name = "xx";
+	Parent = object.BGX;
+	Position = UDim2.new(0.0432099849, 0, 0.373315513, 0);
+	Size = UDim2.new(0, 148, 0, 21);
+	Text = "- New User Interface";
+	TextColor3 = Color3.fromRGB(255, 255, 255);
+	TextSize = 14.000;
+	TextWrapped = true;
+	TextXAlignment = Enum.TextXAlignment.Left;
+})
+
+object.xx = instance.new("TextLabel", {
+	BackgroundColor3 = Color3.fromRGB(255, 255, 255);
+	BackgroundTransparency = 1.000;
+	BorderColor3 = Color3.fromRGB(0, 0, 0);
+	BorderSizePixel = 0;
+	FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+	Name = "xx";
+	Parent = object.BGX;
+	Position = UDim2.new(0.0432099849, 0, 0.444167644, 0);
+	Size = UDim2.new(0, 148, 0, 36);
+	Text = "- Updated to V1.2";
+	TextColor3 = Color3.fromRGB(255, 255, 255);
+	TextSize = 14.000;
+	TextWrapped = true;
+	TextXAlignment = Enum.TextXAlignment.Left;
+})
+
+object.xx = instance.new("TextLabel", {
+	BackgroundColor3 = Color3.fromRGB(255, 255, 255);
+	BackgroundTransparency = 1.000;
+	BorderColor3 = Color3.fromRGB(0, 0, 0);
+	BorderSizePixel = 0;
+	FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+	Name = "xx";
+	Parent = object.BGX;
+	Position = UDim2.new(0.0372576043, 0, 0.554744601, 0);
+	Size = UDim2.new(0, 168, 0, 36);
+	Text = "-  Removed Dex Explorer";
+	TextColor3 = Color3.fromRGB(255, 255, 255);
+	TextSize = 14.000;
+	TextWrapped = true;
+	TextXAlignment = Enum.TextXAlignment.Left;
+})
+
+object.Avatar = instance.new("Frame", {
+	BackgroundColor3 = Color3.fromRGB(18, 18, 18);
+	BorderColor3 = Color3.fromRGB(0, 0, 0);
+	BorderSizePixel = 0;
+	Name = "Avatar";
+	Parent = object.HomeTab;
+	Position = UDim2.new(0.0125195617, 0, 0.0356083103, 0);
+	Size = UDim2.new(0, 320, 0, 74);
+})
+
+object.UICorner = instance.new("UICorner", {
+	CornerRadius = UDim.new(0, 11);
+	Parent = object.Avatar;
+})
+
+object.UserAvatar = instance.new("ImageLabel", {
+	BackgroundColor3 = Color3.fromRGB(255, 255, 255);
+	BackgroundTransparency = 1.000;
+	BorderColor3 = Color3.fromRGB(0, 0, 0);
+	BorderSizePixel = 0;
+	Image = "rbxasset://textures/ui/GuiImagePlaceholder.png";
+	Name = "User-Avatar";
+	Parent = object.Avatar;
+	Position = UDim2.new(0.0436342731, 0, 0.108108111, 0);
+	ScaleType = Enum.ScaleType.Fit;
+	Size = UDim2.new(0, 57, 0, 57);
+})
+
+object.UserName = instance.new("TextLabel", {
+	BackgroundColor3 = Color3.fromRGB(255, 255, 255);
+	BackgroundTransparency = 1.000;
+	BorderColor3 = Color3.fromRGB(0, 0, 0);
+	BorderSizePixel = 0;
+	FontFace = Font.new("rbxassetid://11702779517", Enum.FontWeight.SemiBold, Enum.FontStyle.Normal);
+	Name = "User-Name";
+	Parent = object.Avatar;
+	Position = UDim2.new(0.25405091, 0, 0.162162155, 0);
+	Size = UDim2.new(0, 200, 0, 50);
+	Text = "Welcome, User";
+	TextColor3 = Color3.fromRGB(255, 255, 255);
+	TextSize = 21.000;
+	TextXAlignment = Enum.TextXAlignment.Left;
+})
+
+object.CloseDisplay = instance.new("Frame", {
+	BackgroundColor3 = Color3.fromRGB(16, 16, 16);
+	BorderColor3 = Color3.fromRGB(0, 0, 0);
+	BorderSizePixel = 0;
+	Name = "Close-Display";
+	Parent = object.HomeTab;
+	Position = UDim2.new(0.93583715, 0, 0.0296735913, 0);
+	Size = UDim2.new(0, 26, 0, 26);
+})
+
+object.UICorner = instance.new("UICorner", {
+	CornerRadius = UDim.new(0, 5);
+	Parent = object.CloseDisplay;
+})
+
+object.CloseBTN = instance.new("TextButton", {
+	BackgroundColor3 = Color3.fromRGB(255, 255, 255);
+	BackgroundTransparency = 1.000;
+	BorderColor3 = Color3.fromRGB(0, 0, 0);
+	BorderSizePixel = 0;
+	FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+	Name = "Close-BTN";
+	Parent = object.CloseDisplay;
+	Size = UDim2.new(0, 26, 0, 26);
+	Text = "×";
+	TextColor3 = Color3.fromRGB(255, 255, 255);
+	TextSize = 23.000;
+})
+
+object.CodeDisplay = instance.new("Frame", {
+	BackgroundColor3 = Color3.fromRGB(16, 16, 16);
+	BorderColor3 = Color3.fromRGB(0, 0, 0);
+	BorderSizePixel = 0;
+	Name = "Code-Display";
+	Parent = object.Tabs;
+	Position = UDim2.new(0.314333886, 0, 0.314965814, 0);
+	Size = UDim2.new(0, 34, 0, 33);
+})
+
+object.UICorner = instance.new("UICorner", {
+	CornerRadius = UDim.new(0, 7);
+	Parent = object.CodeDisplay;
+})
+
+object.CodeIconBTN = instance.new("ImageButton", {
+	BackgroundColor3 = Color3.fromRGB(255, 255, 255);
+	BackgroundTransparency = 1.000;
+	BorderColor3 = Color3.fromRGB(0, 0, 0);
+	BorderSizePixel = 0;
+	Image = "rbxassetid://7733920644";
+	Name = "Code-Icon-BTN";
+	Parent = object.CodeDisplay;
+	Position = UDim2.new(0.0882352963, 0, 0.121212125, 0);
+	ScaleType = Enum.ScaleType.Fit;
+	Size = UDim2.new(0, 27, 0, 25);
+})
+
+object.CodeTab = instance.new("Frame", {
+	BackgroundColor3 = Color3.fromRGB(8, 8, 8);
+	BorderColor3 = Color3.fromRGB(0, 0, 0);
+	BorderSizePixel = 0;
+	Name = "Code-Tab";
+	Parent = object.CodeIconBTN;
+	Position = UDim2.new(2.03703737, 0, -4.38991928, 0);
+	Size = UDim2.new(0, 637, 0, 337);
+	Visible = false;
+})
+
+object.UICorner = instance.new("UICorner", {
+	CornerRadius = UDim.new(0, 11);
+	Parent = object.CodeTab;
+})
+
+object.TitleCode = instance.new("TextLabel", {
+	BackgroundColor3 = Color3.fromRGB(255, 255, 255);
+	BackgroundTransparency = 1.000;
+	BorderColor3 = Color3.fromRGB(0, 0, 0);
+	BorderSizePixel = 0;
+	FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Medium, Enum.FontStyle.Normal);
+	Name = "TitleCode";
+	Parent = object.CodeTab;
+	Position = UDim2.new(0.0254629627, 0, 0.0111688105, 0);
+	Size = UDim2.new(0, 200, 0, 32);
+	Text = "Script Editor";
+	TextColor3 = Color3.fromRGB(255, 255, 255);
+	TextSize = 18.000;
+	TextXAlignment = Enum.TextXAlignment.Left;
+})
+
+object.Display = instance.new("Frame", {
+	BackgroundColor3 = Color3.fromRGB(3, 3, 3);
+	BorderColor3 = Color3.fromRGB(0, 0, 0);
+	BorderSizePixel = 0;
+	Name = "Display";
+	Parent = object.CodeTab;
+	Position = UDim2.new(0.0172384549, 0, 0.104251847, 0);
+	Size = UDim2.new(0, 613, 0, 233);
+})
+
+object.UICorner = instance.new("UICorner", {
+	CornerRadius = UDim.new(0, 6);
+	Parent = object.Display;
+})
+
+object.ScrollingFrame = instance.new("ScrollingFrame", {
+	Active = true;
+	BackgroundColor3 = Color3.fromRGB(255, 255, 255);
+	BackgroundTransparency = 1.000;
+	BorderColor3 = Color3.fromRGB(0, 0, 0);
+	BorderSizePixel = 0;
+	CanvasSize = UDim2.new(0, 0, 2, 5);
+	Parent = object.Display;
+	Position = UDim2.new(0.0196559094, 0, 0.0409838408, 0);
+	ScrollBarImageColor3 = Color3.fromRGB(0, 0, 0);
+	Size = UDim2.new(0, 596, 0, 217);
+})
+
+object.TextBox = instance.new("TextBox", {
+	BackgroundColor3 = Color3.fromRGB(255, 255, 255);
+	BackgroundTransparency = 1.000;
+	BorderColor3 = Color3.fromRGB(0, 0, 0);
+	BorderSizePixel = 0;
+	ClearTextOnFocus = false;
+	FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+	Parent = object.ScrollingFrame;
+	PlaceholderText = "-- Here you can execute your favorite scripts!";
+	Size = UDim2.new(0, 583, 0, 487);
+	Text = "";
+	TextColor3 = Color3.fromRGB(255, 255, 255);
+	TextSize = 14.000;
+	TextWrapped = true;
+	TextXAlignment = Enum.TextXAlignment.Left;
+	TextYAlignment = Enum.TextYAlignment.Top;
+})
+
+object.ClearDisplay = instance.new("Frame", {
+	BackgroundColor3 = Color3.fromRGB(4, 4, 4);
+	BorderColor3 = Color3.fromRGB(0, 0, 0);
+	BorderSizePixel = 0;
+	Name = "Clear-Display";
+	Parent = object.CodeTab;
+	Position = UDim2.new(0.0172384549, 0, 0.817692041, 0);
+	Size = UDim2.new(0, 156, 0, 48);
+})
+
+object.UICorner = instance.new("UICorner", {
+	CornerRadius = UDim.new(0, 6);
+	Parent = object.ClearDisplay;
+})
+
+object.ClearBTN = instance.new("TextButton", {
+	BackgroundColor3 = Color3.fromRGB(255, 255, 255);
+	BackgroundTransparency = 1.000;
+	BorderColor3 = Color3.fromRGB(0, 0, 0);
+	BorderSizePixel = 0;
+	FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+	Name = "Clear-BTN";
+	Parent = object.ClearDisplay;
+	Position = UDim2.new(0, 0, 0.0303026829, 0);
+	Size = UDim2.new(0, 156, 0, 44);
+	Text = "Clear";
+	TextColor3 = Color3.fromRGB(255, 255, 255);
+	TextSize = 18.000;
+})
+
+object.CopyDisplay = instance.new("Frame", {
+	BackgroundColor3 = Color3.fromRGB(4, 4, 4);
+	BorderColor3 = Color3.fromRGB(0, 0, 0);
+	BorderSizePixel = 0;
+	Name = "Copy-Display";
+	Parent = object.CodeTab;
+	Position = UDim2.new(0.280644059, 0, 0.817692041, 0);
+	Size = UDim2.new(0, 124, 0, 48);
+})
+
+object.UICorner = instance.new("UICorner", {
+	CornerRadius = UDim.new(0, 6);
+	Parent = object.CopyDisplay;
+})
+
+object.CopyBTN = instance.new("TextButton", {
+	BackgroundColor3 = Color3.fromRGB(255, 255, 255);
+	BackgroundTransparency = 1.000;
+	BorderColor3 = Color3.fromRGB(0, 0, 0);
+	BorderSizePixel = 0;
+	FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+	Name = "Copy-BTN";
+	Parent = object.CopyDisplay;
+	Position = UDim2.new(0, 0, 0.0290851593, 0);
+	Size = UDim2.new(0, 123, 0, 45);
+	Text = "Copy Text";
+	TextColor3 = Color3.fromRGB(255, 255, 255);
+	TextSize = 18.000;
+})
+
+object.PasteDisplay = instance.new("Frame", {
+	BackgroundColor3 = Color3.fromRGB(4, 4, 4);
+	BorderColor3 = Color3.fromRGB(0, 0, 0);
+	BorderSizePixel = 0;
+	Name = "Paste-Display";
+	Parent = object.CodeTab;
+	Position = UDim2.new(0.494537294, 0, 0.81769222, 0);
+	Size = UDim2.new(0, 136, 0, 46);
+})
+
+object.UICorner = instance.new("UICorner", {
+	CornerRadius = UDim.new(0, 6);
+	Parent = object.PasteDisplay;
+})
+
+object.PasteBTN = instance.new("TextButton", {
+	BackgroundColor3 = Color3.fromRGB(255, 255, 255);
+	BackgroundTransparency = 1.000;
+	BorderColor3 = Color3.fromRGB(0, 0, 0);
+	BorderSizePixel = 0;
+	FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+	Name = "Paste-BTN";
+	Parent = object.PasteDisplay;
+	Position = UDim2.new(0.0073529412, 0, 0.0316188633, 0);
+	Size = UDim2.new(0, 135, 0, 46);
+	Text = "Paste Text";
+	TextColor3 = Color3.fromRGB(255, 255, 255);
+	TextSize = 18.000;
+})
+
+object.ExecDisplay = instance.new("Frame", {
+	BackgroundColor3 = Color3.fromRGB(4, 4, 4);
+	BorderColor3 = Color3.fromRGB(0, 0, 0);
+	BorderSizePixel = 0;
+	Name = "Exec-Display";
+	Parent = object.CodeTab;
+	Position = UDim2.new(0.731736958, 0, 0.81769222, 0);
+	Size = UDim2.new(0, 157, 0, 46);
+})
+
+object.UICorner = instance.new("UICorner", {
+	CornerRadius = UDim.new(0, 6);
+	Parent = object.ExecDisplay;
+})
+
+object.ExecBTN = instance.new("TextButton", {
+	BackgroundColor3 = Color3.fromRGB(255, 255, 255);
+	BackgroundTransparency = 1.000;
+	BorderColor3 = Color3.fromRGB(0, 0, 0);
+	BorderSizePixel = 0;
+	FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+	Name = "Exec-BTN";
+	Parent = object.ExecDisplay;
+	Size = UDim2.new(0, 157, 0, 45);
+	Text = "Execute";
+	TextColor3 = Color3.fromRGB(255, 255, 255);
+	TextSize = 18.000;
+})
+
+object.SettingsDisplay = instance.new("Frame", {
+	BackgroundColor3 = Color3.fromRGB(16, 16, 16);
+	BorderColor3 = Color3.fromRGB(0, 0, 0);
+	BorderSizePixel = 0;
+	Name = "Settings-Display";
+	Parent = object.Tabs;
+	Position = UDim2.new(0.317250043, 0, 0.551901639, 0);
+	Size = UDim2.new(0, 34, 0, 33);
+})
+
+object.UICorner = instance.new("UICorner", {
+	CornerRadius = UDim.new(0, 7);
+	Parent = object.SettingsDisplay;
+})
+
+object.SettingsIconBTN = instance.new("ImageButton", {
+	BackgroundColor3 = Color3.fromRGB(255, 255, 255);
+	BackgroundTransparency = 1.000;
+	BorderColor3 = Color3.fromRGB(0, 0, 0);
+	BorderSizePixel = 0;
+	Image = "rbxassetid://7734053495";
+	Name = "Settings-Icon-BTN";
+	Parent = object.SettingsDisplay;
+	Position = UDim2.new(0.0850839019, 0, 0.133939803, 0);
+	ScaleType = Enum.ScaleType.Fit;
+	Size = UDim2.new(0, 27, 0, 25);
+})
+
+object.SettingsTab = instance.new("Frame", {
+	BackgroundColor3 = Color3.fromRGB(8, 8, 8);
+	BorderColor3 = Color3.fromRGB(0, 0, 0);
+	BorderSizePixel = 0;
+	Name = "Settings-Tab";
+	Parent = object.SettingsIconBTN;
+	Position = UDim2.new(2.09041405, 0, -7.76484728, 0);
+	Size = UDim2.new(0, 636, 0, 335);
+	Visible = false;
+})
+
+object.UICorner = instance.new("UICorner", {
+	CornerRadius = UDim.new(0, 11);
+	Parent = object.SettingsTab;
+})
+
+object.FPSBG = instance.new("Frame", {
+	BackgroundColor3 = Color3.fromRGB(24, 24, 24);
+	BorderColor3 = Color3.fromRGB(0, 0, 0);
+	BorderSizePixel = 0;
+	Name = "FPS-BG";
+	Parent = object.SettingsTab;
+	Position = UDim2.new(0.0203160271, 0, 0.0646836609, 0);
+	Size = UDim2.new(0, 212, 0, 43);
+})
+
+object.UICorner = instance.new("UICorner", {
+	Parent = object.FPSBG;
+})
+
+object.FPSTitle = instance.new("TextLabel", {
+	BackgroundColor3 = Color3.fromRGB(255, 255, 255);
+	BackgroundTransparency = 1.000;
+	BorderColor3 = Color3.fromRGB(0, 0, 0);
+	BorderSizePixel = 0;
+	FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+	Name = "FPSTitle";
+	Parent = object.FPSBG;
+	Position = UDim2.new(0.0377358496, 0, 0.25, 0);
+	Size = UDim2.new(0, 200, 0, 21);
+	Text = "FPS Unlocker";
+	TextColor3 = Color3.fromRGB(255, 255, 255);
+	TextSize = 14.000;
+	TextXAlignment = Enum.TextXAlignment.Left;
+})
+
+object.ToggleFramePS = instance.new("Frame", {
+	BackgroundColor3 = Color3.fromRGB(255, 255, 255);
+	BackgroundTransparency = 1.000;
+	BorderColor3 = Color3.fromRGB(0, 0, 0);
+	BorderSizePixel = 0;
+	Name = "ToggleFramePS";
+	Parent = object.FPSBG;
+	Position = UDim2.new(-0.00091682293, 0, -0.0749067813, 0);
+	Size = UDim2.new(0, 207, 0, 44);
+})
+
+object.FPSBTN = instance.new("TextButton", {
+	BackgroundColor3 = Color3.fromRGB(12, 12, 12);
+	BorderColor3 = Color3.fromRGB(0, 0, 0);
+	BorderSizePixel = 0;
+	FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Medium, Enum.FontStyle.Normal);
+	Name = "FPS-BTN";
+	Parent = object.ToggleFramePS;
+	Position = UDim2.new(0.560386896, 0, 0.25, 0);
+	Size = UDim2.new(0, 85, 0, 27);
+	Text = "Execute";
+	TextColor3 = Color3.fromRGB(255, 255, 255);
+	TextSize = 14.000;
+})
+
+object.UICorner = instance.new("UICorner", {
+	CornerRadius = UDim.new(0, 6);
+	Parent = object.FPSBTN;
+})
+
+object.ScriptHubDisplay = instance.new("Frame", {
+	BackgroundColor3 = Color3.fromRGB(16, 16, 16);
+	BorderColor3 = Color3.fromRGB(0, 0, 0);
+	BorderSizePixel = 0;
+	Name = "ScriptHub-Display";
+	Parent = object.Tabs;
+	Position = UDim2.new(0.316355169, 0, 0.430437297, 0);
+	Size = UDim2.new(0, 34, 0, 33);
+})
+
+object.UICorner = instance.new("UICorner", {
+	CornerRadius = UDim.new(0, 7);
+	Parent = object.ScriptHubDisplay;
+})
+
+object.ScriptHubIconBTN = instance.new("ImageButton", {
+	BackgroundColor3 = Color3.fromRGB(255, 255, 255);
+	BackgroundTransparency = 1.000;
+	BorderColor3 = Color3.fromRGB(0, 0, 0);
+	BorderSizePixel = 0;
+	Image = "rbxassetid://7733779730";
+	Name = "ScriptHub-Icon-BTN";
+	Parent = object.ScriptHubDisplay;
+	Position = UDim2.new(0.0882352963, 0, 0.121212125, 0);
+	ScaleType = Enum.ScaleType.Fit;
+	Size = UDim2.new(0, 27, 0, 25);
+})
+
+object.ScriptHubTab = instance.new("Frame", {
+	BackgroundColor3 = Color3.fromRGB(8, 8, 8);
+	BorderColor3 = Color3.fromRGB(0, 0, 0);
+	BorderSizePixel = 0;
+	Name = "ScriptHub-Tab";
+	Parent = object.ScriptHubIconBTN;
+	Position = UDim2.new(2.03209662, 0, -6.00688314, 0);
+	Size = UDim2.new(0, 637, 0, 334);
+	Visible = false;
+})
+
+object.UICorner = instance.new("UICorner", {
+	CornerRadius = UDim.new(0, 11);
+	Parent = object.ScriptHubTab;
+})
+
+object.TitleScriptHub = instance.new("TextLabel", {
+	BackgroundColor3 = Color3.fromRGB(255, 255, 255);
+	BackgroundTransparency = 1.000;
+	BorderColor3 = Color3.fromRGB(0, 0, 0);
+	BorderSizePixel = 0;
+	FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+	Name = "TitleScriptHub";
+	Parent = object.ScriptHubTab;
+	Position = UDim2.new(0.0338600464, 0, 0.0522088371, 0);
+	Size = UDim2.new(0, 200, 0, 25);
+	Text = "Script Hub";
+	TextColor3 = Color3.fromRGB(255, 255, 255);
+	TextSize = 21.000;
+	TextXAlignment = Enum.TextXAlignment.Left;
+})
+
+object.ScrollingFrame = instance.new("ScrollingFrame", {
+	Active = true;
+	BackgroundColor3 = Color3.fromRGB(255, 255, 255);
+	BackgroundTransparency = 1.000;
+	BorderColor3 = Color3.fromRGB(0, 0, 0);
+	BorderSizePixel = 0;
+	Parent = object.ScriptHubTab;
+	Position = UDim2.new(0.020315988, 0, 0.128742516, 0);
+	ScrollBarImageColor3 = Color3.fromRGB(0, 0, 0);
+	Size = UDim2.new(0, 610, 0, 278);
+})
+
+object.SpeedHubX = instance.new("ImageLabel", {
+	BackgroundColor3 = Color3.fromRGB(255, 255, 255);
+	BackgroundTransparency = 1.000;
+	BorderColor3 = Color3.fromRGB(0, 0, 0);
+	BorderSizePixel = 0;
+	Image = "rbxassetid://16022917595";
+	Name = "SpeedHubX";
+	Parent = object.ScrollingFrame;
+	Position = UDim2.new(0.0125786951, 0, 0.0165827088, 0);
+	ScaleType = Enum.ScaleType.Crop;
+	Size = UDim2.new(0, 249, 0, 95);
+})
+
+object.UICorner = instance.new("UICorner", {
+	Parent = object.SpeedHubX;
+})
+
+object.ExecuteSPHX = instance.new("TextButton", {
+	BackgroundColor3 = Color3.fromRGB(0, 0, 0);
+	BorderColor3 = Color3.fromRGB(0, 0, 0);
+	BorderSizePixel = 0;
+	FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Medium, Enum.FontStyle.Normal);
+	Name = "ExecuteSPHX";
+	Parent = object.SpeedHubX;
+	Position = UDim2.new(0.662563682, 0, 0.655263066, 0);
+	Size = UDim2.new(0, 74, 0, 24);
+	Text = "Execute";
+	TextColor3 = Color3.fromRGB(255, 255, 255);
+	TextSize = 14.000;
+})
+
+object.UICorner = instance.new("UICorner", {
+	Parent = object.ExecuteSPHX;
+})
+
+object.IY = instance.new("ImageLabel", {
+	BackgroundColor3 = Color3.fromRGB(255, 255, 255);
+	BackgroundTransparency = 1.000;
+	BorderColor3 = Color3.fromRGB(0, 0, 0);
+	BorderSizePixel = 0;
+	Image = "http://www.roblox.com/asset/?id=15914349618";
+	Name = "IY";
+	Parent = object.ScrollingFrame;
+	Position = UDim2.new(0.453919649, 0, 0.0143089565, 0);
+	ScaleType = Enum.ScaleType.Crop;
+	Size = UDim2.new(0, 253, 0, 96);
+})
+
+object.UICorner = instance.new("UICorner", {
+	Parent = object.IY;
+})
+
+object.ExecuteIY = instance.new("TextButton", {
+	BackgroundColor3 = Color3.fromRGB(0, 0, 0);
+	BorderColor3 = Color3.fromRGB(0, 0, 0);
+	BorderSizePixel = 0;
+	FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Medium, Enum.FontStyle.Normal);
+	Name = "ExecuteIY";
+	Parent = object.IY;
+	Position = UDim2.new(0.641213655, 0, 0.665570259, 0);
+	Size = UDim2.new(0, 74, 0, 24);
+	Text = "Execute";
+	TextColor3 = Color3.fromRGB(255, 255, 255);
+	TextSize = 14.000;
+})
+
+object.UICorner = instance.new("UICorner", {
+	Parent = object.ExecuteIY;
+})
+
+object.ZekromHubX = instance.new("ImageLabel", {
+	BackgroundColor3 = Color3.fromRGB(255, 255, 255);
+	BackgroundTransparency = 1.000;
+	BorderColor3 = Color3.fromRGB(0, 0, 0);
+	BorderSizePixel = 0;
+	Image = "rbxassetid://16172861652";
+	Name = "ZekromHubX";
+	Parent = object.ScrollingFrame;
+	Position = UDim2.new(0.0131147541, 0, 0.184533641, 0);
+	ScaleType = Enum.ScaleType.Crop;
+	Size = UDim2.new(0, 249, 0, 95);
+})
+
+object.UICorner = instance.new("UICorner", {
+	Parent = object.ZekromHubX;
+})
+
+object.ExecuteZekroV2 = instance.new("TextButton", {
+	BackgroundColor3 = Color3.fromRGB(0, 0, 0);
+	BorderColor3 = Color3.fromRGB(0, 0, 0);
+	BorderSizePixel = 0;
+	FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Medium, Enum.FontStyle.Normal);
+	Name = "ExecuteZekroV2";
+	Parent = object.ZekromHubX;
+	Position = UDim2.new(0.74983722, 0, 0.705081701, 0);
+	Size = UDim2.new(0, 74, 0, 24);
+	Text = "Execute";
+	TextColor3 = Color3.fromRGB(255, 255, 255);
+	TextSize = 14.000;
+})
+
+object.UICorner = instance.new("UICorner", {
+	Parent = object.ExecuteZekroV2;
+})
+
+-- Scripts:
+
+local function DHEC_fake_script() -- Open.LocalScript
+    local script = Instance.new('LocalScript', Open)
+local function ZLVXJZX_fake_script() -- UserAvatar.LocalScript
+    local script = Instance.new('LocalScript', UserAvatar)
+local function RAUR_fake_script() -- UserName.LocalScript
+    local script = Instance.new('LocalScript', UserName)
+local function GEFTKW_fake_script() -- CloseBTN.LocalScript
+    local script = Instance.new('LocalScript', CloseBTN)
+local function OZXMUIN_fake_script() -- HomeIconBTN.LocalScript
+    local script = Instance.new('LocalScript', HomeIconBTN)
+local function EWNO_fake_script() -- ClearBTN.LocalScript
+    local script = Instance.new('LocalScript', ClearBTN)
+local function PFDZFG_fake_script() -- CopyBTN.LocalScript
+    local script = Instance.new('LocalScript', CopyBTN)
+local function EANY_fake_script() -- PasteBTN.LocalScript
+    local script = Instance.new('LocalScript', PasteBTN)
+local function ERDUH_fake_script() -- ExecBTN.LocalScript
+    local script = Instance.new('LocalScript', ExecBTN)
+local function WKBY_fake_script() -- CodeIconBTN.LocalScript
+    local script = Instance.new('LocalScript', CodeIconBTN)
+local function VZBJE_fake_script() -- SettingsIconBTN.LocalScript
+    local script = Instance.new('LocalScript', SettingsIconBTN)
+local function WBYUCU_fake_script() -- FPSBTN.LocalScript
+    local script = Instance.new('LocalScript', FPSBTN)
+local function JKUR_fake_script() -- Tabs.CubiX-Drag
+    local script = Instance.new('LocalScript', Tabs)
+local function WMEJARZ_fake_script() -- Tabs.LocalScript
+    local script = Instance.new('LocalScript', Tabs)
+local function NBSTPSK_fake_script() -- ExecuteSPHX.LocalScript
+    local script = Instance.new('LocalScript', ExecuteSPHX)
+local function OZNANT_fake_script() -- ExecuteIY.LocalScript
+    local script = Instance.new('LocalScript', ExecuteIY)
+local function HMEMM_fake_script() -- ExecuteZekroV2.LocalScript
+    local script = Instance.new('LocalScript', ExecuteZekroV2)
+local function EPMJXD_fake_script() -- ScriptHubIconBTN.LocalScript
+    local script = Instance.new('LocalScript', ScriptHubIconBTN)
