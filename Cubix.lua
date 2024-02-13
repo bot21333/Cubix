@@ -109,6 +109,7 @@ DarkBG.BackgroundTransparency = 0.500
 DarkBG.BorderColor3 = Color3.fromRGB(0, 0, 0)
 DarkBG.BorderSizePixel = 0
 DarkBG.Size = UDim2.new(0, 1000, 0, 1000)
+DarkBG.Visible = false
 
 Tabs.Name = "Tabs"
 Tabs.Parent = DarkBG
@@ -757,7 +758,7 @@ UICorner_28.Parent = ExecuteZekroV2
 
 -- Scripts:
 
-local function VGTWY_fake_script() -- Open.LocalScript 
+local function NYXY_fake_script() -- Open.LocalScript 
 	local script = Instance.new('LocalScript', Open)
 
 	local darkbg = script.Parent.Parent["Dark-BG"]
@@ -770,15 +771,15 @@ local function VGTWY_fake_script() -- Open.LocalScript
 		opengui.Visible = false
 	end)
 end
-coroutine.wrap(VGTWY_fake_script)()
-local function RGIMID_fake_script() -- UserAvatar.LocalScript 
+coroutine.wrap(NYXY_fake_script)()
+local function NJUGXP_fake_script() -- UserAvatar.LocalScript 
 	local script = Instance.new('LocalScript', UserAvatar)
 
 	local image = script.Parent
 	image.Image = game.Players:GetUserThumbnailAsync(game.Players.LocalPlayer.UserId,Enum.ThumbnailType.HeadShot, Enum.ThumbnailSize.Size420x420)
 end
-coroutine.wrap(RGIMID_fake_script)()
-local function ZMDY_fake_script() -- UserName.LocalScript 
+coroutine.wrap(NJUGXP_fake_script)()
+local function WLCZZ_fake_script() -- UserName.LocalScript 
 	local script = Instance.new('LocalScript', UserName)
 
 	local user = game.Players.LocalPlayer.Name
@@ -786,8 +787,8 @@ local function ZMDY_fake_script() -- UserName.LocalScript
 	
 	usertxt.Text = "Welcome, "..user
 end
-coroutine.wrap(ZMDY_fake_script)()
-local function PXFODPZ_fake_script() -- CloseBTN.LocalScript 
+coroutine.wrap(WLCZZ_fake_script)()
+local function FWLSH_fake_script() -- CloseBTN.LocalScript 
 	local script = Instance.new('LocalScript', CloseBTN)
 
 	local darkbg = script.Parent.Parent.Parent.Parent.Parent.Parent.Parent.Parent["Dark-BG"]
@@ -801,8 +802,8 @@ local function PXFODPZ_fake_script() -- CloseBTN.LocalScript
 		opengui.Visible = true
 	end)
 end
-coroutine.wrap(PXFODPZ_fake_script)()
-local function AMETI_fake_script() -- HomeIconBTN.LocalScript 
+coroutine.wrap(FWLSH_fake_script)()
+local function QTGVAJ_fake_script() -- HomeIconBTN.LocalScript 
 	local script = Instance.new('LocalScript', HomeIconBTN)
 
 	local home = script.Parent["Home-Tab"]
@@ -817,8 +818,8 @@ local function AMETI_fake_script() -- HomeIconBTN.LocalScript
 		 stngs.Visible = false
 	end)
 end
-coroutine.wrap(AMETI_fake_script)()
-local function UIVBJR_fake_script() -- ClearBTN.LocalScript 
+coroutine.wrap(QTGVAJ_fake_script)()
+local function PWGNM_fake_script() -- ClearBTN.LocalScript 
 	local script = Instance.new('LocalScript', ClearBTN)
 
 	local textbox = script.Parent.Parent.Parent.Display.ScrollingFrame.TextBox
@@ -843,8 +844,8 @@ local function UIVBJR_fake_script() -- ClearBTN.LocalScript
 	function Callback(answer)
 	end
 end
-coroutine.wrap(UIVBJR_fake_script)()
-local function ROJMBL_fake_script() -- CopyBTN.LocalScript 
+coroutine.wrap(PWGNM_fake_script)()
+local function KLUYQN_fake_script() -- CopyBTN.LocalScript 
 	local script = Instance.new('LocalScript', CopyBTN)
 
 	local txt = script.Parent.Parent.Parent.Display.ScrollingFrame.TextBox
@@ -870,8 +871,8 @@ local function ROJMBL_fake_script() -- CopyBTN.LocalScript
 	end
 	
 end
-coroutine.wrap(ROJMBL_fake_script)()
-local function BIBGH_fake_script() -- PasteBTN.LocalScript 
+coroutine.wrap(KLUYQN_fake_script)()
+local function HCRL_fake_script() -- PasteBTN.LocalScript 
 	local script = Instance.new('LocalScript', PasteBTN)
 
 	local txt = script.Parent.Parent.Parent.Display.ScrollingFrame.TextBox
@@ -897,8 +898,8 @@ local function BIBGH_fake_script() -- PasteBTN.LocalScript
 	function Callback(answer)
 	end
 end
-coroutine.wrap(BIBGH_fake_script)()
-local function RKHO_fake_script() -- ExecBTN.LocalScript 
+coroutine.wrap(HCRL_fake_script)()
+local function ZTADS_fake_script() -- ExecBTN.LocalScript 
 	local script = Instance.new('LocalScript', ExecBTN)
 
 	local txtbox = script.Parent.Parent.Parent.Display.ScrollingFrame.TextBox
@@ -930,8 +931,8 @@ local function RKHO_fake_script() -- ExecBTN.LocalScript
 	
 	
 end
-coroutine.wrap(RKHO_fake_script)()
-local function HKDF_fake_script() -- CodeIconBTN.LocalScript 
+coroutine.wrap(ZTADS_fake_script)()
+local function DWBJVHF_fake_script() -- CodeIconBTN.LocalScript 
 	local script = Instance.new('LocalScript', CodeIconBTN)
 
 	local home = script.Parent.Parent.Parent["Home-Display"]["Home-Icon-BTN"]["Home-Tab"]
@@ -946,8 +947,8 @@ local function HKDF_fake_script() -- CodeIconBTN.LocalScript
 		stngs.Visible = false
 	end)
 end
-coroutine.wrap(HKDF_fake_script)()
-local function RBXH_fake_script() -- SettingsIconBTN.LocalScript 
+coroutine.wrap(DWBJVHF_fake_script)()
+local function MLWQPR_fake_script() -- SettingsIconBTN.LocalScript 
 	local script = Instance.new('LocalScript', SettingsIconBTN)
 
 	local home = script.Parent.Parent.Parent["Home-Display"]["Home-Icon-BTN"]["Home-Tab"]
@@ -962,8 +963,8 @@ local function RBXH_fake_script() -- SettingsIconBTN.LocalScript
 		 stngs.Visible = true
 	end)
 end
-coroutine.wrap(RBXH_fake_script)()
-local function VFHD_fake_script() -- FPSBTN.LocalScript 
+coroutine.wrap(MLWQPR_fake_script)()
+local function TMHVQCE_fake_script() -- FPSBTN.LocalScript 
 	local script = Instance.new('LocalScript', FPSBTN)
 
 	local btn = script.Parent
@@ -988,16 +989,16 @@ local function VFHD_fake_script() -- FPSBTN.LocalScript
 	end
 	
 end
-coroutine.wrap(VFHD_fake_script)()
-local function ZSKTR_fake_script() -- Tabs.LocalScript 
+coroutine.wrap(TMHVQCE_fake_script)()
+local function NYKPDQQ_fake_script() -- Tabs.LocalScript 
 	local script = Instance.new('LocalScript', Tabs)
 
 	function identifyexecutor()
 		return "CubiX V1.2"
 	end
 end
-coroutine.wrap(ZSKTR_fake_script)()
-local function MDNTM_fake_script() -- ExecuteSPHX.LocalScript 
+coroutine.wrap(NYKPDQQ_fake_script)()
+local function LAZOJ_fake_script() -- ExecuteSPHX.LocalScript 
 	local script = Instance.new('LocalScript', ExecuteSPHX)
 
 	local GetScriptIY = script.Parent
@@ -1006,8 +1007,8 @@ local function MDNTM_fake_script() -- ExecuteSPHX.LocalScript
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/ahmadsgamer2/Speed-Hub-X/main/SpeedHubX"))()
 	end)
 end
-coroutine.wrap(MDNTM_fake_script)()
-local function TPTHDI_fake_script() -- ExecuteIY.LocalScript 
+coroutine.wrap(LAZOJ_fake_script)()
+local function CRQZX_fake_script() -- ExecuteIY.LocalScript 
 	local script = Instance.new('LocalScript', ExecuteIY)
 
 	local GetScriptIY = script.Parent
@@ -1016,8 +1017,8 @@ local function TPTHDI_fake_script() -- ExecuteIY.LocalScript
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source", true))()
 	end)
 end
-coroutine.wrap(TPTHDI_fake_script)()
-local function ZIJZ_fake_script() -- ExecuteZekroV2.LocalScript 
+coroutine.wrap(CRQZX_fake_script)()
+local function ZIJP_fake_script() -- ExecuteZekroV2.LocalScript 
 	local script = Instance.new('LocalScript', ExecuteZekroV2)
 
 	local GetScriptIY = script.Parent.Parent
@@ -1026,8 +1027,8 @@ local function ZIJZ_fake_script() -- ExecuteZekroV2.LocalScript
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/ahmadsgamer2/Zekrom-Hub-X/main/Zekrom-Hub-X-exe", true))()
 	end)
 end
-coroutine.wrap(ZIJZ_fake_script)()
-local function TIUNSXV_fake_script() -- ScriptHubIconBTN.LocalScript 
+coroutine.wrap(ZIJP_fake_script)()
+local function WCPDKI_fake_script() -- ScriptHubIconBTN.LocalScript 
 	local script = Instance.new('LocalScript', ScriptHubIconBTN)
 
 	local home = script.Parent.Parent.Parent["Home-Display"]["Home-Icon-BTN"]["Home-Tab"]
@@ -1042,4 +1043,4 @@ local function TIUNSXV_fake_script() -- ScriptHubIconBTN.LocalScript
 		stngs.Visible = false
 	end)
 end
-coroutine.wrap(TIUNSXV_fake_script)()
+coroutine.wrap(WCPDKI_fake_script)()
