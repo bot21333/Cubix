@@ -82,8 +82,10 @@ local UICorner_27 = Instance.new("UICorner")
 local ExecuteZekroV2 = Instance.new("TextButton")
 local UICorner_28 = Instance.new("UICorner")
 
+-- Properties:
+
 CubiX.Name = "CubiX"
-CubiX.Parent = game:GetService("CoreGui") or gethui()
+CubiX.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 CubiX.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 CubiX.ResetOnSpawn = false
 
@@ -107,7 +109,6 @@ DarkBG.BackgroundTransparency = 0.500
 DarkBG.BorderColor3 = Color3.fromRGB(0, 0, 0)
 DarkBG.BorderSizePixel = 0
 DarkBG.Size = UDim2.new(0, 1000, 0, 1000)
-DarkBG.Visible = false
 
 Tabs.Name = "Tabs"
 Tabs.Parent = DarkBG
@@ -756,7 +757,7 @@ UICorner_28.Parent = ExecuteZekroV2
 
 -- Scripts:
 
-local function ZVJEG_fake_script() -- Open.LocalScript 
+local function VGTWY_fake_script() -- Open.LocalScript 
 	local script = Instance.new('LocalScript', Open)
 
 	local darkbg = script.Parent.Parent["Dark-BG"]
@@ -769,15 +770,15 @@ local function ZVJEG_fake_script() -- Open.LocalScript
 		opengui.Visible = false
 	end)
 end
-coroutine.wrap(ZVJEG_fake_script)()
-local function EMCZX_fake_script() -- UserAvatar.LocalScript 
+coroutine.wrap(VGTWY_fake_script)()
+local function RGIMID_fake_script() -- UserAvatar.LocalScript 
 	local script = Instance.new('LocalScript', UserAvatar)
 
 	local image = script.Parent
 	image.Image = game.Players:GetUserThumbnailAsync(game.Players.LocalPlayer.UserId,Enum.ThumbnailType.HeadShot, Enum.ThumbnailSize.Size420x420)
 end
-coroutine.wrap(EMCZX_fake_script)()
-local function IRDXDOH_fake_script() -- UserName.LocalScript 
+coroutine.wrap(RGIMID_fake_script)()
+local function ZMDY_fake_script() -- UserName.LocalScript 
 	local script = Instance.new('LocalScript', UserName)
 
 	local user = game.Players.LocalPlayer.Name
@@ -785,8 +786,8 @@ local function IRDXDOH_fake_script() -- UserName.LocalScript
 	
 	usertxt.Text = "Welcome, "..user
 end
-coroutine.wrap(IRDXDOH_fake_script)()
-local function AXUG_fake_script() -- CloseBTN.LocalScript 
+coroutine.wrap(ZMDY_fake_script)()
+local function PXFODPZ_fake_script() -- CloseBTN.LocalScript 
 	local script = Instance.new('LocalScript', CloseBTN)
 
 	local darkbg = script.Parent.Parent.Parent.Parent.Parent.Parent.Parent.Parent["Dark-BG"]
@@ -800,8 +801,8 @@ local function AXUG_fake_script() -- CloseBTN.LocalScript
 		opengui.Visible = true
 	end)
 end
-coroutine.wrap(AXUG_fake_script)()
-local function GNDO_fake_script() -- HomeIconBTN.LocalScript 
+coroutine.wrap(PXFODPZ_fake_script)()
+local function AMETI_fake_script() -- HomeIconBTN.LocalScript 
 	local script = Instance.new('LocalScript', HomeIconBTN)
 
 	local home = script.Parent["Home-Tab"]
@@ -816,8 +817,8 @@ local function GNDO_fake_script() -- HomeIconBTN.LocalScript
 		 stngs.Visible = false
 	end)
 end
-coroutine.wrap(GNDO_fake_script)()
-local function ZAWNPO_fake_script() -- ClearBTN.LocalScript 
+coroutine.wrap(AMETI_fake_script)()
+local function UIVBJR_fake_script() -- ClearBTN.LocalScript 
 	local script = Instance.new('LocalScript', ClearBTN)
 
 	local textbox = script.Parent.Parent.Parent.Display.ScrollingFrame.TextBox
@@ -842,8 +843,8 @@ local function ZAWNPO_fake_script() -- ClearBTN.LocalScript
 	function Callback(answer)
 	end
 end
-coroutine.wrap(ZAWNPO_fake_script)()
-local function SDQKZKQ_fake_script() -- CopyBTN.LocalScript 
+coroutine.wrap(UIVBJR_fake_script)()
+local function ROJMBL_fake_script() -- CopyBTN.LocalScript 
 	local script = Instance.new('LocalScript', CopyBTN)
 
 	local txt = script.Parent.Parent.Parent.Display.ScrollingFrame.TextBox
@@ -869,8 +870,8 @@ local function SDQKZKQ_fake_script() -- CopyBTN.LocalScript
 	end
 	
 end
-coroutine.wrap(SDQKZKQ_fake_script)()
-local function MVLYEN_fake_script() -- PasteBTN.LocalScript 
+coroutine.wrap(ROJMBL_fake_script)()
+local function BIBGH_fake_script() -- PasteBTN.LocalScript 
 	local script = Instance.new('LocalScript', PasteBTN)
 
 	local txt = script.Parent.Parent.Parent.Display.ScrollingFrame.TextBox
@@ -896,8 +897,8 @@ local function MVLYEN_fake_script() -- PasteBTN.LocalScript
 	function Callback(answer)
 	end
 end
-coroutine.wrap(MVLYEN_fake_script)()
-local function AJZDJY_fake_script() -- ExecBTN.LocalScript 
+coroutine.wrap(BIBGH_fake_script)()
+local function RKHO_fake_script() -- ExecBTN.LocalScript 
 	local script = Instance.new('LocalScript', ExecBTN)
 
 	local txtbox = script.Parent.Parent.Parent.Display.ScrollingFrame.TextBox
@@ -929,8 +930,8 @@ local function AJZDJY_fake_script() -- ExecBTN.LocalScript
 	
 	
 end
-coroutine.wrap(AJZDJY_fake_script)()
-local function LWKONX_fake_script() -- CodeIconBTN.LocalScript 
+coroutine.wrap(RKHO_fake_script)()
+local function HKDF_fake_script() -- CodeIconBTN.LocalScript 
 	local script = Instance.new('LocalScript', CodeIconBTN)
 
 	local home = script.Parent.Parent.Parent["Home-Display"]["Home-Icon-BTN"]["Home-Tab"]
@@ -945,8 +946,8 @@ local function LWKONX_fake_script() -- CodeIconBTN.LocalScript
 		stngs.Visible = false
 	end)
 end
-coroutine.wrap(LWKONX_fake_script)()
-local function CLALM_fake_script() -- SettingsIconBTN.LocalScript 
+coroutine.wrap(HKDF_fake_script)()
+local function RBXH_fake_script() -- SettingsIconBTN.LocalScript 
 	local script = Instance.new('LocalScript', SettingsIconBTN)
 
 	local home = script.Parent.Parent.Parent["Home-Display"]["Home-Icon-BTN"]["Home-Tab"]
@@ -961,8 +962,8 @@ local function CLALM_fake_script() -- SettingsIconBTN.LocalScript
 		 stngs.Visible = true
 	end)
 end
-coroutine.wrap(CLALM_fake_script)()
-local function LANH_fake_script() -- FPSBTN.LocalScript 
+coroutine.wrap(RBXH_fake_script)()
+local function VFHD_fake_script() -- FPSBTN.LocalScript 
 	local script = Instance.new('LocalScript', FPSBTN)
 
 	local btn = script.Parent
@@ -987,74 +988,16 @@ local function LANH_fake_script() -- FPSBTN.LocalScript
 	end
 	
 end
-coroutine.wrap(LANH_fake_script)()
-local function GUKXT_fake_script() -- Tabs.CubiX-Drag 
-	local script = Instance.new('LocalScript', Tabs)
-
-	local UserInputService = game:GetService("UserInputService")
-	local runService = (game:GetService("RunService"));
-	
-	local gui = script.Parent
-	
-	local dragging
-	local dragInput
-	local dragStart
-	local startPos
-	
-	function Lerp(a, b, m)
-		return a + (b - a) * m
-	end;
-	
-	local lastMousePos
-	local lastGoalPos
-	local DRAG_SPEED = (8); -- // The speed of the UI darg.
-	function Update(dt)
-		if not (startPos) then return end;
-		if not (dragging) and (lastGoalPos) then
-			gui.Position = UDim2.new(startPos.X.Scale, Lerp(gui.Position.X.Offset, lastGoalPos.X.Offset, dt * DRAG_SPEED), startPos.Y.Scale, Lerp(gui.Position.Y.Offset, lastGoalPos.Y.Offset, dt * DRAG_SPEED))
-			return 
-		end;
-	
-		local delta = (lastMousePos - UserInputService:GetMouseLocation())
-		local xGoal = (startPos.X.Offset - delta.X);
-		local yGoal = (startPos.Y.Offset - delta.Y);
-		lastGoalPos = UDim2.new(startPos.X.Scale, xGoal, startPos.Y.Scale, yGoal)
-		gui.Position = UDim2.new(startPos.X.Scale, Lerp(gui.Position.X.Offset, xGoal, dt * DRAG_SPEED), startPos.Y.Scale, Lerp(gui.Position.Y.Offset, yGoal, dt * DRAG_SPEED))
-	end;
-	
-	gui.InputBegan:Connect(function(input)
-		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
-			dragging = true
-			dragStart = input.Position
-			startPos = gui.Position
-			lastMousePos = UserInputService:GetMouseLocation()
-	
-			input.Changed:Connect(function()
-				if input.UserInputState == Enum.UserInputState.End then
-					dragging = false
-				end
-			end)
-		end
-	end)
-	
-	gui.InputChanged:Connect(function(input)
-		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
-			dragInput = input
-		end
-	end)
-	
-	runService.Heartbeat:Connect(Update)
-end
-coroutine.wrap(GUKXT_fake_script)()
-local function XMXB_fake_script() -- Tabs.LocalScript 
+coroutine.wrap(VFHD_fake_script)()
+local function ZSKTR_fake_script() -- Tabs.LocalScript 
 	local script = Instance.new('LocalScript', Tabs)
 
 	function identifyexecutor()
 		return "CubiX V1.2"
 	end
 end
-coroutine.wrap(XMXB_fake_script)()
-local function DJSAI_fake_script() -- ExecuteSPHX.LocalScript 
+coroutine.wrap(ZSKTR_fake_script)()
+local function MDNTM_fake_script() -- ExecuteSPHX.LocalScript 
 	local script = Instance.new('LocalScript', ExecuteSPHX)
 
 	local GetScriptIY = script.Parent
@@ -1063,8 +1006,8 @@ local function DJSAI_fake_script() -- ExecuteSPHX.LocalScript
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/ahmadsgamer2/Speed-Hub-X/main/SpeedHubX"))()
 	end)
 end
-coroutine.wrap(DJSAI_fake_script)()
-local function SWSXURO_fake_script() -- ExecuteIY.LocalScript 
+coroutine.wrap(MDNTM_fake_script)()
+local function TPTHDI_fake_script() -- ExecuteIY.LocalScript 
 	local script = Instance.new('LocalScript', ExecuteIY)
 
 	local GetScriptIY = script.Parent
@@ -1073,8 +1016,8 @@ local function SWSXURO_fake_script() -- ExecuteIY.LocalScript
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source", true))()
 	end)
 end
-coroutine.wrap(SWSXURO_fake_script)()
-local function XWDGRJR_fake_script() -- ExecuteZekroV2.LocalScript 
+coroutine.wrap(TPTHDI_fake_script)()
+local function ZIJZ_fake_script() -- ExecuteZekroV2.LocalScript 
 	local script = Instance.new('LocalScript', ExecuteZekroV2)
 
 	local GetScriptIY = script.Parent.Parent
@@ -1083,8 +1026,8 @@ local function XWDGRJR_fake_script() -- ExecuteZekroV2.LocalScript
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/ahmadsgamer2/Zekrom-Hub-X/main/Zekrom-Hub-X-exe", true))()
 	end)
 end
-coroutine.wrap(XWDGRJR_fake_script)()
-local function TBPF_fake_script() -- ScriptHubIconBTN.LocalScript 
+coroutine.wrap(ZIJZ_fake_script)()
+local function TIUNSXV_fake_script() -- ScriptHubIconBTN.LocalScript 
 	local script = Instance.new('LocalScript', ScriptHubIconBTN)
 
 	local home = script.Parent.Parent.Parent["Home-Display"]["Home-Icon-BTN"]["Home-Tab"]
@@ -1099,4 +1042,4 @@ local function TBPF_fake_script() -- ScriptHubIconBTN.LocalScript
 		stngs.Visible = false
 	end)
 end
-coroutine.wrap(TBPF_fake_script)()
+coroutine.wrap(TIUNSXV_fake_script)()
